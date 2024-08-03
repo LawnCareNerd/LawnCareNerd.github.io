@@ -1,0 +1,273 @@
+<html><head><base href="https://lawncarenerd.com/services/before-after-galleries">
+    <title>LawnTech Web Solutions - Before/After Galleries</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .service-description {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .demo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2rem;
+        }
+
+        .before-after-container {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .before-after-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .before-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .after-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background-color: #fff;
+            cursor: ew-resize;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .slider-icon {
+            font-size: 20px;
+            color: #27ae60;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 2rem;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Before/After Galleries Service</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="service-description">
+                <h2>Showcase Your Lawn Care Expertise</h2>
+                <p>Our Before/After Galleries service helps you display your lawn care transformations in an engaging, interactive format. Potential customers can easily see the dramatic improvements you make, building trust and showcasing your skills.</p>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Interactive slider for easy before/after comparison</li>
+                    <li>Responsive design for all devices</li>
+                    <li>Customizable gallery layout to match your brand</li>
+                    <li>Easy-to-use admin interface for adding new projects</li>
+                    <li>Optimized images for fast loading times</li>
+                </ul>
+            </section>
+
+            <h2>Interactive Demo</h2>
+            <div class="demo-gallery">
+                <div class="before-after-container" id="demo1">
+                    <div class="before-image">
+                        <img alt="Overgrown lawn with weeds and patchy grass" src="https://example.com/before-lawn-1.jpg" width="400" height="300">
+                    </div>
+                    <div class="after-image">
+                        <img alt="Well-manicured lawn with lush green grass" src="https://example.com/after-lawn-1.jpg" width="400" height="300">
+                    </div>
+                    <div class="slider">
+                        <div class="slider-button">
+                            <span class="slider-icon">⇆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="before-after-container" id="demo2">
+                    <div class="before-image">
+                        <img alt="Neglected garden with overgrown shrubs" src="https://example.com/before-garden-1.jpg" width="400" height="300">
+                    </div>
+                    <div class="after-image">
+                        <img alt="Beautifully landscaped garden with trimmed shrubs and colorful flowers" src="https://example.com/after-garden-1.jpg" width="400" height="300">
+                    </div>
+                    <div class="slider">
+                        <div class="slider-button">
+                            <span class="slider-icon">⇆</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/contact" class="cta-button">Get Before/After Galleries for Your Site</a>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const containers = document.querySelectorAll('.before-after-container');
+
+            containers.forEach(container => {
+                const slider = container.querySelector('.slider');
+                const beforeImage = container.querySelector('.before-image');
+
+                let isResizing = false;
+
+                slider.addEventListener('mousedown', (e) => {
+                    isResizing = true;
+                    e.preventDefault();
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (!isResizing) return;
+                    const containerRect = container.getBoundingClientRect();
+                    const newPosition = (e.clientX - containerRect.left) / containerRect.width;
+                    setBeforeImageWidth(newPosition);
+                });
+
+                document.addEventListener('mouseup', () => {
+                    isResizing = false;
+                });
+
+                function setBeforeImageWidth(newPosition) {
+                    const clampedPosition = Math.max(0, Math.min(1, newPosition));
+                    beforeImage.style.width = `${clampedPosition * 100}%`;
+                    slider.style.left = `${clampedPosition * 100}%`;
+                }
+
+                // Touch events for mobile devices
+                slider.addEventListener('touchstart', (e) => {
+                    isResizing = true;
+                    e.preventDefault();
+                });
+
+                document.addEventListener('touchmove', (e) => {
+                    if (!isResizing) return;
+                    const touch = e.touches[0];
+                    const containerRect = container.getBoundingClientRect();
+                    const newPosition = (touch.clientX - containerRect.left) / containerRect.width;
+                    setBeforeImageWidth(newPosition);
+                });
+
+                document.addEventListener('touchend', () => {
+                    isResizing = false;
+                });
+            });
+        });
+    </script>
+</body></html>

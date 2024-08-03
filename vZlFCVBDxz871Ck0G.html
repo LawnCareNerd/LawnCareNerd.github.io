@@ -1,0 +1,223 @@
+<html><head><base href="https://lawncarenerd.com/services/customer-review-integration">
+    <title>LawnTech Web Solutions - Customer Review Integration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .service-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefits-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #2ecc71;
+        }
+
+        #review-animation {
+            width: 100%;
+            height: 200px;
+            margin: 2rem 0;
+        }
+
+        .star {
+            fill: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customer Review Integration</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="service-details">
+            <h2>Boost Your Lawn Care Business with Customer Reviews</h2>
+            <p>In today's digital landscape, customer reviews are more important than ever. They provide social proof, build trust, and can significantly influence potential customers' decisions. Our Customer Review Integration service helps you showcase your best testimonials and manage your online reputation effectively.</p>
+
+            <h3>Benefits of Our Customer Review Integration:</h3>
+            <ul class="benefits-list">
+                <li>Automatically display your latest and best reviews from popular platforms like Google, Yelp, and Facebook</li>
+                <li>Encourage satisfied customers to leave reviews with strategically placed CTAs</li>
+                <li>Showcase star ratings and review counts to build instant credibility</li>
+                <li>Respond to reviews directly from your website's dashboard</li>
+                <li>Analyze review trends and customer sentiment to improve your services</li>
+            </ul>
+
+            <h3>How It Works:</h3>
+            <ol>
+                <li>We set up API connections with major review platforms</li>
+                <li>Reviews are fetched and displayed on your website in real-time</li>
+                <li>You can moderate and respond to reviews through an easy-to-use dashboard</li>
+                <li>Positive reviews are highlighted, while concerns are addressed promptly</li>
+            </ol>
+
+            <p>Don't let your hard-earned reputation go unnoticed. Let us help you leverage the power of customer reviews to grow your lawn care business!</p>
+
+            <a href="/contact" class="cta-button">Get Started with Review Integration</a>
+        </main>
+
+        <svg id="review-animation" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <path id="curve" d="M0,50 Q75,10 150,50 T300,50" fill="transparent"/>
+            </defs>
+            
+            <text>
+                <textPath href="#curve" startOffset="0%">
+                    <tspan class="review-text">Great service! My lawn looks amazing now!</tspan>
+                </textPath>
+            </text>
+
+            <g class="stars" transform="translate(125, 70)">
+                <path class="star" d="M10,0L13,6L20,7L15,12L16,20L10,16L4,20L5,12L0,7L7,6Z" transform="translate(-50, 0)"/>
+                <path class="star" d="M10,0L13,6L20,7L15,12L16,20L10,16L4,20L5,12L0,7L7,6Z" transform="translate(-25, 0)"/>
+                <path class="star" d="M10,0L13,6L20,7L15,12L16,20L10,16L4,20L5,12L0,7L7,6Z" transform="translate(0, 0)"/>
+                <path class="star" d="M10,0L13,6L20,7L15,12L16,20L10,16L4,20L5,12L0,7L7,6Z" transform="translate(25, 0)"/>
+                <path class="star" d="M10,0L13,6L20,7L15,12L16,20L10,16L4,20L5,12L0,7L7,6Z" transform="translate(50, 0)"/>
+            </g>
+        </svg>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reviewText = document.querySelector('.review-text');
+            const stars = document.querySelectorAll('.star');
+
+            function animateReview() {
+                let startOffset = 100;
+                const duration = 15000; // 15 seconds
+                const start = performance.now();
+
+                function step(timestamp) {
+                    const elapsed = timestamp - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    startOffset = 100 - (progress * 100);
+                    reviewText.setAttribute('startOffset', `${startOffset}%`);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        // Reset and repeat the animation
+                        setTimeout(animateReview, 1000);
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            function animateStars() {
+                stars.forEach((star, index) => {
+                    setTimeout(() => {
+                        star.style.opacity = 0;
+                        star.animate([
+                            { opacity: 0, transform: 'scale(0.5)' },
+                            { opacity: 1, transform: 'scale(1.2)' },
+                            { opacity: 1, transform: 'scale(1)' }
+                        ], {
+                            duration: 500,
+                            fill: 'forwards'
+                        });
+                    }, index * 200);
+                });
+
+                setTimeout(animateStars, 5000);
+            }
+
+            animateReview();
+            animateStars();
+        });
+    </script>
+</body></html>
