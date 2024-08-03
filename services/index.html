@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncarenerd.com/services">
+<html>
+
+<head>
     <title>LawnTech Web Solutions - Services</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +30,9 @@
             margin-bottom: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Architects Daughter', cursive;
         }
 
@@ -75,7 +79,7 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .service-icon {
@@ -114,6 +118,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>LawnTech Web Solutions Services</h1>
@@ -184,18 +189,18 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const grassSvg = document.getElementById('grass-animation');
-            
+
             function createGrassBlade(x) {
                 const height = 50 + Math.random() * 50;
                 const width = 2 + Math.random() * 3;
-                const bladePath = `M${x},100 Q${x+width},${100-height} ${x+width*2},100`;
+                const bladePath = `M${x},100 Q${x + width},${100 - height} ${x + width * 2},100`;
                 const blade = document.createElementNS("http://www.w3.org/2000/svg", "path");
                 blade.setAttribute("d", bladePath);
                 blade.setAttribute("fill", "none");
                 blade.setAttribute("stroke", "url(#grass-gradient)");
                 blade.setAttribute("stroke-width", "2");
                 grassSvg.appendChild(blade);
-                
+
                 return blade;
             }
 
@@ -224,4 +229,6 @@
             animateGrass();
         });
     </script>
-</body></html>
+</body>
+
+</html>

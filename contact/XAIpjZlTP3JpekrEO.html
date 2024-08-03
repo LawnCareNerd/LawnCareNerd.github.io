@@ -1,4 +1,7 @@
-<html><head><base href="mailto:jake@lawntechwebsolutions.com">
+<html>
+
+<head>
+    <base href="mailto:jake@lawntechwebsolutions.com">
     <title>Email Jake at LawnTech Web Solutions</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +25,7 @@
             background-color: #fff;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -41,7 +44,8 @@
             margin-bottom: 5px;
         }
 
-        input, textarea {
+        input,
+        textarea {
             padding: 10px;
             margin-bottom: 15px;
             border: 2px solid #34495e;
@@ -99,11 +103,19 @@
         }
 
         @keyframes sway {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(5deg); }
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Email Jake at LawnTech Web Solutions</h1>
@@ -138,7 +150,7 @@
     </div>
 
     <script>
-        document.getElementById('email-form').addEventListener('submit', function(e) {
+        document.getElementById('email-form').addEventListener('submit', function (e) {
             e.preventDefault();
             // In a real implementation, you would send the form data to a server here
             // For this simulation, we'll just show the success message
@@ -146,4 +158,6 @@
             this.reset();
         });
     </script>
-</body></html>
+</body>
+
+</html>

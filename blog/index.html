@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncarenerd.com/blog">
+<html>
+
+<head>
     <title>LawnTech Web Solutions - Blog</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +30,9 @@
             margin-bottom: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Architects Daughter', cursive;
         }
 
@@ -69,7 +73,7 @@
 
         .blog-post:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .blog-post h2 {
@@ -107,6 +111,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>LawnTech Web Solutions Blog</h1>
@@ -126,37 +131,42 @@
             <article class="blog-post">
                 <h2>5 Must-Have Features for Your Lawn Care Website</h2>
                 <p class="date">Posted on May 15, 2023</p>
-                <p>In today's digital age, having a strong online presence is crucial for lawn care businesses. Here are five essential features that every lawn care website should have to attract and retain customers...</p>
+                <p>In today's digital age, having a strong online presence is crucial for lawn care businesses. Here are
+                    five essential features that every lawn care website should have to attract and retain customers...
+                </p>
                 <a href="/blog/5-must-have-features-lawn-care-website" class="read-more">Read More</a>
             </article>
 
             <article class="blog-post">
                 <h2>How to Optimize Your Lawn Care Website for Local SEO</h2>
                 <p class="date">Posted on April 28, 2023</p>
-                <p>Local SEO is the key to getting your lawn care business found by potential customers in your area. Learn the top strategies to improve your local search rankings and attract more leads...</p>
+                <p>Local SEO is the key to getting your lawn care business found by potential customers in your area.
+                    Learn the top strategies to improve your local search rankings and attract more leads...</p>
                 <a href="/blog/optimize-lawn-care-website-local-seo" class="read-more">Read More</a>
             </article>
 
             <article class="blog-post">
                 <h2>The Power of Before and After Photos on Your Lawn Care Website</h2>
                 <p class="date">Posted on April 10, 2023</p>
-                <p>Visual proof of your work can be a game-changer for your lawn care business. Discover how to effectively use before and after photos on your website to showcase your skills and win more clients...</p>
+                <p>Visual proof of your work can be a game-changer for your lawn care business. Discover how to
+                    effectively use before and after photos on your website to showcase your skills and win more
+                    clients...</p>
                 <a href="/blog/power-of-before-after-photos-lawn-care-website" class="read-more">Read More</a>
             </article>
         </main>
     </div>
 
     <svg id="lawn-doodle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10,90 Q25,70 40,90 T70,90 T100,90" stroke="#27ae60" fill="none" stroke-width="2"/>
-        <path d="M0,100 Q15,80 30,100 T60,100 T90,100" stroke="#2ecc71" fill="none" stroke-width="2"/>
-        <circle cx="80" cy="75" r="8" fill="#f1c40f"/> <!-- Sun -->
-        <path d="M20,60 Q40,40 60,60" stroke="#3498db" fill="none" stroke-width="2"/> <!-- Water drop -->
+        <path d="M10,90 Q25,70 40,90 T70,90 T100,90" stroke="#27ae60" fill="none" stroke-width="2" />
+        <path d="M0,100 Q15,80 30,100 T60,100 T90,100" stroke="#2ecc71" fill="none" stroke-width="2" />
+        <circle cx="80" cy="75" r="8" fill="#f1c40f" /> <!-- Sun -->
+        <path d="M20,60 Q40,40 60,60" stroke="#3498db" fill="none" stroke-width="2" /> <!-- Water drop -->
     </svg>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const lawnDoodle = document.getElementById('lawn-doodle');
-            
+
             function animateLawnDoodle() {
                 lawnDoodle.animate([
                     { transform: 'translateY(0)' },
@@ -171,4 +181,6 @@
             animateLawnDoodle();
         });
     </script>
-</body></html>
+</body>
+
+</html>

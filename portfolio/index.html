@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncarenerd.com/portfolio">
+<html>
+
+<head>
     <title>LawnTech Web Solutions - Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +30,8 @@
             margin-bottom: 30px;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             font-family: 'Architects Daughter', cursive;
         }
 
@@ -102,6 +105,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>LawnTech Web Solutions Portfolio</h1>
@@ -111,55 +115,67 @@
     <div class="container">
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="https://example.com/green-thumb-pros-thumbnail.jpg" alt="Green Thumb Pros website thumbnail" width="300" height="200">
+                <img src="https://example.com/green-thumb-pros-thumbnail.jpg" alt="Green Thumb Pros website thumbnail"
+                    width="300" height="200">
                 <div class="portfolio-content">
                     <h2>Green Thumb Pros</h2>
-                    <p>A modern, responsive website for a local lawn care company featuring online booking and a before-and-after gallery.</p>
+                    <p>A modern, responsive website for a local lawn care company featuring online booking and a
+                        before-and-after gallery.</p>
                     <a href="/portfolio/green-thumb-pros" class="cta-button">View Project</a>
                 </div>
             </div>
 
             <div class="portfolio-item">
-                <img src="https://example.com/lawn-stars-thumbnail.jpg" alt="Lawn Stars website thumbnail" width="300" height="200">
+                <img src="https://example.com/lawn-stars-thumbnail.jpg" alt="Lawn Stars website thumbnail" width="300"
+                    height="200">
                 <div class="portfolio-content">
                     <h2>Lawn Stars</h2>
-                    <p>An e-commerce enabled site for a premium lawn care service, complete with a product shop for lawn care essentials.</p>
+                    <p>An e-commerce enabled site for a premium lawn care service, complete with a product shop for lawn
+                        care essentials.</p>
                     <a href="/portfolio/lawn-stars" class="cta-button">View Project</a>
                 </div>
             </div>
 
             <div class="portfolio-item">
-                <img src="https://example.com/mow-and-grow-thumbnail.jpg" alt="Mow & Grow website thumbnail" width="300" height="200">
+                <img src="https://example.com/mow-and-grow-thumbnail.jpg" alt="Mow & Grow website thumbnail" width="300"
+                    height="200">
                 <div class="portfolio-content">
                     <h2>Mow & Grow</h2>
-                    <p>A vibrant, informative website for a landscaping education company, featuring course listings and student testimonials.</p>
+                    <p>A vibrant, informative website for a landscaping education company, featuring course listings and
+                        student testimonials.</p>
                     <a href="/portfolio/mow-and-grow" class="cta-button">View Project</a>
                 </div>
             </div>
 
             <div class="portfolio-item">
-                <img src="https://example.com/eco-lawns-thumbnail.jpg" alt="Eco Lawns website thumbnail" width="300" height="200">
+                <img src="https://example.com/eco-lawns-thumbnail.jpg" alt="Eco Lawns website thumbnail" width="300"
+                    height="200">
                 <div class="portfolio-content">
                     <h2>Eco Lawns</h2>
-                    <p>An eco-focused lawn care company website highlighting sustainable practices and organic lawn treatments.</p>
+                    <p>An eco-focused lawn care company website highlighting sustainable practices and organic lawn
+                        treatments.</p>
                     <a href="/portfolio/eco-lawns" class="cta-button">View Project</a>
                 </div>
             </div>
 
             <div class="portfolio-item">
-                <img src="https://example.com/lawn-gear-pros-thumbnail.jpg" alt="Lawn Gear Pros website thumbnail" width="300" height="200">
+                <img src="https://example.com/lawn-gear-pros-thumbnail.jpg" alt="Lawn Gear Pros website thumbnail"
+                    width="300" height="200">
                 <div class="portfolio-content">
                     <h2>Lawn Gear Pros</h2>
-                    <p>An equipment rental website for lawn care professionals, featuring an inventory management system and online reservations.</p>
+                    <p>An equipment rental website for lawn care professionals, featuring an inventory management system
+                        and online reservations.</p>
                     <a href="/portfolio/lawn-gear-pros" class="cta-button">View Project</a>
                 </div>
             </div>
 
             <div class="portfolio-item">
-                <img src="https://example.com/green-oasis-thumbnail.jpg" alt="Green Oasis website thumbnail" width="300" height="200">
+                <img src="https://example.com/green-oasis-thumbnail.jpg" alt="Green Oasis website thumbnail" width="300"
+                    height="200">
                 <div class="portfolio-content">
                     <h2>Green Oasis</h2>
-                    <p>A luxurious lawn and garden design company website showcasing high-end landscaping projects and 3D design services.</p>
+                    <p>A luxurious lawn and garden design company website showcasing high-end landscaping projects and
+                        3D design services.</p>
                     <a href="/portfolio/green-oasis" class="cta-button">View Project</a>
                 </div>
             </div>
@@ -171,7 +187,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -205,4 +221,6 @@
         `;
         document.head.appendChild(style);
     </script>
-</body></html>
+</body>
+
+</html>

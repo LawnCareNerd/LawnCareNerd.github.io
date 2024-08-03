@@ -1,4 +1,7 @@
-<html><head><base href="https://lawncarenerd.com/portfolio/green-thumb-pros">
+<html>
+
+<head>
+    <base href="https://lawncarenerd.com/portfolio/green-thumb-pros">
     <title>Green Thumb Pros - LawnTech Web Solutions Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +31,9 @@
             margin-bottom: 30px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Architects Daughter', cursive;
         }
 
@@ -102,6 +107,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Green Thumb Pros</h1>
@@ -110,33 +116,41 @@
 
     <div class="container">
         <div class="portfolio-item">
-            <img src="https://example.com/green-thumb-pros-screenshot.jpg" alt="Green Thumb Pros website screenshot" width="1200" height="675">
+            <img src="https://example.com/green-thumb-pros-screenshot.jpg" alt="Green Thumb Pros website screenshot"
+                width="1200" height="675">
             <div class="portfolio-content">
                 <h2>Project Overview</h2>
-                <p>Green Thumb Pros is a local lawn care company that needed a fresh, modern website to showcase their services and attract new clients. We created a responsive, user-friendly site that highlights their expertise and makes it easy for potential customers to request services.</p>
+                <p>Green Thumb Pros is a local lawn care company that needed a fresh, modern website to showcase their
+                    services and attract new clients. We created a responsive, user-friendly site that highlights their
+                    expertise and makes it easy for potential customers to request services.</p>
 
                 <div class="features">
                     <div class="feature">
                         <h3>Responsive Design</h3>
-                        <p>The site looks great and functions smoothly on all devices, from desktop computers to smartphones.</p>
+                        <p>The site looks great and functions smoothly on all devices, from desktop computers to
+                            smartphones.</p>
                     </div>
                     <div class="feature">
                         <h3>Service Showcase</h3>
-                        <p>A visually appealing gallery showcases before-and-after photos of their work, demonstrating the quality of their services.</p>
+                        <p>A visually appealing gallery showcases before-and-after photos of their work, demonstrating
+                            the quality of their services.</p>
                     </div>
                     <div class="feature">
                         <h3>Online Booking</h3>
-                        <p>An integrated booking system allows customers to easily schedule appointments and request quotes.</p>
+                        <p>An integrated booking system allows customers to easily schedule appointments and request
+                            quotes.</p>
                     </div>
                     <div class="feature">
                         <h3>SEO Optimization</h3>
-                        <p>The site is optimized for local search, helping Green Thumb Pros appear in relevant Google searches.</p>
+                        <p>The site is optimized for local search, helping Green Thumb Pros appear in relevant Google
+                            searches.</p>
                     </div>
                 </div>
 
                 <h3>Client Testimonial</h3>
                 <blockquote>
-                    "Jake from LawnTech Web Solutions transformed our online presence. Our new website has helped us attract more clients and streamline our booking process. We couldn't be happier with the results!"
+                    "Jake from LawnTech Web Solutions transformed our online presence. Our new website has helped us
+                    attract more clients and streamline our booking process. We couldn't be happier with the results!"
                     <cite>- John Smith, Owner of Green Thumb Pros</cite>
                 </blockquote>
 
@@ -150,7 +164,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const features = document.querySelectorAll('.feature');
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -184,4 +198,6 @@
         `;
         document.head.appendChild(style);
     </script>
-</body></html>
+</body>
+
+</html>

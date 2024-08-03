@@ -1,4 +1,7 @@
-<html><head><base href="https://lawncarenerd.com/">
+<html>
+
+<head>
+    <base href="https://lawncarenerd.com/">
     <title>LawnTech Web Solutions - Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +30,9 @@
             padding: 1rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Architects Daughter', cursive;
         }
 
@@ -65,7 +70,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -106,7 +111,7 @@
             border-radius: 8px;
             padding: 1.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
@@ -145,6 +150,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>LawnTech Web Solutions</h1>
@@ -201,21 +207,21 @@
     </div>
 
     <svg id="lawn-mower" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="40" width="80" height="20" fill="#2c3e50"/>
-        <circle cx="25" cy="60" r="10" fill="#95a5a6"/>
-        <circle cx="75" cy="60" r="10" fill="#95a5a6"/>
-        <rect x="30" y="30" width="40" height="10" fill="#27ae60"/>
-        <path d="M30,30 Q50,10 70,30" stroke="#27ae60" stroke-width="5" fill="none"/>
-        <circle cx="50" cy="15" r="5" fill="#f1c40f"/>
+        <rect x="10" y="40" width="80" height="20" fill="#2c3e50" />
+        <circle cx="25" cy="60" r="10" fill="#95a5a6" />
+        <circle cx="75" cy="60" r="10" fill="#95a5a6" />
+        <rect x="30" y="30" width="40" height="10" fill="#27ae60" />
+        <path d="M30,30 Q50,10 70,30" stroke="#27ae60" stroke-width="5" fill="none" />
+        <circle cx="50" cy="15" r="5" fill="#f1c40f" />
     </svg>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const lawnMower = document.getElementById('lawn-mower');
-            
+
             function animateLawnMower() {
                 lawnMower.style.left = '100%';
-                
+
                 setTimeout(() => {
                     lawnMower.style.transition = 'none';
                     lawnMower.style.left = '-100px';
@@ -229,4 +235,6 @@
             animateLawnMower();
         });
     </script>
-</body></html>
+</body>
+
+</html>
