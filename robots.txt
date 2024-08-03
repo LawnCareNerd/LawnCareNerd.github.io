@@ -1,0 +1,18 @@
+# Allow all web crawlers to index the site
+User-agent: *
+Disallow:
+
+# Block access to certain directories
+Disallow: /contact
+Disallow: /contact/
+Disallow: /portfolio
+Disallow: /portfolio/
+Disallow: /services
+Disallow: /services/
+Disallow: /blog
+Disallow: /blog/
+Disallow: /dev
+Disallow: /dev/
+
+# Specify the location of the sitemap
+Sitemap: https://lawncarenerd.github.io/sitemap.xml
