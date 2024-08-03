@@ -1,215 +1,161 @@
 <html>
 
 <head>
-    <title>Contact LawnTech Web Solutions</title>
+    <base href="mailto:jake@lawntechwebsolutions.com">
+    <title>Email Jake at LawnTech Web Solutions</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Architects Daughter', cursive;
             line-height: 1.6;
-            color: #333;
+            color: #2c3e50;
             margin: 0;
-            padding: 0;
-            background-color: #f0f8f0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0 98 C 20 90, 50 90, 100 98' stroke='%2334495e' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-size: 100px 100px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        header {
-            background-color: #27ae60;
-            color: white;
+        h1 {
+            color: #27ae60;
             text-align: center;
-            padding: 1rem;
+            margin-bottom: 20px;
         }
 
-        h1,
-        h2,
-        h3 {
-            font-family: 'Architects Daughter', cursive;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav {
-            background-color: #2ecc71;
-            padding: 1rem;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        .email-form {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #f1c40f;
-        }
-
-        .contact-form {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
+            flex-direction: column;
         }
 
         label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
         }
 
-        input[type="text"],
-        input[type="email"],
+        input,
         textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1em;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #34495e;
+            border-radius: 5px;
+            font-family: 'Architects Daughter', cursive;
         }
 
         textarea {
             height: 150px;
+            resize: vertical;
         }
 
-        button[type="submit"] {
+        .send-button {
             background-color: #27ae60;
-            color: white;
+            color: #fff;
             border: none;
-            padding: 0.8rem 1.5rem;
-            font-size: 1em;
-            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Architects Daughter', cursive;
         }
 
-        button[type="submit"]:hover {
+        .send-button:hover {
             background-color: #2ecc71;
+            transform: scale(1.05);
         }
 
-        #grass-field {
-            position: fixed;
+        #email-sent {
+            display: none;
+            text-align: center;
+            color: #27ae60;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .grass {
+            position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 100px;
-            z-index: -1;
+            height: 50px;
+            overflow: hidden;
         }
 
-        .grass-blade {
+        .blade {
             position: absolute;
             bottom: 0;
-            width: 2px;
+            width: 20px;
+            height: 50px;
             background-color: #27ae60;
             transform-origin: bottom center;
+            animation: sway 3s ease-in-out infinite;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
+        @keyframes sway {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
             }
 
-            .contact-form {
-                padding: 1rem;
+            50% {
+                transform: rotate(5deg);
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Contact LawnTech Web Solutions</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
-        <h2>Get in Touch</h2>
-        <p>Have questions about our web development services for lawn care professionals? Fill out the form below, and
-            we'll get back to you as soon as possible!</p>
+        <h1>Email Jake at LawnTech Web Solutions</h1>
+        <form class="email-form" id="email-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <div class="contact-form">
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="company">Company Name:</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="send-button">Send Email</button>
+        </form>
+        <p id="email-sent">Your email has been sent successfully!</p>
     </div>
 
-    <div id="grass-field"></div>
+    <div class="grass">
+        <div class="blade" style="left: 10%; animation-delay: -0.5s;"></div>
+        <div class="blade" style="left: 20%; animation-delay: -1s;"></div>
+        <div class="blade" style="left: 30%; animation-delay: -1.5s;"></div>
+        <div class="blade" style="left: 40%; animation-delay: -2s;"></div>
+        <div class="blade" style="left: 50%; animation-delay: -2.5s;"></div>
+        <div class="blade" style="left: 60%; animation-delay: -3s;"></div>
+        <div class="blade" style="left: 70%; animation-delay: -3.5s;"></div>
+        <div class="blade" style="left: 80%; animation-delay: -4s;"></div>
+        <div class="blade" style="left: 90%; animation-delay: -4.5s;"></div>
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const grassField = document.getElementById('grass-field');
-
-            function createGrassBlade() {
-                const blade = document.createElement('div');
-                blade.classList.add('grass-blade');
-                blade.style.left = `${Math.random() * 100}%`;
-                blade.style.height = `${30 + Math.random() * 70}px`;
-                blade.style.animationDuration = `${2 + Math.random() * 3}s`;
-                grassField.appendChild(blade);
-            }
-
-            for (let i = 0; i < 100; i++) {
-                createGrassBlade();
-            }
-
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
-            });
+        document.getElementById('email-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to a server here
+            // For this simulation, we'll just show the success message
+            document.getElementById('email-sent').style.display = 'block';
+            this.reset();
         });
     </script>
 </body>

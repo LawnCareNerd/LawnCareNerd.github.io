@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <title>Contact LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #2ecc71;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #2ecc71;
+        }
+
+        #grass-field {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: -1;
+        }
+
+        .grass-blade {
+            position: absolute;
+            bottom: 0;
+            width: 2px;
+            background-color: #27ae60;
+            transform-origin: bottom center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .contact-form {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact LawnTech Web Solutions</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p>Have questions about our web development services for lawn care professionals? Fill out the form below, and
+            we'll get back to you as soon as possible!</p>
+
+        <div class="contact-form">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="grass-field"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grassField = document.getElementById('grass-field');
+
+            function createGrassBlade() {
+                const blade = document.createElement('div');
+                blade.classList.add('grass-blade');
+                blade.style.left = `${Math.random() * 100}%`;
+                blade.style.height = `${30 + Math.random() * 70}px`;
+                blade.style.animationDuration = `${2 + Math.random() * 3}s`;
+                grassField.appendChild(blade);
+            }
+
+            for (let i = 0; i < 100; i++) {
+                createGrassBlade();
+            }
+
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+
+</html>
