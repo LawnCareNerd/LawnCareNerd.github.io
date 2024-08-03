@@ -41,6 +41,10 @@
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+
+        }
+
+        main {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0 98 C 20 90, 50 90, 100 98' stroke='%2334495e' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
             background-size: 100px 100px;
         }
@@ -150,12 +154,10 @@
 
 <body>
     <div class="container">
-        <div class="hand-drawn-box" id="header">
-        <!-- <header> -->
+        <header>
             <h1>LawnTech Web Solutions</h1>
             <p>Cultivating Digital Success for Lawn Care Professionals</p>
-        <!-- </header> -->
-    </div>
+        </header>
 
         <!-- <nav>
             <ul>
@@ -165,42 +167,43 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav> -->
+        <main>
+            <div class="hand-drawn-box" id="about">
+                <h2>👋 Hey there, I'm Jake!</h2>
+                <p>As a web developer with a green thumb, I've found my niche in creating awesome websites for lawn care
+                    companies. My mission? To help your business grow as lush as the lawns you maintain!</p>
+            </div>
 
-        <div class="hand-drawn-box" id="about">
-            <h2>👋 Hey there, I'm Jake!</h2>
-            <p>As a web developer with a green thumb, I've found my niche in creating awesome websites for lawn care
-                companies. My mission? To help your business grow as lush as the lawns you maintain!</p>
-        </div>
+            <div class="hand-drawn-box" id="services">
+                <h2>🌱 Services I Offer</h2>
+                <ul>
+                    <li>Custom Website Design</li>
+                    <li>Responsive Mobile Optimization</li>
+                    <li>SEO for Local Lawn Care Businesses</li>
+                    <li>Online Booking Systems</li>
+                    <li>Before/After Galleries</li>
+                </ul>
+            </div>
 
-        <div class="hand-drawn-box" id="services">
-            <h2>🌱 Services I Offer</h2>
-            <ul>
-                <li>Custom Website Design</li>
-                <li>Responsive Mobile Optimization</li>
-                <li>SEO for Local Lawn Care Businesses</li>
-                <li>Online Booking Systems</li>
-                <li>Before/After Galleries</li>
-            </ul>
-        </div>
+            <div class="hand-drawn-box" id="portfolio">
+                <h2>🌿 My Work</h2>
+                <p>Check out some of the digital landscapes I've cultivated:</p>
+                <ul>
+                    <li><a href="#">Coming Soon!</a></li>
+                    <!-- <li><a href="/portfolio/green-thumb-pros">Green Thumb Pros</a></li> -->
+                    <!-- <li><a href="/portfolio/lawn-stars">Lawn Stars</a></li> -->
+                    <!-- <li><a href="/portfolio/mow-and-grow">Mow & Grow</a></li> -->
+                </ul>
+            </div>
 
-        <div class="hand-drawn-box" id="portfolio">
-            <h2>🌿 My Work</h2>
-            <p>Check out some of the digital landscapes I've cultivated:</p>
-            <ul>
-                <li><a href="#">Coming Soon!</a></li>
-                <!-- <li><a href="/portfolio/green-thumb-pros">Green Thumb Pros</a></li> -->
-                <!-- <li><a href="/portfolio/lawn-stars">Lawn Stars</a></li> -->
-                <!-- <li><a href="/portfolio/mow-and-grow">Mow & Grow</a></li> -->
-            </ul>
-        </div>
-
-        <div class="hand-drawn-box" id="contact">
-            <h2>📞 Let's Grow Together!</h2>
-            <p>Ready to take your lawn care business to the next level? Let's chat about how I can help you create a
-                website that's as impressive as your landscaping skills!</p>
-            <a href="mailto:jake@lawntechwebsolutions.com" class="cta-button">Get in Touch</a>
-        </div>
+            <div class="hand-drawn-box" id="contact">
+                <h2>📞 Let's Grow Together!</h2>
+                <p>Ready to take your lawn care business to the next level? Let's chat about how I can help you create a
+                    website that's as impressive as your landscaping skills!</p>
+                <a href="mailto:jake@lawntechwebsolutions.com" class="cta-button">Get in Touch</a>
+            </div>
     </div>
+    </main>
 
     <!-- <svg id="lawn-mower" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <rect x="10" y="60" width="80" height="30" fill="#2c3e50" />
