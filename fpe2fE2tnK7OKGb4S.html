@@ -1,0 +1,184 @@
+<html><head><base href="https://plowing.lawncarenerd.com/status#include%20historic%20data%20on%20snow%20fall%20in%20a%20local%20area">
+    <title>Snow Plowing Status & Historic Data | LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f3ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 25 L75 25 L75 75 L25 75 Z' stroke='%23b3d9ff' fill='none' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Architects Daughter', cursive;
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .status-box, .historic-data {
+            background-color: #fff;
+            border: 3px solid #3498db;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+
+        .status-item .label {
+            font-weight: bold;
+        }
+
+        .status-item .value {
+            color: #3498db;
+        }
+
+        #snowfallChart {
+            width: 100%;
+            height: 400px;
+        }
+
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 80vh;
+            width: 80vw;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                width: 100%;
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❄️ Snow Plowing Status & Historic Data ❄️</h1>
+            <p>Stay informed with real-time updates and historical snowfall information</p>
+        </header>
+
+        <div class="status-box">
+            <h2>Current Status</h2>
+            <div class="status-item">
+                <span class="label">Current Temperature:</span>
+                <span class="value" id="currentTemp">Loading...</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Snowfall Today:</span>
+                <span class="value" id="snowfallToday">Loading...</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Plowing Status:</span>
+                <span class="value" id="plowingStatus">Loading...</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Next Scheduled Plow:</span>
+                <span class="value" id="nextPlow">Loading...</span>
+            </div>
+        </div>
+
+        <div class="historic-data">
+            <h2>Historic Snowfall Data for Springfield, IL</h2>
+            <p>Average monthly snowfall over the past 30 years:</p>
+            <div class="chart-container">
+                <canvas id="snowfallChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulated real-time data update
+        function updateStatus() {
+            const currentTemp = Math.floor(Math.random() * (40 - 20) + 20);
+            const snowfallToday = (Math.random() * 5).toFixed(1);
+            const plowingStatus = Math.random() > 0.5 ? "Active" : "On Standby";
+            const nextPlow = new Date(Date.now() + Math.random() * 86400000).toLocaleString();
+
+            document.getElementById('currentTemp').textContent = `${currentTemp}°F`;
+            document.getElementById('snowfallToday').textContent = `${snowfallToday} inches`;
+            document.getElementById('plowingStatus').textContent = plowingStatus;
+            document.getElementById('nextPlow').textContent = nextPlow;
+        }
+
+        updateStatus();
+        setInterval(updateStatus, 60000); // Update every minute
+
+        // Historic snowfall data
+        const ctx = document.getElementById('snowfallChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Average Snowfall (inches)',
+                    data: [6.5, 5.4, 3.1, 0.7, 0, 0, 0, 0, 0, 0.1, 1.2, 5.8],
+                    backgroundColor: 'rgba(52, 152, 219, 0.5)',
+                    borderColor: 'rgba(52, 152, 219, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Snowfall (inches)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Average Monthly Snowfall in Springfield, IL (1991-2020)',
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body></html>

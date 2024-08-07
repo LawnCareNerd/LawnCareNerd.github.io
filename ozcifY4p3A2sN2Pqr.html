@@ -1,0 +1,235 @@
+<html><head><base href="https://plowing.lawncarenerd.com/status#make%20the%20git%20calendar%20look%20modern">
+    <title>Snow Plowing Status & History | LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        :root {
+            --bg-color: #f7f9fc;
+            --text-color: #2d3748;
+            --primary-color: #3182ce;
+            --secondary-color: #718096;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        .status-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .snow-calendar {
+            display: grid;
+            grid-template-columns: repeat(53, 1fr);
+            gap: 3px;
+            margin-bottom: 20px;
+        }
+
+        .snow-week {
+            display: grid;
+            grid-template-rows: repeat(7, 1fr);
+            gap: 3px;
+        }
+
+        .snow-day {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            transition: transform 0.2s ease;
+        }
+
+        .snow-day:hover {
+            transform: scale(1.3);
+        }
+
+        .snow-level-0 { background-color: #ebedf0; }
+        .snow-level-1 { background-color: #9be9a8; }
+        .snow-level-2 { background-color: #40c463; }
+        .snow-level-3 { background-color: #30a14e; }
+        .snow-level-4 { background-color: #216e39; }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            border-radius: 2px;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #24292e;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Snow Plowing Status & History</h1>
+        
+        <div class="status-box">
+            <h2>Current Status</h2>
+            <div class="status-item">
+                <span>Temperature:</span>
+                <span id="currentTemp">Loading...</span>
+            </div>
+            <div class="status-item">
+                <span>Snowfall Today:</span>
+                <span id="snowfallToday">Loading...</span>
+            </div>
+            <div class="status-item">
+                <span>Plowing Status:</span>
+                <span id="plowingStatus">Loading...</span>
+            </div>
+        </div>
+
+        <h2>Snow Plowing History (Last Year)</h2>
+        <div class="snow-calendar" id="snowCalendar"></div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color snow-level-0"></div>
+                <span>No snow</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color snow-level-1"></div>
+                <span>Light</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color snow-level-2"></div>
+                <span>Moderate</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color snow-level-3"></div>
+                <span>Heavy</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color snow-level-4"></div>
+                <span>Extreme</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Simulated real-time data update
+        function updateStatus() {
+            const currentTemp = Math.floor(Math.random() * (40 - 20) + 20);
+            const snowfallToday = (Math.random() * 5).toFixed(1);
+            const plowingStatus = Math.random() > 0.5 ? "Active" : "On Standby";
+
+            document.getElementById('currentTemp').textContent = `${currentTemp}°F`;
+            document.getElementById('snowfallToday').textContent = `${snowfallToday} inches`;
+            document.getElementById('plowingStatus').textContent = plowingStatus;
+        }
+
+        updateStatus();
+        setInterval(updateStatus, 60000); // Update every minute
+
+        // Generate snow plowing history
+        function generateSnowHistory() {
+            const calendar = document.getElementById('snowCalendar');
+            const weeks = 53;
+            const days = 7;
+            
+            for (let w = 0; w < weeks; w++) {
+                const week = document.createElement('div');
+                week.className = 'snow-week';
+                
+                for (let d = 0; d < days; d++) {
+                    const day = document.createElement('div');
+                    day.className = 'snow-day';
+                    
+                    // Randomly assign snow levels
+                    const snowLevel = Math.floor(Math.random() * 5);
+                    day.classList.add(`snow-level-${snowLevel}`);
+                    
+                    // Add data attributes for tooltip
+                    const date = new Date();
+                    date.setDate(date.getDate() - ((weeks - w - 1) * 7 + (days - d - 1)));
+                    day.setAttribute('data-date', date.toLocaleDateString());
+                    day.setAttribute('data-snow', getSnowDescription(snowLevel));
+                    
+                    week.appendChild(day);
+                }
+                
+                calendar.appendChild(week);
+            }
+        }
+
+        function getSnowDescription(level) {
+            const descriptions = [
+                "No snow",
+                "Light snow (0-2 inches)",
+                "Moderate snow (2-6 inches)",
+                "Heavy snow (6-12 inches)",
+                "Extreme snow (12+ inches)"
+            ];
+            return descriptions[level];
+        }
+
+        generateSnowHistory();
+
+        // Tooltip functionality
+        const tooltip = document.getElementById('tooltip');
+        document.querySelectorAll('.snow-day').forEach(day => {
+            day.addEventListener('mouseover', (e) => {
+                const rect = e.target.getBoundingClientRect();
+                const date = e.target.getAttribute('data-date');
+                const snow = e.target.getAttribute('data-snow');
+                tooltip.innerHTML = `${date}<br>${snow}`;
+                tooltip.style.left = `${rect.left}px`;
+                tooltip.style.top = `${rect.top - 40}px`;
+                tooltip.style.opacity = 1;
+            });
+            day.addEventListener('mouseout', () => {
+                tooltip.style.opacity = 0;
+            });
+        });
+    </script>
+</body></html>
