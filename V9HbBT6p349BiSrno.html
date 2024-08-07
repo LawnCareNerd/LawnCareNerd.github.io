@@ -1,0 +1,212 @@
+<html><head><base href="https://plowing.lawncarenerd.com/pricing">
+    <title>Snow Plowing Pricing | LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f3ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 25 L75 25 L75 75 L25 75 Z' stroke='%23b3d9ff' fill='none' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Architects Daughter', cursive;
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .pricing-box {
+            border: 3px solid #3498db;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .pricing-option {
+            margin-bottom: 20px;
+        }
+
+        .pricing-option h3 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .interactive-demo {
+            margin-top: 40px;
+        }
+
+        #snowfallSimulator {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f8ff;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1em;
+            top: -20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(220px);
+            }
+        }
+
+        #controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #snowfallAmount {
+            width: 80%;
+        }
+
+        #priceDisplay {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❄️ Snow Plowing Pricing ❄️</h1>
+            <p>Flexible pricing options to fit your needs</p>
+        </header>
+
+        <div class="pricing-box">
+            <h2>Our Pricing Options</h2>
+            <div class="pricing-option">
+                <h3>Per-Plow Pricing</h3>
+                <p>Pay only when we plow. Great for areas with infrequent snowfall.</p>
+                <p class="price">Starting at $75 per plow</p>
+            </div>
+            <div class="pricing-option">
+                <h3>Inch-Based Pricing</h3>
+                <p>Price varies based on snowfall amount. Fair and transparent.</p>
+                <p class="price">Starting at $50 for 2-4 inches</p>
+            </div>
+            <div class="pricing-option">
+                <h3>Seasonal Contract</h3>
+                <p>One flat rate for the entire winter season. Budget-friendly and worry-free.</p>
+                <p class="price">Starting at $500 per season</p>
+            </div>
+        </div>
+
+        <div class="interactive-demo">
+            <h2>Interactive Pricing Demo</h2>
+            <p>See how our inch-based pricing works with this interactive snowfall simulator!</p>
+            <div id="snowfallSimulator"></div>
+            <div id="controls">
+                <input type="range" id="snowfallAmount" min="0" max="12" step="0.5" value="0">
+                <span id="snowfallDisplay">0 inches</span>
+            </div>
+            <p id="priceDisplay">Price: $0</p>
+        </div>
+    </div>
+
+    <script>
+        const snowfallSimulator = document.getElementById('snowfallSimulator');
+        const snowfallAmount = document.getElementById('snowfallAmount');
+        const snowfallDisplay = document.getElementById('snowfallDisplay');
+        const priceDisplay = document.getElementById('priceDisplay');
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * snowfallSimulator.offsetWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowfallSimulator.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        function updatePrice(inches) {
+            let price;
+            if (inches < 2) {
+                price = 0;
+            } else if (inches <= 4) {
+                price = 50;
+            } else if (inches <= 6) {
+                price = 75;
+            } else if (inches <= 8) {
+                price = 100;
+            } else {
+                price = 100 + (inches - 8) * 15;
+            }
+            priceDisplay.textContent = `Price: $${price.toFixed(2)}`;
+        }
+
+        snowfallAmount.addEventListener('input', (e) => {
+            const inches = parseFloat(e.target.value);
+            snowfallDisplay.textContent = `${inches} inches`;
+            updatePrice(inches);
+
+            // Clear existing snowflakes
+            snowfallSimulator.innerHTML = '';
+
+            // Create new snowflakes based on inches
+            const snowflakeCount = Math.floor(inches * 10);
+            for (let i = 0; i < snowflakeCount; i++) {
+                createSnowflake();
+            }
+        });
+
+        // Initial snowfall
+        setInterval(createSnowflake, 300);
+    </script>
+</body></html>

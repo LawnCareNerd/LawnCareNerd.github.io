@@ -1,0 +1,251 @@
+<html><head><base href="https://plowing.lawncarenerd.com/contracts">
+    <title>Snow Plowing Contracts | LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f3ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 25 L75 25 L75 75 L25 75 Z' stroke='%23b3d9ff' fill='none' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Architects Daughter', cursive;
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .contract-box {
+            border: 3px solid #3498db;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contract-generator {
+            margin-top: 30px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #contractPreview {
+            white-space: pre-wrap;
+            font-family: 'Open Sans', sans-serif;
+            padding: 20px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            margin-top: 20px;
+        }
+
+        .snowflake {
+            position: fixed;
+            color: #fff;
+            font-size: 1em;
+            top: -20px;
+            animation: fall linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❄️ Snow Plowing Contracts ❄️</h1>
+            <p>Generate custom contracts for your snow plowing services</p>
+        </header>
+
+        <div class="contract-box">
+            <h2>Contract Information</h2>
+            <p>Use the form below to generate a customized snow plowing contract. Fill in the details, and we'll create a professional contract template for you.</p>
+
+            <div class="contract-generator">
+                <form id="contractForm">
+                    <label for="clientName">Client Name:</label>
+                    <input type="text" id="clientName" required>
+
+                    <label for="clientAddress">Client Address:</label>
+                    <input type="text" id="clientAddress" required>
+
+                    <label for="contractType">Contract Type:</label>
+                    <select id="contractType" required>
+                        <option value="per-plow">Per-plow</option>
+                        <option value="inch-based">Inch-based</option>
+                        <option value="seasonal">Seasonal</option>
+                    </select>
+
+                    <label for="serviceArea">Service Area (sq ft):</label>
+                    <input type="number" id="serviceArea" required>
+
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" required>
+
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" required>
+
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" required>
+
+                    <label for="additionalTerms">Additional Terms:</label>
+                    <textarea id="additionalTerms" rows="4"></textarea>
+
+                    <button type="submit">Generate Contract</button>
+                </form>
+            </div>
+
+            <div id="contractPreview"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contractForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generateContract();
+        });
+
+        function generateContract() {
+            const clientName = document.getElementById('clientName').value;
+            const clientAddress = document.getElementById('clientAddress').value;
+            const contractType = document.getElementById('contractType').value;
+            const serviceArea = document.getElementById('serviceArea').value;
+            const price = document.getElementById('price').value;
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const additionalTerms = document.getElementById('additionalTerms').value;
+
+            let contractText = `SNOW PLOWING SERVICE AGREEMENT
+
+This Snow Plowing Service Agreement (the "Agreement") is entered into on ${new Date().toLocaleDateString()} by and between:
+
+Service Provider: [Your Company Name]
+Client: ${clientName}
+
+1. Services: The Service Provider agrees to provide snow plowing services for the Client's property located at:
+   ${clientAddress}
+
+2. Service Area: The area to be serviced is approximately ${serviceArea} square feet.
+
+3. Contract Type and Pricing:
+   This is a ${contractType} contract.
+   ${getContractTypeDetails(contractType, price)}
+
+4. Term: This Agreement shall commence on ${startDate} and terminate on ${endDate}, unless terminated earlier as provided herein.
+
+5. Service Triggers:
+   - Per-plow: Service will be provided when snowfall accumulation reaches 2 inches or more.
+   - Inch-based: Service charges will be calculated based on the depth of snowfall.
+   - Seasonal: Service will be provided for any snowfall of 2 inches or more throughout the contract period.
+
+6. Limitations:
+   - The Service Provider is not responsible for ice formation or slip and fall accidents.
+   - The Client is responsible for marking obstacles that may be hidden by snow.
+
+7. Payment: Payment is due within 15 days of invoice date. Late payments are subject to a 1.5% monthly interest charge.
+
+8. Termination: Either party may terminate this Agreement with 30 days written notice.
+
+9. Additional Terms:
+${additionalTerms}
+
+10. Entire Agreement: This Agreement constitutes the entire understanding between the parties and supersedes all prior agreements, whether written or oral.
+
+IN WITNESS WHEREOF, the parties hereto have executed this Agreement as of the date first above written.
+
+_________________________                  _________________________
+[Your Company Name]                        ${clientName}
+Service Provider                           Client
+`;
+
+            document.getElementById('contractPreview').textContent = contractText;
+        }
+
+        function getContractTypeDetails(contractType, price) {
+            switch (contractType) {
+                case 'per-plow':
+                    return `The Client agrees to pay $${price} per plowing service.`;
+                case 'inch-based':
+                    return `The Client agrees to pay based on the following schedule:
+   - 2-4 inches: $${price}
+   - 4-6 inches: $${Math.round(price * 1.5)}
+   - 6-8 inches: $${price * 2}
+   - Over 8 inches: $${price * 2} + $${Math.round(price * 0.25)} per additional inch`;
+                case 'seasonal':
+                    return `The Client agrees to pay a seasonal flat rate of $${price} for unlimited plowing services during the contract period.`;
+                default:
+                    return '';
+            }
+        }
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 300);
+    </script>
+</body></html>

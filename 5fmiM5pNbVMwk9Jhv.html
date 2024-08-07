@@ -1,0 +1,247 @@
+<html><head><base href="https://plowing.lawncarenerd.com/">
+    <title>LawnTech Snow Plowing Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Permanent+Marker&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 50 L75 50 M50 25 L50 75' stroke='%23b0c4de' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-size: 20px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Permanent Marker', cursive;
+            color: #1e3a8a;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            background-color: #2563eb;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #bfdbfe;
+        }
+
+        .hero {
+            background-color: #dbeafe;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #1e40af;
+        }
+
+        .services {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: #f3f4f6;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        #snow-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .snowflake {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="snow-animation"></div>
+        <h1>LawnTech Snow Plowing</h1>
+        <p>Clear paths, safe spaces</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero" id="home">
+            <h2>Professional Snow Plowing Services</h2>
+            <p>Keep your property safe and accessible all winter long</p>
+            <a href="#contact" class="cta-button">Get a Free Quote</a>
+        </section>
+
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚜</div>
+                    <h3>Residential Plowing</h3>
+                    <p>Clear driveways and walkways for homes</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Plowing</h3>
+                    <p>Large-scale clearing for businesses and parking lots</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧂</div>
+                    <h3>De-icing Services</h3>
+                    <p>Prevent ice formation with professional de-icing</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⏰</div>
+                    <h3>24/7 Emergency Services</h3>
+                    <p>Round-the-clock support for unexpected snowfall</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>LawnTech Snow Plowing is a division of LawnTech Web Solutions, bringing our commitment to quality and customer satisfaction to winter property maintenance. With years of experience in both digital and physical landscapes, we understand the importance of keeping your spaces clear and accessible.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to ensure your property stays snow-free this winter? Get in touch for a free quote!</p>
+            <a href="mailto:info@lawntechsnowplowing.com" class="cta-button">Email Us</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 LawnTech Snow Plowing. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.width = snowflake.style.height = Math.random() * 5 + 5 + 'px';
+            
+            document.getElementById('snow-animation').appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 50);
+    </script>
+</body></html>

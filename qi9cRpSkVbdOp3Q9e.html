@@ -1,0 +1,286 @@
+<html><head><base href="https://plowing.lawncarenerd.com/pricing#include%20an%20interactive%20demo%20that%20shows%20the%20price%20differences%20of%20differenct%20common%20plow%20pricing%20methods%20based%20on%20snow%20fall%20and%20such">
+    <title>Pricing Comparison - Winter Plowing Services | LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+        body {
+            font-family: 'Architects Daughter', cursive;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f3ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 25 L75 25 L75 75 L25 75 Z' stroke='%23b3d9ff' fill='none' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1, h2 {
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .pricing-box {
+            border: 3px solid #3498db;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .pricing-demo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .demo-controls {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+
+        .demo-results {
+            flex-basis: 100%;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #3498db;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        #priceChart {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1em;
+            top: -20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Winter Plowing Pricing Comparison</h1>
+            <p>Interactive Demo: Compare Different Pricing Methods</p>
+        </header>
+
+        <div class="pricing-box">
+            <h2>❄️ Pricing Method Comparison</h2>
+            <p>Use the sliders below to adjust variables and see how different pricing methods compare based on snowfall and property characteristics.</p>
+
+            <div class="pricing-demo">
+                <div class="demo-controls">
+                    <label for="drivewaySize">Driveway Size (sq ft): <span id="drivewaySizeValue">1000</span></label>
+                    <input type="range" id="drivewaySize" min="500" max="3000" value="1000" step="100">
+
+                    <label for="snowfallAmount">Average Snowfall per Event (inches): <span id="snowfallAmountValue">4</span></label>
+                    <input type="range" id="snowfallAmount" min="1" max="12" value="4" step="0.5">
+
+                    <label for="eventsPerSeason">Plowing Events per Season: <span id="eventsPerSeasonValue">15</span></label>
+                    <input type="range" id="eventsPerSeason" min="5" max="30" value="15" step="1">
+                </div>
+
+                <div class="demo-results">
+                    <table id="pricingTable">
+                        <tr>
+                            <th>Pricing Method</th>
+                            <th>Per Event</th>
+                            <th>Monthly (4 month season)</th>
+                            <th>Seasonal Total</th>
+                        </tr>
+                    </table>
+
+                    <canvas id="priceChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const drivewaySize = document.getElementById('drivewaySize');
+        const snowfallAmount = document.getElementById('snowfallAmount');
+        const eventsPerSeason = document.getElementById('eventsPerSeason');
+        const pricingTable = document.getElementById('pricingTable');
+        const ctx = document.getElementById('priceChart').getContext('2d');
+
+        let chart;
+
+        function updateValues() {
+            document.getElementById('drivewaySizeValue').textContent = drivewaySize.value;
+            document.getElementById('snowfallAmountValue').textContent = snowfallAmount.value;
+            document.getElementById('eventsPerSeasonValue').textContent = eventsPerSeason.value;
+        }
+
+        function calculatePrices() {
+            const size = parseInt(drivewaySize.value);
+            const snowfall = parseFloat(snowfallAmount.value);
+            const events = parseInt(eventsPerSeason.value);
+
+            // Per-plow pricing
+            const perPlowBase = 50 + (size - 500) / 100 * 5;
+            const perPlowSnowMultiplier = 1 + (snowfall - 4) * 0.1;
+            const perPlow = perPlowBase * perPlowSnowMultiplier;
+
+            // Inch-based pricing
+            const inchBased = 20 + snowfall * 5;
+
+            // Seasonal contract
+            const seasonal = 500 + (size - 500) / 100 * 20 + events * 15;
+
+            return {
+                perPlow: perPlow,
+                inchBased: inchBased,
+                seasonal: seasonal,
+            };
+        }
+
+        function updateTable(prices) {
+            const events = parseInt(eventsPerSeason.value);
+            pricingTable.innerHTML = `
+                <tr>
+                    <th>Pricing Method</th>
+                    <th>Per Event</th>
+                    <th>Monthly (4 month season)</th>
+                    <th>Seasonal Total</th>
+                </tr>
+                <tr>
+                    <td>Per-plow</td>
+                    <td>$${prices.perPlow.toFixed(2)}</td>
+                    <td>$${((prices.perPlow * events) / 4).toFixed(2)}</td>
+                    <td>$${(prices.perPlow * events).toFixed(2)}</td>
+                </tr>
+                <tr>
+                    <td>Inch-based</td>
+                    <td>$${prices.inchBased.toFixed(2)}</td>
+                    <td>$${((prices.inchBased * events) / 4).toFixed(2)}</td>
+                    <td>$${(prices.inchBased * events).toFixed(2)}</td>
+                </tr>
+                <tr>
+                    <td>Seasonal Contract</td>
+                    <td>N/A</td>
+                    <td>$${(prices.seasonal / 4).toFixed(2)}</td>
+                    <td>$${prices.seasonal.toFixed(2)}</td>
+                </tr>
+            `;
+        }
+
+        function updateChart(prices) {
+            const events = parseInt(eventsPerSeason.value);
+            const data = {
+                labels: ['Per-plow', 'Inch-based', 'Seasonal Contract'],
+                datasets: [{
+                    label: 'Seasonal Total',
+                    data: [
+                        prices.perPlow * events,
+                        prices.inchBased * events,
+                        prices.seasonal
+                    ],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            if (chart) {
+                chart.data = data;
+                chart.update();
+            } else {
+                chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Total Cost ($)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function updateDemo() {
+            updateValues();
+            const prices = calculatePrices();
+            updateTable(prices);
+            updateChart(prices);
+        }
+
+        drivewaySize.addEventListener('input', updateDemo);
+        snowfallAmount.addEventListener('input', updateDemo);
+        eventsPerSeason.addEventListener('input', updateDemo);
+
+        updateDemo();
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 300);
+    </script>
+</body></html>

@@ -1,0 +1,202 @@
+<html><head><base href="https://plowing.lawncarenerd.com/dashboard">
+    <title>Snow Plowing Dashboard | LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f3ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 25 L75 25 L75 75 L25 75 Z' stroke='%23b3d9ff' fill='none' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Architects Daughter', cursive;
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .dashboard-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .weather-forecast {
+            text-align: center;
+        }
+
+        #snow-map {
+            width: 100%;
+            height: 300px;
+            background-color: #f0f8ff;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+        }
+
+        .job-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .job-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .status-pending { background-color: #f39c12; }
+        .status-in-progress { background-color: #3498db; }
+        .status-completed { background-color: #2ecc71; }
+
+        #revenue-chart {
+            width: 100%;
+            height: 200px;
+        }
+
+        .quick-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .quick-actions button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .quick-actions button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❄️ Snow Plowing Dashboard ❄️</h1>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card weather-forecast">
+                <h2>Weather Forecast</h2>
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="#f0f8ff" stroke="#3498db" stroke-width="3"/>
+                    <path d="M50 10 L50 20 M90 50 L80 50 M50 90 L50 80 M10 50 L20 50" stroke="#3498db" stroke-width="3"/>
+                    <path d="M30 30 L37 37 M70 30 L63 37 M70 70 L63 63 M30 70 L37 63" stroke="#3498db" stroke-width="2"/>
+                    <text x="50" y="55" font-family="Arial" font-size="20" text-anchor="middle" fill="#3498db">32°F</text>
+                </svg>
+                <p>Heavy snowfall expected tonight</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Snow Coverage Map</h2>
+                <div id="snow-map"></div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Upcoming Jobs</h2>
+                <ul class="job-list">
+                    <li><span class="status-indicator status-pending"></span> 123 Main St - Scheduled for 7 AM</li>
+                    <li><span class="status-indicator status-in-progress"></span> 456 Elm St - In progress</li>
+                    <li><span class="status-indicator status-completed"></span> 789 Oak St - Completed at 6:30 AM</li>
+                </ul>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Revenue Overview</h2>
+                <canvas id="revenue-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button onclick="alert('Dispatching crew to next job...')">Dispatch Crew</button>
+            <button onclick="alert('Generating invoice...')">Generate Invoice</button>
+            <button onclick="alert('Checking inventory...')">Check Inventory</button>
+        </div>
+    </div>
+
+    <script>
+        // Snow Coverage Map
+        const snowMap = document.getElementById('snow-map');
+        const ctx = snowMap.getContext('2d');
+        ctx.fillStyle = '#f0f8ff';
+        ctx.fillRect(0, 0, snowMap.width, snowMap.height);
+
+        for (let i = 0; i < 1000; i++) {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.beginPath();
+            ctx.arc(Math.random() * snowMap.width, Math.random() * snowMap.height, Math.random() * 2, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Revenue Chart
+        const revenueChart = new Chart(document.getElementById('revenue-chart'), {
+            type: 'line',
+            data: {
+                labels: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+                datasets: [{
+                    label: 'Revenue',
+                    data: [5000, 8000, 12000, 10000, 7000],
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return '$' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body></html>

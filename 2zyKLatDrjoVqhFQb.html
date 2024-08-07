@@ -1,0 +1,241 @@
+<html><head><base href="https://plowing.lawncarenerd.com/status">
+    <title>Plow Status | LawnTech Web Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f3ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 25 L75 25 L75 75 L25 75 Z' stroke='%23b3d9ff' fill='none' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Architects Daughter', cursive;
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .status-box {
+            border: 3px solid #3498db;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .status-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .active {
+            background-color: #2ecc71;
+            animation: pulse 2s infinite;
+        }
+
+        .inactive {
+            background-color: #e74c3c;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+            }
+        }
+
+        .plow-map {
+            width: 100%;
+            height: 400px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .weather-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .weather-card {
+            text-align: center;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .snow-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1em;
+            top: -20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❄️ Plow Status Dashboard ❄️</h1>
+            <p>Real-time updates on our snow plowing operations</p>
+        </header>
+
+        <div class="status-box">
+            <h2>Current Plow Status</h2>
+            <div class="status-indicator">
+                <div id="statusIcon" class="status-icon"></div>
+                <span id="statusText"></span>
+            </div>
+            <p id="lastUpdated"></p>
+
+            <h3>Active Plow Locations</h3>
+            <div id="map" class="plow-map"></div>
+
+            <div class="weather-info">
+                <div class="weather-card">
+                    <h3>Current Temperature</h3>
+                    <p id="temperature"></p>
+                </div>
+                <div class="weather-card">
+                    <h3>Snowfall</h3>
+                    <p id="snowfall"></p>
+                </div>
+                <div class="weather-card">
+                    <h3>Wind Speed</h3>
+                    <p id="windSpeed"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="snow-animation" id="snowContainer"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script>
+        // Simulated data - replace with real API calls in a production environment
+        const plowStatus = {
+            isActive: true,
+            lastUpdated: new Date().toLocaleString(),
+            plowLocations: [
+                {lat: 40.7128, lng: -74.0060},
+                {lat: 40.7282, lng: -73.9942},
+                {lat: 40.7589, lng: -73.9851},
+            ],
+            weather: {
+                temperature: -2,
+                snowfall: 4,
+                windSpeed: 15
+            }
+        };
+
+        function updateStatus() {
+            const statusIcon = document.getElementById('statusIcon');
+            const statusText = document.getElementById('statusText');
+            const lastUpdated = document.getElementById('lastUpdated');
+
+            statusIcon.className = plowStatus.isActive ? 'status-icon active' : 'status-icon inactive';
+            statusText.textContent = plowStatus.isActive ? 'Plows Active' : 'Plows Inactive';
+            lastUpdated.textContent = `Last Updated: ${plowStatus.lastUpdated}`;
+
+            document.getElementById('temperature').textContent = `${plowStatus.weather.temperature}°C`;
+            document.getElementById('snowfall').textContent = `${plowStatus.weather.snowfall} inches`;
+            document.getElementById('windSpeed').textContent = `${plowStatus.weather.windSpeed} mph`;
+        }
+
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: plowStatus.plowLocations[0]
+            });
+
+            plowStatus.plowLocations.forEach(location => {
+                new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: {
+                        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                        scale: 5,
+                        fillColor: "#3498db",
+                        fillOpacity: 1,
+                        strokeWeight: 2,
+                        rotation: 45
+                    }
+                });
+            });
+        }
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+
+            document.getElementById('snowContainer').appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        window.onload = function() {
+            updateStatus();
+            initMap();
+            setInterval(createSnowflake, 100);
+        };
+    </script>
+</body></html>

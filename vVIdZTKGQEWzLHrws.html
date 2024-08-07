@@ -1,0 +1,199 @@
+<html><head><base href="https://winter.lawncarenerd.com">
+    <title>LawnTech Web Solutions - Winter Lawn Care Tips</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+        body {
+            font-family: 'Architects Daughter', cursive;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M25 50 L75 50 M50 25 L50 75' stroke='%23b0c4de' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-size: 20px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #4682b4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            margin-bottom: 40px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #4682b4;
+            text-decoration: none;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #4682b4;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .winter-box {
+            border: 3px solid #4682b4;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .winter-box::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid #b0c4de;
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4682b4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #5f9ea0;
+            transform: scale(1.05);
+        }
+
+        #snowflake {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: top 5s linear, opacity 5s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LawnTech Web Solutions</h1>
+            <p>Winter Lawn Care Tips: Keeping Your Digital Presence Evergreen</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#winter-care">Winter Care</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="winter-box" id="winter-care">
+            <h2>❄️ Winter Lawn Care for Your Website</h2>
+            <p>Just like your lawn needs special care during the winter months, your website needs attention too! Let's keep your digital presence thriving all year round.</p>
+        </div>
+
+        <div class="winter-box" id="services">
+            <h2>🌨️ Our Winter Services</h2>
+            <ul>
+                <li>Seasonal Content Updates</li>
+                <li>Winter-themed Design Refreshes</li>
+                <li>Holiday Promotion Integration</li>
+                <li>End-of-Year SEO Tune-ups</li>
+                <li>Website "Winterization" Check</li>
+            </ul>
+        </div>
+
+        <div class="winter-box" id="tips">
+            <h2>☃️ Winter Web Tips</h2>
+            <ol>
+                <li>Update your content to reflect winter lawn care services</li>
+                <li>Showcase snow removal services if applicable</li>
+                <li>Create a winter preparation checklist for customers</li>
+                <li>Share tips for protecting lawns from frost and snow damage</li>
+                <li>Highlight indoor or off-season services you might offer</li>
+            </ol>
+        </div>
+
+        <div class="winter-box" id="contact">
+            <h2>📞 Let's Brave the Digital Winter Together!</h2>
+            <p>Ready to keep your lawn care business website flourishing even in the coldest months? Let's chat about how we can winterproof your online presence!</p>
+            <a href="mailto:jake@lawntechwebsolutions.com" class="cta-button">Get Winter-Ready</a>
+        </div>
+    </div>
+
+    <svg id="snowflake" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 2 L25 48 M2 25 L48 25 M10 10 L40 40 M10 40 L40 10" stroke="#4682b4" stroke-width="2" fill="none"/>
+        <circle cx="25" cy="25" r="3" fill="#4682b4"/>
+    </svg>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const snowflake = document.getElementById('snowflake');
+            
+            function animateSnowflake() {
+                snowflake.style.top = '120%';
+                snowflake.style.opacity = '1';
+                setTimeout(() => {
+                    snowflake.style.transition = 'none';
+                    snowflake.style.top = '-50px';
+                    snowflake.style.opacity = '0';
+                    setTimeout(() => {
+                        snowflake.style.transition = 'top 5s linear, opacity 5s linear';
+                        animateSnowflake();
+                    }, 50);
+                }, 5000);
+            }
+
+            animateSnowflake();
+        });
+    </script>
+</body></html>
