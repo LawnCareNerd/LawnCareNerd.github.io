@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Page - LawnCareNerd.com</title>
+    <title>Dev Log - LawnCareNerd.com</title>
     
-    <!-- Import VT323 Font -->
+    <!-- Import VT323 and Courier Prime Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
         
         body {
-            font-family: 'VT323', monospace;
+            font-family: 'Courier Prime', monospace;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -34,25 +35,29 @@
         }
 
         h1 {
+            font-family: 'VT323', monospace;
             color: #27ae60;
             text-align: center;
             margin-bottom: 20px;
             font-size: 2.5em;
         }
 
-        p {
+        h2 {
+            font-family: 'VT323', monospace;
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        p, li {
+            font-family: 'Courier Prime', monospace;
             font-size: 1.2em;
-            text-align: center;
+            margin-bottom: 15px;
         }
 
         .directory {
             margin-top: 30px;
-        }
-
-        .directory h2 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #34495e;
         }
 
         .directory ul {
@@ -80,8 +85,18 @@
 
 <body>
     <div class="container">
-        <h1>Dev Page - LawnCareNerd.com</h1>
-        <p>Welcome to the development page for LawnCareNerd.com. Below is a directory of available resources and sections:</p>
+        <h1>Dev Log - LawnCareNerd.com</h1>
+        <p>Welcome to the development log for LawnCareNerd.com. Here you'll find updates and notes on the ongoing development of the site:</p>
+
+        <div class="log-entry">
+            <h2>August 7, 2024</h2>
+            <p>Started working on the dev log page. Decided to use VT323 for headers and Courier Prime for the main text to give the page a unique, hand-crafted feel. The directory is also being expanded to include more sections as the site grows.</p>
+        </div>
+
+        <div class="log-entry">
+            <h2>July 30, 2024</h2>
+            <p>Began transitioning content from the old LawnCareNerd.github.io site to the new domain at LawnCareNerd.com. Focused on establishing a consistent style and integrating new features that cater to lawn care businesses.</p>
+        </div>
 
         <div class="directory">
             <h2>Directory</h2>
