@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#modern%20but%20simple">
+<html>
+
+<head>
     <title>LawnCare Co. - Modern but Simple Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -31,7 +33,9 @@
             padding: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 700;
             margin-bottom: 1rem;
         }
@@ -70,7 +74,7 @@
             color: white;
             font-size: 1rem;
             font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -175,26 +179,31 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Modern but Simple Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">#4CAF50</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">#8BC34A</div>
             <div class="color-swatch" style="background-color: var(--accent-color);">#FFC107</div>
             <div class="color-swatch" style="background-color: var(--text-color);">#333333</div>
-            <div class="color-swatch" style="background-color: var(--light-gray); color: var(--text-color);">#F5F5F5</div>
+            <div class="color-swatch" style="background-color: var(--light-gray); color: var(--text-color);">#F5F5F5
+            </div>
         </div>
 
         <h2>Typography</h2>
         <div class="typography">
             <div class="font-example">
                 <h3>Roboto (Main Font)</h3>
-                <p style="font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww
+                    Xx Yy Zz</p>
+                <p style="font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv
+                    Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww
+                    Xx Yy Zz</p>
                 <p>1234567890!@#$%^&*()</p>
             </div>
         </div>
@@ -204,10 +213,13 @@
 
         <h2>Logo</h2>
         <svg id="modern-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)"/>
-            <text x="10" y="65" font-family="Roboto, sans-serif" font-size="48" font-weight="700" fill="var(--primary-color)">LawnCare</text>
-            <text x="10" y="90" font-family="Roboto, sans-serif" font-size="24" font-weight="300" fill="var(--secondary-color)">Modern Simplicity</text>
-            <path d="M250,20 L270,50 L290,20 M260,30 L280,30" stroke="var(--accent-color)" stroke-width="4" fill="none"/>
+            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)" />
+            <text x="10" y="65" font-family="Roboto, sans-serif" font-size="48" font-weight="700"
+                fill="var(--primary-color)">LawnCare</text>
+            <text x="10" y="90" font-family="Roboto, sans-serif" font-size="24" font-weight="300"
+                fill="var(--secondary-color)">Modern Simplicity</text>
+            <path d="M250,20 L270,50 L290,20 M260,30 L280,30" stroke="var(--accent-color)" stroke-width="4"
+                fill="none" />
         </svg>
 
         <h2>Design Principles</h2>
@@ -252,17 +264,17 @@
     <script>
         // Add hover effect to color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('mouseenter', function() {
+            swatch.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.05)';
             });
-            swatch.addEventListener('mouseleave', function() {
+            swatch.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1)';
             });
         });
 
         // Add click-to-copy functionality for color codes
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.innerHTML;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard.`);
@@ -271,11 +283,11 @@
 
         // Add hover effect to modern elements
         document.querySelectorAll('.modern-element').forEach(element => {
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-5px)';
                 this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(0)';
                 this.style.boxShadow = 'none';
             });
@@ -309,7 +321,7 @@
             const quoteText = document.getElementById('quote-text');
             const quoteAuthor = document.getElementById('quote-author');
             const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            
+
             quoteText.textContent = `"${randomQuote.text}"`;
             quoteAuthor.textContent = `- ${randomQuote.author}`;
         }
@@ -322,13 +334,14 @@
 
         // Add a subtle animation to the logo
         const logo = document.getElementById('modern-logo');
-        logo.addEventListener('mouseenter', function() {
+        logo.addEventListener('mouseenter', function () {
             this.style.transform = 'scale(1.05)';
             this.style.transition = 'transform 0.3s ease';
         });
-        logo.addEventListener('mouseleave', function() {
+        logo.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
     </script>
 </body>
+
 </html>

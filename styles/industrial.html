@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#industrial%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. - Industrial Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono&display=swap');
@@ -35,7 +37,9 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 700;
             margin-bottom: 1rem;
             text-transform: uppercase;
@@ -222,39 +226,55 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes rotate-reverse {
-            from { transform: rotate(360deg); }
-            to { transform: rotate(0deg); }
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Industrial Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">#2C3E50</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">#E74C3C</div>
             <div class="color-swatch" style="background-color: var(--accent-color);">#F39C12</div>
-            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#ECF0F1</div>
-            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">#34495E</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">
+                #ECF0F1</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">
+                #34495E</div>
         </div>
 
         <h2>Typography</h2>
         <div class="typography">
             <div class="font-example">
                 <h3>Roboto Condensed (Headings & Body)</h3>
-                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg
+                    Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh
+                    Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
             <div class="font-example">
                 <h3>Roboto Mono (Code & Technical Text)</h3>
-                <p style="font-family: 'Roboto Mono', monospace;">Monospace: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Mono', monospace;">Monospace: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn
+                    Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
         </div>
 
@@ -264,10 +284,13 @@
         <h2>Logo</h2>
         <svg id="industrial-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
             <rect width="300" height="100" fill="#ECF0F1" />
-            <text x="10" y="60" font-family="Roboto Condensed, sans-serif" font-size="48" font-weight="700" fill="#2C3E50">LAWN</text>
-            <text x="140" y="60" font-family="Roboto Condensed, sans-serif" font-size="48" font-weight="700" fill="#E74C3C">TECH</text>
+            <text x="10" y="60" font-family="Roboto Condensed, sans-serif" font-size="48" font-weight="700"
+                fill="#2C3E50">LAWN</text>
+            <text x="140" y="60" font-family="Roboto Condensed, sans-serif" font-size="48" font-weight="700"
+                fill="#E74C3C">TECH</text>
             <path d="M10 70 Q 150 90, 290 70" stroke="#F39C12" stroke-width="4" fill="none" />
-            <text x="70" y="90" font-family="Roboto Mono, monospace" font-size="14" fill="#34495E">Precision. Efficiency. Growth.</text>
+            <text x="70" y="90" font-family="Roboto Mono, monospace" font-size="14" fill="#34495E">Precision.
+                Efficiency. Growth.</text>
         </svg>
 
         <h2>Design Principles</h2>
@@ -318,7 +341,7 @@
     <script>
         // Add click-to-copy for color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.textContent;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard!`);
@@ -327,11 +350,11 @@
 
         // Add hover effect to industrial elements
         document.querySelectorAll('.industrial-element').forEach(element => {
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-10px)';
                 this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(-5px)';
                 this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
             });
@@ -367,4 +390,5 @@
         }, 50);
     </script>
 </body>
+
 </html>

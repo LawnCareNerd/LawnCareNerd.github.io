@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#heavy%20industrial/construction%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. - Heavy Industrial/Construction Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Teko:wght@500;700&display=swap');
@@ -36,7 +38,9 @@
             border: 2px solid var(--primary-color);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Teko', sans-serif;
             font-weight: 700;
             margin-bottom: 1rem;
@@ -239,8 +243,13 @@
         }
 
         @keyframes hook-move {
-            0% { transform: translateX(-50%) translateY(0); }
-            100% { transform: translateX(-50%) translateY(100px); }
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(100px);
+            }
         }
 
         #progress-bar {
@@ -261,48 +270,58 @@
         }
 
         .hazard-stripes {
-            background: repeating-linear-gradient(
-                45deg,
-                var(--primary-color),
-                var(--primary-color) 10px,
-                var(--secondary-color) 10px,
-                var(--secondary-color) 20px
-            );
+            background: repeating-linear-gradient(45deg,
+                    var(--primary-color),
+                    var(--primary-color) 10px,
+                    var(--secondary-color) 10px,
+                    var(--secondary-color) 20px);
             height: 30px;
             margin: 2rem 0;
             animation: move-stripes 30s linear infinite;
         }
 
         @keyframes move-stripes {
-            0% { background-position: 0 0; }
-            100% { background-position: 50px 50px; }
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 50px 50px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Heavy Industrial/Construction Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">#FFC300</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">#DAA520</div>
             <div class="color-swatch" style="background-color: var(--accent-color);">#FF5733</div>
-            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#2C3E50</div>
-            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">#ECF0F1</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">
+                #2C3E50</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">
+                #ECF0F1</div>
         </div>
 
         <h2>Typography</h2>
         <div class="typography">
             <div class="font-example">
                 <h3>Teko (Headings)</h3>
-                <p style="font-family: 'Teko', sans-serif; font-weight: 500; font-size: 24px;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Teko', sans-serif; font-weight: 700; font-size: 24px;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Teko', sans-serif; font-weight: 500; font-size: 24px;">Regular: Aa Bb Cc Dd Ee
+                    Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Teko', sans-serif; font-weight: 700; font-size: 24px;">Bold: Aa Bb Cc Dd Ee Ff
+                    Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
             <div class="font-example">
                 <h3>Roboto Condensed (Body Text)</h3>
-                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg
+                    Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh
+                    Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
         </div>
 
@@ -313,8 +332,10 @@
         <svg id="construction-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
             <rect width="300" height="100" fill="#2C3E50" />
             <polygon points="20,80 50,20 80,80" fill="#FFC300" />
-            <text x="90" y="70" font-family="Teko, sans-serif" font-size="48" font-weight="700" fill="#ECF0F1">LAWN</text>
-            <text x="200" y="70" font-family="Teko, sans-serif" font-size="48" font-weight="700" fill="#FF5733">FORCE</text>
+            <text x="90" y="70" font-family="Teko, sans-serif" font-size="48" font-weight="700"
+                fill="#ECF0F1">LAWN</text>
+            <text x="200" y="70" font-family="Teko, sans-serif" font-size="48" font-weight="700"
+                fill="#FF5733">FORCE</text>
             <line x1="20" y1="85" x2="280" y2="85" stroke="#DAA520" stroke-width="4" stroke-linecap="round" />
         </svg>
 
@@ -372,7 +393,7 @@
     <script>
         // Add click-to-copy for color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.textContent;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard!`);
@@ -381,11 +402,11 @@
 
         // Add hover effect to construction elements
         document.querySelectorAll('.construction-element').forEach(element => {
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-10px)';
                 this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(-5px)';
                 this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
             });
@@ -416,4 +437,5 @@
         }, 50);
     </script>
 </body>
+
 </html>

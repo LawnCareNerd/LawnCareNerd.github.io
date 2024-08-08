@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#retro%20theme">
+<html>
+
+<head>
     <title>LawnCare Co. Retro Theme Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=VT323&display=swap');
@@ -14,7 +16,9 @@
             background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e0c9a6' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'VT323', monospace;
             color: #d35400;
             text-shadow: 2px 2px 0px #f39c12;
@@ -36,7 +40,7 @@
             justify-content: center;
             color: white;
             font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
             border: 4px solid #333;
             box-shadow: 4px 4px 0px #333;
             transition: all 0.3s;
@@ -85,8 +89,16 @@
         }
 
         @keyframes blink {
-            0%, 49% { opacity: 1; }
-            50%, 100% { opacity: 0; }
+
+            0%,
+            49% {
+                opacity: 1;
+            }
+
+            50%,
+            100% {
+                opacity: 0;
+            }
         }
 
         .crt-effect {
@@ -95,74 +107,95 @@
 
         @keyframes textShadow {
             0% {
-                text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5), -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             5% {
-                text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5), -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             10% {
-                text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5), -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             15% {
-                text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5), -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             20% {
-                text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5), -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             25% {
-                text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5), -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             30% {
-                text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5), -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             35% {
-                text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.5), -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             40% {
-                text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.5), -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             45% {
-                text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.5), -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             50% {
-                text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5), -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             55% {
-                text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5), -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             60% {
-                text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.5), -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             65% {
-                text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5), -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             70% {
-                text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5), -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             75% {
-                text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5), -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             80% {
-                text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5), -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             85% {
-                text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5), -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             90% {
-                text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.5), -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             95% {
-                text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5), -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
+
             100% {
-                text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+                text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5), -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
             }
         }
     </style>
 </head>
+
 <body>
     <h1 class="crt-effect">LawnCare Co. Retro Theme</h1>
-    
+
     <h2>Color Palette</h2>
     <div class="color-palette">
         <div class="color-swatch" style="background-color: #e74c3c;">#e74c3c</div>
@@ -175,9 +208,10 @@
     <h2>Typography</h2>
     <div class="font-example">
         <h3>Headings: 'VT323', monospace</h3>
-        <p style="font-family: 'VT323', monospace;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+        <p style="font-family: 'VT323', monospace;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww
+            Xx Yy Zz</p>
         <p style="font-family: 'VT323', monospace;">1234567890!@#$%^&*()</p>
-        
+
         <h3>Body: 'Roboto Slab', serif</h3>
         <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
         <p>1234567890!@#$%^&*()</p>
@@ -188,12 +222,12 @@
 
     <h2>Logo</h2>
     <svg id="retro-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="10" width="280" height="130" fill="#f5e6d3" stroke="#333" stroke-width="5"/>
+        <rect x="10" y="10" width="280" height="130" fill="#f5e6d3" stroke="#333" stroke-width="5" />
         <text x="30" y="60" font-family="VT323, monospace" font-size="36" fill="#e74c3c">LawnCare</text>
         <text x="90" y="100" font-family="VT323, monospace" font-size="36" fill="#e74c3c">Co.</text>
-        <path d="M20 120 Q150 80 280 120" stroke="#27ae60" stroke-width="5" fill="none"/>
-        <circle cx="40" cy="130" r="8" fill="#f39c12"/>
-        <circle cx="260" cy="130" r="8" fill="#f39c12"/>
+        <path d="M20 120 Q150 80 280 120" stroke="#27ae60" stroke-width="5" fill="none" />
+        <circle cx="40" cy="130" r="8" fill="#f39c12" />
+        <circle cx="260" cy="130" r="8" fill="#f39c12" />
     </svg>
 
     <h2>Design Principles</h2>
@@ -207,7 +241,7 @@
 
     <script>
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 navigator.clipboard.writeText(this.textContent);
                 alert('Color code copied to clipboard!');
             });
@@ -229,10 +263,10 @@
         });
 
         // Retro hover effect for buttons
-        document.querySelector('.button').addEventListener('mouseover', function() {
+        document.querySelector('.button').addEventListener('mouseover', function () {
             this.style.backgroundColor = '#f39c12';
         });
-        document.querySelector('.button').addEventListener('mouseout', function() {
+        document.querySelector('.button').addEventListener('mouseout', function () {
             this.style.backgroundColor = '#e74c3c';
         });
 
@@ -252,4 +286,5 @@
         document.addEventListener('click', playRetroClick);
     </script>
 </body>
+
 </html>

@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#ingredient%20list%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. - Ingredient List Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Merriweather:wght@400;700&display=swap');
@@ -34,7 +36,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Merriweather', serif;
             margin-bottom: 1rem;
             color: var(--accent-color);
@@ -193,10 +197,11 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Ingredient List Theme</h1>
-        
+
         <svg id="ingredient-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <rect width="100" height="100" fill="var(--background-color)" />
             <path d="M20 20 H80 V80 H20 Z" fill="none" stroke="var(--accent-color)" stroke-width="4" />
@@ -221,12 +226,15 @@
         <div class="typography">
             <div class="font-example">
                 <h3>Merriweather (Headings)</h3>
-                <p style="font-family: 'Merriweather', serif; font-size: 18px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Merriweather', serif; font-size: 18px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm
+                    Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
             <div class="font-example">
                 <h3>Roboto Mono (Body Text)</h3>
-                <p style="font-family: 'Roboto Mono', monospace; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Roboto Mono', monospace; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Mono', monospace; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii
+                    Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Mono', monospace; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj
+                    Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
         </div>
 
@@ -276,7 +284,7 @@
     <script>
         // Add click-to-copy functionality for color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorName = this.textContent;
                 const colorValue = getComputedStyle(this).backgroundColor;
                 navigator.clipboard.writeText(colorValue);
@@ -286,29 +294,30 @@
 
         // Add hover effect to ingredient list items
         document.querySelectorAll('.ingredient-list li').forEach(item => {
-            item.addEventListener('mouseenter', function() {
+            item.addEventListener('mouseenter', function () {
                 this.style.backgroundColor = 'var(--highlight-color)';
                 this.style.transition = 'background-color 0.3s ease';
             });
-            item.addEventListener('mouseleave', function() {
+            item.addEventListener('mouseleave', function () {
                 this.style.backgroundColor = 'transparent';
             });
         });
 
         // Add animation to the ingredient icon
         const icon = document.getElementById('ingredient-icon');
-        icon.addEventListener('mouseenter', function() {
+        icon.addEventListener('mouseenter', function () {
             this.style.transform = 'rotate(5deg) scale(1.1)';
             this.style.transition = 'transform 0.3s ease';
         });
-        icon.addEventListener('mouseleave', function() {
+        icon.addEventListener('mouseleave', function () {
             this.style.transform = 'rotate(0) scale(1)';
         });
 
         // Simulate opening a modal with full ingredients list
-        document.querySelector('.button').addEventListener('click', function() {
+        document.querySelector('.button').addEventListener('click', function () {
             alert('This would open a modal or new page with a full list of ingredients and detailed information.');
         });
     </script>
 </body>
+
 </html>

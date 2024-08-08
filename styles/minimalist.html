@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#minimalist%20theme">
+<html>
+
+<head>
     <title>LawnCare Co. Minimalist Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -26,7 +28,9 @@
             padding: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 300;
         }
 
@@ -110,24 +114,29 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Minimalist Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">#4A4A4A</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">#9BCC50</div>
             <div class="color-swatch" style="background-color: var(--text-color);">#333333</div>
-            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">#E0E0E0</div>
-            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color); border: 1px solid var(--accent-color);">#FFFFFF</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">#E0E0E0
+            </div>
+            <div class="color-swatch"
+                style="background-color: var(--background-color); color: var(--text-color); border: 1px solid var(--accent-color);">
+                #FFFFFF</div>
         </div>
 
         <h2>Typography</h2>
         <div class="typography">
             <div class="font-example">
                 <h3>Roboto Light (300)</h3>
-                <p style="font-weight: 300;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 300;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
+                    Zz</p>
                 <p style="font-weight: 300;">1234567890!@#$%^&*()</p>
             </div>
             <div class="font-example">
@@ -137,7 +146,8 @@
             </div>
             <div class="font-example">
                 <h3>Roboto Bold (700)</h3>
-                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
+                    Zz</p>
                 <p style="font-weight: 700;">1234567890!@#$%^&*()</p>
             </div>
         </div>
@@ -147,10 +157,12 @@
 
         <h2>Logo</h2>
         <svg id="minimalist-logo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="200" height="100" fill="var(--background-color)"/>
-            <text x="10" y="50" font-family="Roboto, sans-serif" font-size="24" font-weight="300" fill="var(--primary-color)">LawnCare</text>
-            <text x="10" y="80" font-family="Roboto, sans-serif" font-size="24" font-weight="300" fill="var(--secondary-color)">Co.</text>
-            <line x1="10" y1="90" x2="190" y2="90" stroke="var(--accent-color)" stroke-width="1"/>
+            <rect x="0" y="0" width="200" height="100" fill="var(--background-color)" />
+            <text x="10" y="50" font-family="Roboto, sans-serif" font-size="24" font-weight="300"
+                fill="var(--primary-color)">LawnCare</text>
+            <text x="10" y="80" font-family="Roboto, sans-serif" font-size="24" font-weight="300"
+                fill="var(--secondary-color)">Co.</text>
+            <line x1="10" y1="90" x2="190" y2="90" stroke="var(--accent-color)" stroke-width="1" />
         </svg>
 
         <h2>Design Principles</h2>
@@ -169,17 +181,17 @@
     <script>
         // Add hover effect to color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('mouseenter', function() {
+            swatch.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.05)';
             });
-            swatch.addEventListener('mouseleave', function() {
+            swatch.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1)';
             });
         });
 
         // Add click-to-copy functionality for color codes
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.innerHTML;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard!`);
@@ -188,25 +200,25 @@
 
         // Add subtle animation to the logo
         const logo = document.getElementById('minimalist-logo');
-        logo.addEventListener('mouseenter', function() {
+        logo.addEventListener('mouseenter', function () {
             this.style.transition = 'all 0.3s ease';
             this.style.transform = 'scale(1.05)';
         });
-        logo.addEventListener('mouseleave', function() {
+        logo.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
 
         // Add interactive effect to the button
         const button = document.querySelector('.button');
-        button.addEventListener('mouseenter', function() {
+        button.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-2px)';
         });
-        button.addEventListener('mouseleave', function() {
+        button.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0)';
         });
 
         // Add subtle parallax effect to headings
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollPosition = window.pageYOffset;
             document.querySelectorAll('h2').forEach((heading, index) => {
                 heading.style.transform = `translateY(${scrollPosition * 0.1 * (index + 1)}px)`;
@@ -214,4 +226,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#B%20O%20L%20D">
+<html>
+
+<head>
     <title>LawnCare Co. BOLD Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
@@ -26,7 +28,9 @@
             padding: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Bebas Neue', cursive;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -65,7 +69,7 @@
             color: white;
             font-weight: bold;
             font-size: 1.2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
             border: 5px solid var(--text-color);
             box-shadow: 5px 5px 0px var(--text-color);
             transition: all 0.3s ease;
@@ -141,9 +145,17 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         .animated {
@@ -151,30 +163,35 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. BOLD Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">Primary<br>#FF6B35</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">Secondary<br>#4CAF50</div>
             <div class="color-swatch" style="background-color: var(--accent-color);">Accent<br>#FFC300</div>
-            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">Text<br>#333333</div>
-            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">Background<br>#F5F5F5</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">
+                Text<br>#333333</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">
+                Background<br>#F5F5F5</div>
         </div>
 
         <h2>Typography</h2>
         <div class="typography">
             <div class="font-example">
                 <h3>Headings: 'Bebas Neue', cursive</h3>
-                <p style="font-family: 'Bebas Neue', cursive; font-size: 2rem;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Bebas Neue', cursive; font-size: 2rem;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm
+                    Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
                 <p style="font-family: 'Bebas Neue', cursive; font-size: 2rem;">1234567890!@#$%^&*()</p>
             </div>
             <div class="font-example">
                 <h3>Body: 'Roboto', sans-serif</h3>
                 <p>Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p><strong>Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</strong></p>
+                <p><strong>Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</strong>
+                </p>
                 <p>1234567890!@#$%^&*()</p>
             </div>
         </div>
@@ -184,10 +201,13 @@
 
         <h2>Logo</h2>
         <svg id="bold-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="280" height="130" fill="var(--background-color)" stroke="var(--text-color)" stroke-width="10"/>
-            <text x="30" y="80" font-family="Bebas Neue, cursive" font-size="48" fill="var(--primary-color)">LawnCare</text>
-            <text x="100" y="120" font-family="Bebas Neue, cursive" font-size="48" fill="var(--secondary-color)">Co.</text>
-            <path d="M20 130 Q150 70 280 130" stroke="var(--accent-color)" stroke-width="10" fill="none"/>
+            <rect x="10" y="10" width="280" height="130" fill="var(--background-color)" stroke="var(--text-color)"
+                stroke-width="10" />
+            <text x="30" y="80" font-family="Bebas Neue, cursive" font-size="48"
+                fill="var(--primary-color)">LawnCare</text>
+            <text x="100" y="120" font-family="Bebas Neue, cursive" font-size="48"
+                fill="var(--secondary-color)">Co.</text>
+            <path d="M20 130 Q150 70 280 130" stroke="var(--accent-color)" stroke-width="10" fill="none" />
         </svg>
 
         <h2>Design Principles</h2>
@@ -206,17 +226,17 @@
     <script>
         // Add hover effect to color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('mouseenter', function() {
+            swatch.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.1) rotate(5deg)';
             });
-            swatch.addEventListener('mouseleave', function() {
+            swatch.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1) rotate(0deg)';
             });
         });
 
         // Add click-to-copy functionality for color codes
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.innerHTML.split('<br>')[1];
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard!`);
@@ -229,20 +249,21 @@
 
         // Add interactive effect to the button
         const button = document.querySelector('.button');
-        button.addEventListener('mouseenter', function() {
+        button.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-5px) scale(1.1)';
             this.style.boxShadow = '8px 8px 0px var(--text-color)';
         });
-        button.addEventListener('mouseleave', function() {
+        button.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
             this.style.boxShadow = '5px 5px 0px var(--text-color)';
         });
 
         // Add subtle parallax effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollPosition = window.pageYOffset;
             document.body.style.backgroundPositionY = -scrollPosition * 0.5 + 'px';
         });
     </script>
 </body>
+
 </html>

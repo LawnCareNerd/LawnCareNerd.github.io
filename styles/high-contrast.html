@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#high%20contrast">
+<html>
+
+<head>
     <title>LawnCare Co. High Contrast Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -26,7 +28,9 @@
             padding: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 700;
         }
 
@@ -115,15 +119,19 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. High Contrast Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
-            <div class="color-swatch" style="background-color: var(--primary-color); color: var(--secondary-color);">#000000</div>
-            <div class="color-swatch" style="background-color: var(--secondary-color); color: var(--primary-color);">#FFFFFF</div>
-            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--primary-color);">#FFD700</div>
+            <div class="color-swatch" style="background-color: var(--primary-color); color: var(--secondary-color);">
+                #000000</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color); color: var(--primary-color);">
+                #FFFFFF</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--primary-color);">
+                #FFD700</div>
         </div>
 
         <h2>Typography</h2>
@@ -135,7 +143,8 @@
             </div>
             <div class="font-example">
                 <h3>Roboto Bold (700)</h3>
-                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
+                    Zz</p>
                 <p style="font-weight: 700;">1234567890!@#$%^&*()</p>
             </div>
         </div>
@@ -145,10 +154,12 @@
 
         <h2>Logo</h2>
         <svg id="high-contrast-logo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="200" height="100" fill="var(--primary-color)"/>
-            <text x="10" y="50" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="var(--accent-color)">LawnCare</text>
-            <text x="10" y="80" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="var(--secondary-color)">Co.</text>
-            <line x1="10" y1="90" x2="190" y2="90" stroke="var(--accent-color)" stroke-width="2"/>
+            <rect x="0" y="0" width="200" height="100" fill="var(--primary-color)" />
+            <text x="10" y="50" font-family="Roboto, sans-serif" font-size="24" font-weight="700"
+                fill="var(--accent-color)">LawnCare</text>
+            <text x="10" y="80" font-family="Roboto, sans-serif" font-size="24" font-weight="700"
+                fill="var(--secondary-color)">Co.</text>
+            <line x1="10" y1="90" x2="190" y2="90" stroke="var(--accent-color)" stroke-width="2" />
         </svg>
 
         <h2>Design Principles</h2>
@@ -168,11 +179,11 @@
     <script>
         // Add hover effect to color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('mouseenter', function() {
+            swatch.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.1)';
                 this.style.boxShadow = '0 0 10px var(--accent-color)';
             });
-            swatch.addEventListener('mouseleave', function() {
+            swatch.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1)';
                 this.style.boxShadow = 'none';
             });
@@ -180,7 +191,7 @@
 
         // Add click-to-copy functionality for color codes
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.innerHTML;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard!`);
@@ -189,38 +200,38 @@
 
         // Add subtle animation to the logo
         const logo = document.getElementById('high-contrast-logo');
-        logo.addEventListener('mouseenter', function() {
+        logo.addEventListener('mouseenter', function () {
             this.style.transition = 'all 0.3s ease';
             this.style.transform = 'scale(1.05)';
         });
-        logo.addEventListener('mouseleave', function() {
+        logo.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
 
         // Add interactive effect to the button
         const button = document.querySelector('.button');
-        button.addEventListener('mouseenter', function() {
+        button.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-2px)';
             this.style.boxShadow = '0 2px 5px rgba(255, 255, 255, 0.2)';
         });
-        button.addEventListener('mouseleave', function() {
+        button.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0)';
             this.style.boxShadow = 'none';
         });
 
         // Add focus outline for accessibility
         document.querySelectorAll('a, button').forEach(element => {
-            element.addEventListener('focus', function() {
+            element.addEventListener('focus', function () {
                 this.style.outline = '2px solid var(--accent-color)';
                 this.style.outlineOffset = '2px';
             });
-            element.addEventListener('blur', function() {
+            element.addEventListener('blur', function () {
                 this.style.outline = 'none';
             });
         });
 
         // Add subtle parallax effect to headings
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollPosition = window.pageYOffset;
             document.querySelectorAll('h2').forEach((heading, index) => {
                 heading.style.transform = `translateX(${scrollPosition * 0.1 * (index % 2 === 0 ? 1 : -1)}px)`;
@@ -228,4 +239,5 @@
         });
     </script>
 </body>
+
 </html>

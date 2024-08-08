@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#nature%20and%20wellness">
+<html>
+
+<head>
     <title>LawnCare Co. - Nature and Wellness Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
@@ -26,7 +28,9 @@
             padding: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Playfair Display', serif;
             color: var(--primary-color);
         }
@@ -61,7 +65,7 @@
             color: white;
             font-size: 1rem;
             font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
             border-radius: 50%;
             transition: all 0.3s ease;
         }
@@ -75,7 +79,7 @@
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .button {
@@ -88,13 +92,13 @@
             border: none;
             border-radius: 25px;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .button:hover {
             background-color: var(--secondary-color);
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         #nature-logo {
@@ -107,7 +111,7 @@
             background-color: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .design-principles ul {
@@ -138,15 +142,31 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         @keyframes sway {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(5deg); }
-            100% { transform: rotate(0deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
         }
 
         .floating-leaf {
@@ -165,24 +185,27 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Nature and Wellness Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">#4CAF50</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">#8BC34A</div>
             <div class="color-swatch" style="background-color: var(--accent-color);">#FFC107</div>
             <div class="color-swatch" style="background-color: var(--text-color);">#333333</div>
-            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#F5F5F5</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">
+                #F5F5F5</div>
         </div>
 
         <h2>Typography</h2>
         <div class="typography">
             <div class="font-example">
                 <h3>Playfair Display (Headings)</h3>
-                <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk
+                    Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
                 <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">1234567890!@#$%^&*()</p>
             </div>
             <div class="font-example">
@@ -197,10 +220,13 @@
 
         <h2>Logo</h2>
         <svg id="nature-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)" rx="10" ry="10"/>
-            <text x="20" y="60" font-family="Playfair Display, serif" font-size="48" font-weight="700" fill="var(--primary-color)">LawnCare</text>
-            <text x="20" y="85" font-family="Roboto, sans-serif" font-size="24" font-weight="300" fill="var(--secondary-color)">Wellness Co.</text>
-            <path d="M250,20 Q270,50 290,20 M260,25 Q270,40 280,25 M270,30 Q275,40 280,30" stroke="var(--accent-color)" stroke-width="3" fill="none"/>
+            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)" rx="10" ry="10" />
+            <text x="20" y="60" font-family="Playfair Display, serif" font-size="48" font-weight="700"
+                fill="var(--primary-color)">LawnCare</text>
+            <text x="20" y="85" font-family="Roboto, sans-serif" font-size="24" font-weight="300"
+                fill="var(--secondary-color)">Wellness Co.</text>
+            <path d="M250,20 Q270,50 290,20 M260,25 Q270,40 280,25 M270,30 Q275,40 280,30" stroke="var(--accent-color)"
+                stroke-width="3" fill="none" />
         </svg>
 
         <h2>Design Principles</h2>
@@ -229,17 +255,17 @@
     <script>
         // Add hover effect to color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('mouseenter', function() {
+            swatch.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.1) rotate(10deg)';
             });
-            swatch.addEventListener('mouseleave', function() {
+            swatch.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1) rotate(0deg)';
             });
         });
 
         // Add click-to-copy functionality for color codes
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.innerHTML;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard. Feel the tranquility!`);
@@ -273,10 +299,10 @@
 
         // Add a calming breath animation to the button
         const button = document.querySelector('.button');
-        button.addEventListener('mouseenter', function() {
+        button.addEventListener('mouseenter', function () {
             this.style.animation = 'breathe 4s infinite ease-in-out';
         });
-        button.addEventListener('mouseleave', function() {
+        button.addEventListener('mouseleave', function () {
             this.style.animation = 'none';
         });
 
@@ -291,7 +317,7 @@
         document.head.appendChild(style);
 
         // Add a nature sound on button click
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             const natureSounds = [
                 'https://example.com/bird-chirping.mp3',
@@ -311,10 +337,11 @@
             "The clearest way into the Universe is through a forest wilderness. - John Muir"
         ];
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const quoteElement = document.getElementById('mindfulness-quote');
             quoteElement.textContent = quotes[Math.floor(Math.random() * quotes.length)];
         });
     </script>
 </body>
+
 </html>

@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#summer%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. - Summer Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap');
@@ -35,7 +37,9 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Pacifico', cursive;
             color: var(--watermelon-pink);
             margin-bottom: 1rem;
@@ -187,8 +191,13 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.2); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
         }
 
         #beach-scene {
@@ -260,13 +269,13 @@
             background-color: #8B4513;
             transform: translateX(-50%);
         }
-
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Summer Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--sunny-yellow);">Sunny Yellow</div>
@@ -281,13 +290,17 @@
         <div class="typography">
             <div class="font-example">
                 <h3>Pacifico (Headings)</h3>
-                <p style="font-family: 'Pacifico', cursive; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Pacifico', cursive; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn
+                    Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
             <div class="font-example">
                 <h3>Roboto (Body Text)</h3>
-                <p style="font-family: 'Roboto', sans-serif; font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Roboto', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk
+                    Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj
+                    Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk
+                    Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
         </div>
 
@@ -299,8 +312,10 @@
             <rect width="300" height="150" fill="#87CEEB" />
             <circle cx="250" cy="50" r="30" fill="#FFD700" />
             <path d="M0,150 Q150,50 300,150" fill="#7CFC00" />
-            <text x="50%" y="50%" font-family="Pacifico, cursive" font-size="36" fill="#FF6B6B" text-anchor="middle" dominant-baseline="middle">LawnCare Co.</text>
-            <text x="50%" y="75%" font-family="Roboto, sans-serif" font-size="18" fill="#F0F8FF" text-anchor="middle" dominant-baseline="middle">Summer Fresh</text>
+            <text x="50%" y="50%" font-family="Pacifico, cursive" font-size="36" fill="#FF6B6B" text-anchor="middle"
+                dominant-baseline="middle">LawnCare Co.</text>
+            <text x="50%" y="75%" font-family="Roboto, sans-serif" font-size="18" fill="#F0F8FF" text-anchor="middle"
+                dominant-baseline="middle">Summer Fresh</text>
         </svg>
 
         <h2>Design Principles</h2>
@@ -352,7 +367,7 @@
     <script>
         // Add click-to-copy for color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorName = this.textContent;
                 const colorValue = getComputedStyle(this).backgroundColor;
                 navigator.clipboard.writeText(colorValue);
@@ -362,10 +377,10 @@
 
         // Add hover effect to summer elements
         document.querySelectorAll('.summer-element').forEach(element => {
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-10px) rotate(5deg)';
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(-5px) rotate(3deg)';
             });
         });
@@ -390,4 +405,5 @@
         animateBeach();
     </script>
 </body>
+
 </html>

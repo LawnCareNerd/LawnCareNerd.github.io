@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#winter%20%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. - Winter Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
@@ -35,7 +37,9 @@
             box-shadow: 0 0 20px rgba(119, 181, 254, 0.3);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Playfair Display', serif;
             color: var(--midnight-blue);
             margin-bottom: 1rem;
@@ -196,8 +200,13 @@
         }
 
         @keyframes snowfall {
-            0% { transform: translateY(-10px) rotate(0deg); }
-            100% { transform: translateY(310px) rotate(360deg); }
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(310px) rotate(360deg);
+            }
         }
 
         #winter-scene {
@@ -265,13 +274,13 @@
             bottom: 85px;
             left: 15px;
         }
-
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Winter Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--snow-white);">Snow White</div>
@@ -286,13 +295,17 @@
         <div class="typography">
             <div class="font-example">
                 <h3>Playfair Display (Headings)</h3>
-                <p style="font-family: 'Playfair Display', serif; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll
+                    Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
             <div class="font-example">
                 <h3>Montserrat (Body Text)</h3>
-                <p style="font-family: 'Montserrat', sans-serif; font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Montserrat', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj
+                    Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii
+                    Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj
+                    Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
         </div>
 
@@ -304,8 +317,10 @@
             <rect width="300" height="150" fill="#A5F2F3" />
             <circle cx="250" cy="50" r="30" fill="#FFFFFF" />
             <path d="M0,150 Q150,120 300,150" fill="#77B5FE" />
-            <text x="50%" y="50%" font-family="Playfair Display, serif" font-size="36" fill="#191970" text-anchor="middle" dominant-baseline="middle">LawnCare Co.</text>
-            <text x="50%" y="75%" font-family="Montserrat, sans-serif" font-size="18" fill="#708090" text-anchor="middle" dominant-baseline="middle">Winter Wonder</text>
+            <text x="50%" y="50%" font-family="Playfair Display, serif" font-size="36" fill="#191970"
+                text-anchor="middle" dominant-baseline="middle">LawnCare Co.</text>
+            <text x="50%" y="75%" font-family="Montserrat, sans-serif" font-size="18" fill="#708090"
+                text-anchor="middle" dominant-baseline="middle">Winter Wonder</text>
         </svg>
 
         <h2>Design Principles</h2>
@@ -362,7 +377,7 @@
     <script>
         // Add click-to-copy for color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorName = this.textContent;
                 const colorValue = getComputedStyle(this).backgroundColor;
                 navigator.clipboard.writeText(colorValue);
@@ -372,10 +387,10 @@
 
         // Add hover effect to winter elements
         document.querySelectorAll('.winter-element').forEach(element => {
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-10px) rotate(5deg)';
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(-5px) rotate(3deg)';
             });
         });
@@ -433,4 +448,5 @@
         }, 3000);
     </script>
 </body>
+
 </html>

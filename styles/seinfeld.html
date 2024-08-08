@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#seinfeld%20thmed">
+<html>
+
+<head>
     <title>LawnCare Co. - Seinfeld Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
@@ -26,7 +28,9 @@
             padding: 2rem;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 700;
             color: var(--primary-color);
         }
@@ -63,7 +67,7 @@
             color: white;
             font-size: 0.8rem;
             font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             transition: all 0.3s ease;
         }
@@ -77,7 +81,7 @@
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .button {
@@ -97,7 +101,7 @@
         .button:hover {
             background-color: var(--primary-color);
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         #seinfeld-logo {
@@ -110,7 +114,7 @@
             background-color: white;
             padding: 1rem;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .design-principles ul {
@@ -146,17 +150,20 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Seinfeld Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">#FF0000</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">#4A90E2</div>
-            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#F0F0F0</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">
+                #F0F0F0</div>
             <div class="color-swatch" style="background-color: var(--text-color);">#333333</div>
-            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">#FFD700</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">#FFD700
+            </div>
         </div>
 
         <h2>Typography</h2>
@@ -168,7 +175,8 @@
             </div>
             <div class="font-example">
                 <h3>Syne Bold (700)</h3>
-                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
+                    Zz</p>
                 <p style="font-weight: 700;">1234567890!@#$%^&*()</p>
             </div>
         </div>
@@ -178,10 +186,12 @@
 
         <h2>Logo</h2>
         <svg id="seinfeld-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)"/>
-            <text x="10" y="60" font-family="Syne, sans-serif" font-size="48" font-weight="700" fill="var(--primary-color)">LawnCare</text>
-            <text x="10" y="90" font-family="Syne, sans-serif" font-size="24" font-weight="400" fill="var(--secondary-color)">Co.</text>
-            <path d="M270,20 Q285,50 300,80" stroke="var(--accent-color)" stroke-width="4" fill="none"/>
+            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)" />
+            <text x="10" y="60" font-family="Syne, sans-serif" font-size="48" font-weight="700"
+                fill="var(--primary-color)">LawnCare</text>
+            <text x="10" y="90" font-family="Syne, sans-serif" font-size="24" font-weight="400"
+                fill="var(--secondary-color)">Co.</text>
+            <path d="M270,20 Q285,50 300,80" stroke="var(--accent-color)" stroke-width="4" fill="none" />
         </svg>
 
         <h2>Design Principles</h2>
@@ -199,26 +209,26 @@
     </div>
 
     <svg id="puffy-shirt" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20,80 Q50,60 80,80 L90,100 H10 L20,80" fill="white" stroke="var(--text-color)" stroke-width="2"/>
-        <path d="M30,80 Q50,70 70,80" fill="none" stroke="var(--text-color)" stroke-width="2"/>
-        <circle cx="50" cy="30" r="20" fill="white" stroke="var(--text-color)" stroke-width="2"/>
-        <path d="M40,25 Q50,35 60,25" fill="none" stroke="var(--text-color)" stroke-width="2"/>
+        <path d="M20,80 Q50,60 80,80 L90,100 H10 L20,80" fill="white" stroke="var(--text-color)" stroke-width="2" />
+        <path d="M30,80 Q50,70 70,80" fill="none" stroke="var(--text-color)" stroke-width="2" />
+        <circle cx="50" cy="30" r="20" fill="white" stroke="var(--text-color)" stroke-width="2" />
+        <path d="M40,25 Q50,35 60,25" fill="none" stroke="var(--text-color)" stroke-width="2" />
     </svg>
 
     <script>
         // Add hover effect to color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('mouseenter', function() {
+            swatch.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.1) rotate(5deg)';
             });
-            swatch.addEventListener('mouseleave', function() {
+            swatch.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1) rotate(0deg)';
             });
         });
 
         // Add click-to-copy functionality for color codes
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.innerHTML;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard! Not that there's anything wrong with that.`);
@@ -235,41 +245,42 @@
             "It's not a lie if you believe it.",
             "Hello, Newman."
         ];
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             alert(quotes[Math.floor(Math.random() * quotes.length)]);
         });
 
         // Add puffy shirt easter egg
         const puffyShirt = document.getElementById('puffy-shirt');
-        puffyShirt.addEventListener('click', function() {
+        puffyShirt.addEventListener('click', function () {
             alert("But I don't wanna be a pirate!");
         });
 
         // Add subtle animation to the logo
         const logo = document.getElementById('seinfeld-logo');
-        logo.addEventListener('mouseenter', function() {
+        logo.addEventListener('mouseenter', function () {
             this.style.transition = 'all 0.3s ease';
             this.style.transform = 'scale(1.05)';
         });
-        logo.addEventListener('mouseleave', function() {
+        logo.addEventListener('mouseleave', function () {
             this.style.transform = 'scale(1)';
         });
 
         // Add "bass slap" sound effect on page load
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const bassSlap = new Audio('https://example.com/bass-slap.mp3');
             bassSlap.play();
         });
 
         // Change cursor to a soup ladle on hover over design principles
         const designPrinciples = document.querySelector('.design-principles');
-        designPrinciples.addEventListener('mouseenter', function() {
+        designPrinciples.addEventListener('mouseenter', function () {
             document.body.style.cursor = 'url(https://example.com/soup-ladle-cursor.png), auto';
         });
-        designPrinciples.addEventListener('mouseleave', function() {
+        designPrinciples.addEventListener('mouseleave', function () {
             document.body.style.cursor = 'default';
         });
     </script>
 </body>
+
 </html>

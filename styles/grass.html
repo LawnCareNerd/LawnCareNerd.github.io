@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#grass%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. - Grass Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
@@ -117,13 +119,11 @@
             left: 0;
             width: 100%;
             height: 50px;
-            background: repeating-linear-gradient(
-                45deg,
-                var(--primary-color),
-                var(--primary-color) 10px,
-                var(--secondary-color) 10px,
-                var(--secondary-color) 20px
-            );
+            background: repeating-linear-gradient(45deg,
+                    var(--primary-color),
+                    var(--primary-color) 10px,
+                    var(--secondary-color) 10px,
+                    var(--secondary-color) 20px);
         }
 
         .lawn-mower {
@@ -141,6 +141,7 @@
             0% {
                 left: -100px;
             }
+
             100% {
                 left: 100%;
             }
@@ -198,6 +199,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>LawnCare Co. Grass Theme</h1>
@@ -210,9 +212,11 @@
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">Primary</div>
             <div class="color-swatch" style="background-color: var(--secondary-color);">Secondary</div>
-            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">Accent</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">Accent
+            </div>
             <div class="color-swatch" style="background-color: var(--text-color);">Text</div>
-            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">Background</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">
+                Background</div>
         </div>
 
         <h2>Typography</h2>
@@ -269,13 +273,13 @@
     <script>
         // Add click-to-copy functionality for color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const color = this.style.backgroundColor;
                 navigator.clipboard.writeText(color);
-                
+
                 const originalText = this.textContent;
                 this.textContent = 'Copied!';
-                
+
                 setTimeout(() => {
                     this.textContent = originalText;
                 }, 1500);
@@ -333,4 +337,5 @@
         });
     </script>
 </body>
+
 </html>

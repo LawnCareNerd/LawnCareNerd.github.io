@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#black%20and%20white%20film%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. Black and White Film Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap');
@@ -29,7 +31,8 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             font-family: 'Special Elite', cursive;
             color: var(--black);
         }
@@ -134,11 +137,12 @@
         }
     </style>
 </head>
+
 <body>
     <div class="film-border"></div>
     <div class="container">
         <h1>LawnCare Co. Black and White Film Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--black);">#000000</div>
@@ -152,7 +156,8 @@
         <div class="typography">
             <div class="font-example">
                 <h3 style="font-family: 'Special Elite', cursive; font-size: 1.5rem;">Special Elite</h3>
-                <p style="font-family: 'Special Elite', cursive; font-size: 1rem;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Special Elite', cursive; font-size: 1rem;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll
+                    Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
                 <p style="font-family: 'Special Elite', cursive; font-size: 1rem;">1234567890!@#$%^&*()</p>
             </div>
             <div class="font-example">
@@ -167,11 +172,12 @@
 
         <h2>Logo</h2>
         <svg id="film-logo" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="300" height="200" fill="var(--white)" stroke="var(--black)" stroke-width="10"/>
-            <text x="30" y="80" font-family="'Special Elite', cursive" font-size="40" fill="var(--black)">LawnCare</text>
+            <rect x="0" y="0" width="300" height="200" fill="var(--white)" stroke="var(--black)" stroke-width="10" />
+            <text x="30" y="80" font-family="'Special Elite', cursive" font-size="40"
+                fill="var(--black)">LawnCare</text>
             <text x="30" y="130" font-family="'Special Elite', cursive" font-size="40" fill="var(--black)">Co.</text>
-            <rect x="10" y="10" width="20" height="180" fill="var(--black)"/>
-            <rect x="270" y="10" width="20" height="180" fill="var(--black)"/>
+            <rect x="10" y="10" width="20" height="180" fill="var(--black)" />
+            <rect x="270" y="10" width="20" height="180" fill="var(--black)" />
         </svg>
 
         <h2>Design Principles</h2>
@@ -190,17 +196,17 @@
     <script>
         // Add hover effect to color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('mouseenter', function() {
+            swatch.addEventListener('mouseenter', function () {
                 this.style.transform = 'scale(1.05)';
             });
-            swatch.addEventListener('mouseleave', function() {
+            swatch.addEventListener('mouseleave', function () {
                 this.style.transform = 'scale(1)';
             });
         });
 
         // Add click-to-copy functionality for color codes
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.innerHTML;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard!`);
@@ -209,11 +215,11 @@
 
         // Add film reel animation to the logo
         const logo = document.getElementById('film-logo');
-        logo.addEventListener('mouseenter', function() {
+        logo.addEventListener('mouseenter', function () {
             this.style.transition = 'all 0.5s ease';
             this.style.transform = 'translateX(10px)';
         });
-        logo.addEventListener('mouseleave', function() {
+        logo.addEventListener('mouseleave', function () {
             this.style.transform = 'translateX(0)';
         });
 
@@ -265,4 +271,5 @@
         document.body.appendChild(vignette);
     </script>
 </body>
+
 </html>

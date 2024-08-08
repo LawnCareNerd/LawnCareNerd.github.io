@@ -1,4 +1,6 @@
-<html><head><base href="https://lawncare.co/styling-guide#titanic%20themed">
+<html>
+
+<head>
     <title>LawnCare Co. - Titanic Themed Styling Guide</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
@@ -36,7 +38,9 @@
             border: 2px solid var(--border-color);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             margin-bottom: 1rem;
@@ -220,13 +224,23 @@
         }
 
         @keyframes sail {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(100% + 150px)); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(100% + 150px));
+            }
         }
 
         @keyframes wave {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         #life-preserver {
@@ -263,10 +277,11 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>LawnCare Co. Titanic Theme</h1>
-        
+
         <h2>Color Palette</h2>
         <div class="color-palette">
             <div class="color-swatch" style="background-color: var(--primary-color);">#14213D</div>
@@ -280,13 +295,17 @@
         <div class="typography">
             <div class="font-example">
                 <h3>Playfair Display (Headings)</h3>
-                <p style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px;">Regular: Aa Bb Cc
+                    Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px;">Bold: Aa Bb Cc Dd
+                    Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
             <div class="font-example">
                 <h3>Lora (Body Text)</h3>
-                <p style="font-family: 'Lora', serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
-                <p style="font-family: 'Lora', serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Lora', serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm
+                    Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Lora', serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn
+                    Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
             </div>
         </div>
 
@@ -297,8 +316,10 @@
         <svg id="titanic-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
             <rect width="300" height="100" fill="#14213D" />
             <path d="M20,80 Q75,20 150,80 T280,80" fill="none" stroke="#FCA311" stroke-width="3" />
-            <text x="50%" y="55%" font-family="Playfair Display, serif" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="middle">TITANIC</text>
-            <text x="50%" y="80%" font-family="Lora, serif" font-size="18" font-weight="400" fill="#E5E5E5" text-anchor="middle">LawnCare Co.</text>
+            <text x="50%" y="55%" font-family="Playfair Display, serif" font-size="36" font-weight="700" fill="#FFFFFF"
+                text-anchor="middle">TITANIC</text>
+            <text x="50%" y="80%" font-family="Lora, serif" font-size="18" font-weight="400" fill="#E5E5E5"
+                text-anchor="middle">LawnCare Co.</text>
         </svg>
 
         <h2>Design Principles</h2>
@@ -349,7 +370,7 @@
     <script>
         // Add click-to-copy for color swatches
         document.querySelectorAll('.color-swatch').forEach(swatch => {
-            swatch.addEventListener('click', function() {
+            swatch.addEventListener('click', function () {
                 const colorCode = this.textContent;
                 navigator.clipboard.writeText(colorCode);
                 alert(`Color code ${colorCode} copied to clipboard!`);
@@ -358,11 +379,11 @@
 
         // Add hover effect to Titanic elements
         document.querySelectorAll('.titanic-element').forEach(element => {
-            element.addEventListener('mouseenter', function() {
+            element.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-10px) rotate(5deg)';
                 this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
             });
-            element.addEventListener('mouseleave', function() {
+            element.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateY(-5px) rotate(0deg)';
                 this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
             });
@@ -386,4 +407,5 @@
         floatAnimation();
     </script>
 </body>
+
 </html>
