@@ -1,0 +1,393 @@
+<html><head><base href="https://lawncare.co/styling-guide#summer%20themed">
+    <title>LawnCare Co. - Summer Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --sunny-yellow: #FFD700;
+            --sky-blue: #87CEEB;
+            --grass-green: #7CFC00;
+            --watermelon-pink: #FF6B6B;
+            --sandy-beige: #F4A460;
+            --cool-white: #F0F8FF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--cool-white);
+            color: #333;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Pacifico', cursive;
+            color: var(--watermelon-pink);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px var(--sunny-yellow);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid var(--grass-green);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--sandy-beige);
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--watermelon-pink);
+            border: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: var(--grass-green);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #summer-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: var(--sky-blue);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "☀️";
+            position: absolute;
+            left: 0;
+        }
+
+        #summer-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .summer-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--sunny-yellow);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .summer-element:hover {
+            transform: translateY(-5px) rotate(3deg);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .summer-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #sun-animation {
+            width: 100px;
+            height: 100px;
+            background-color: var(--sunny-yellow);
+            border-radius: 50%;
+            margin: 2rem auto;
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
+        #beach-scene {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+            border-radius: 15px;
+        }
+
+        .sky {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background-color: var(--sky-blue);
+        }
+
+        .sun {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--sunny-yellow);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--sunny-yellow);
+        }
+
+        .sand {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-color: var(--sandy-beige);
+        }
+
+        .water {
+            position: absolute;
+            bottom: 40%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background-color: var(--sky-blue);
+            opacity: 0.7;
+        }
+
+        .umbrella {
+            position: absolute;
+            bottom: 20%;
+            left: 30%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50% 50% 0 0;
+            background-color: var(--watermelon-pink);
+            transform: rotate(-10deg);
+        }
+
+        .umbrella::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            width: 5px;
+            height: 80px;
+            background-color: #8B4513;
+            transform: translateX(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Summer Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--sunny-yellow);">Sunny Yellow</div>
+            <div class="color-swatch" style="background-color: var(--sky-blue);">Sky Blue</div>
+            <div class="color-swatch" style="background-color: var(--grass-green);">Grass Green</div>
+            <div class="color-swatch" style="background-color: var(--watermelon-pink);">Watermelon Pink</div>
+            <div class="color-swatch" style="background-color: var(--sandy-beige);">Sandy Beige</div>
+            <div class="color-swatch" style="background-color: var(--cool-white);">Cool White</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Pacifico (Headings)</h3>
+                <p style="font-family: 'Pacifico', cursive; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto (Body Text)</h3>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Summer Fresh Lawn</button>
+
+        <h2>Logo</h2>
+        <svg id="summer-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="150" fill="#87CEEB" />
+            <circle cx="250" cy="50" r="30" fill="#FFD700" />
+            <path d="M0,150 Q150,50 300,150" fill="#7CFC00" />
+            <text x="50%" y="50%" font-family="Pacifico, cursive" font-size="36" fill="#FF6B6B" text-anchor="middle" dominant-baseline="middle">LawnCare Co.</text>
+            <text x="50%" y="75%" font-family="Roboto, sans-serif" font-size="18" fill="#F0F8FF" text-anchor="middle" dominant-baseline="middle">Summer Fresh</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use bright, vibrant colors that evoke feelings of warmth and sunshine</li>
+                <li>Incorporate playful, casual typography to reflect the relaxed summer mood</li>
+                <li>Utilize summer-related iconography such as sun, beach elements, and outdoor activities</li>
+                <li>Implement smooth, fluid animations to simulate the easy-going nature of summer</li>
+                <li>Create layouts that suggest openness and freedom, like clear summer skies</li>
+                <li>Use gradients and overlays to mimic the effect of sunlight and shadows</li>
+                <li>Integrate nature-inspired textures like grass, sand, or water ripples</li>
+            </ul>
+        </div>
+
+        <h2>Summer Elements</h2>
+        <div id="summer-elements">
+            <div class="summer-element">
+                <div class="summer-icon">🌞</div>
+                <p>Sunshine</p>
+            </div>
+            <div class="summer-element">
+                <div class="summer-icon">🏖️</div>
+                <p>Beach</p>
+            </div>
+            <div class="summer-element">
+                <div class="summer-icon">🍉</div>
+                <p>Watermelon</p>
+            </div>
+            <div class="summer-element">
+                <div class="summer-icon">🌻</div>
+                <p>Sunflower</p>
+            </div>
+        </div>
+
+        <h2>Sun Animation</h2>
+        <div id="sun-animation"></div>
+
+        <h2>Beach Scene</h2>
+        <div id="beach-scene">
+            <div class="sky"></div>
+            <div class="sun"></div>
+            <div class="water"></div>
+            <div class="sand"></div>
+            <div class="umbrella"></div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                alert(`${colorName} color (${colorValue}) copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to summer elements
+        document.querySelectorAll('.summer-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotate(5deg)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px) rotate(3deg)';
+            });
+        });
+
+        // Animate beach scene
+        const sun = document.querySelector('.sun');
+        const water = document.querySelector('.water');
+        let sunPosition = 20;
+        let waterOpacity = 0.7;
+
+        function animateBeach() {
+            sunPosition += 0.5;
+            if (sunPosition > 220) sunPosition = 20;
+            sun.style.top = `${sunPosition}px`;
+
+            waterOpacity = 0.7 + Math.sin(Date.now() / 1000) * 0.1;
+            water.style.opacity = waterOpacity;
+
+            requestAnimationFrame(animateBeach);
+        }
+
+        animateBeach();
+    </script>
+</body>
+</html>

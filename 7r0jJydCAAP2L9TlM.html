@@ -1,0 +1,336 @@
+<html><head><base href="https://lawncare.co/styling-guide#grass%20themed">
+    <title>LawnCare Co. - Grass Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #8BC34A;
+            --accent-color: #FFC107;
+            --text-color: #333333;
+            --background-color: #F1F8E9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .grass-background {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--primary-color),
+                var(--primary-color) 10px,
+                var(--secondary-color) 10px,
+                var(--secondary-color) 20px
+            );
+        }
+
+        .lawn-mower {
+            position: absolute;
+            bottom: 10px;
+            left: -100px;
+            width: 80px;
+            height: 40px;
+            background-color: var(--accent-color);
+            border-radius: 8px;
+            animation: mow 15s linear infinite;
+        }
+
+        @keyframes mow {
+            0% {
+                left: -100px;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .design-principles {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+        }
+
+        #grass-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .grass-element {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .grass-element:hover {
+            transform: translateY(-5px);
+        }
+
+        .grass-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LawnCare Co. Grass Theme</h1>
+        <div class="grass-background"></div>
+        <div class="lawn-mower"></div>
+    </header>
+
+    <div class="container">
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">Primary</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">Secondary</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">Accent</div>
+            <div class="color-swatch" style="background-color: var(--text-color);">Text</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">Background</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Open Sans</h3>
+                <p style="font-weight: 400;">Regular: The quick brown fox jumps over the lazy dog.</p>
+                <p style="font-weight: 600;">Semi-bold: The quick brown fox jumps over the lazy dog.</p>
+                <p style="font-weight: 700;">Bold: The quick brown fox jumps over the lazy dog.</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Mow My Lawn</button>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use natural, earthy colors inspired by grass and nature</li>
+                <li>Incorporate organic shapes and patterns reminiscent of lawn textures</li>
+                <li>Utilize white space to create a clean, fresh feel</li>
+                <li>Implement subtle animations to mimic grass movement</li>
+                <li>Use grass-related icons and imagery to reinforce the theme</li>
+                <li>Maintain a balance between professional and approachable design</li>
+                <li>Ensure high contrast for readability and accessibility</li>
+            </ul>
+        </div>
+
+        <h2>Grass-Inspired Elements</h2>
+        <div id="grass-elements">
+            <div class="grass-element">
+                <div class="grass-icon">🌱</div>
+                <h3>Growth</h3>
+                <p>Represents new beginnings and potential</p>
+            </div>
+            <div class="grass-element">
+                <div class="grass-icon">🌿</div>
+                <h3>Sustainability</h3>
+                <p>Emphasizes eco-friendly practices</p>
+            </div>
+            <div class="grass-element">
+                <div class="grass-icon">🍃</div>
+                <h3>Freshness</h3>
+                <p>Conveys a sense of cleanliness and renewal</p>
+            </div>
+            <div class="grass-element">
+                <div class="grass-icon">🌳</div>
+                <h3>Maturity</h3>
+                <p>Symbolizes established and well-maintained lawns</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy functionality for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const color = this.style.backgroundColor;
+                navigator.clipboard.writeText(color);
+                
+                const originalText = this.textContent;
+                this.textContent = 'Copied!';
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 1500);
+            });
+        });
+
+        // Add subtle grass movement animation
+        function createGrassBlades() {
+            const grassContainer = document.createElement('div');
+            grassContainer.style.position = 'fixed';
+            grassContainer.style.bottom = '0';
+            grassContainer.style.left = '0';
+            grassContainer.style.width = '100%';
+            grassContainer.style.height = '100px';
+            grassContainer.style.overflow = 'hidden';
+            grassContainer.style.pointerEvents = 'none';
+
+            for (let i = 0; i < 100; i++) {
+                const blade = document.createElement('div');
+                blade.style.position = 'absolute';
+                blade.style.bottom = '0';
+                blade.style.width = '2px';
+                blade.style.height = `${20 + Math.random() * 80}px`;
+                blade.style.backgroundColor = i % 2 === 0 ? 'var(--primary-color)' : 'var(--secondary-color)';
+                blade.style.left = `${Math.random() * 100}%`;
+                blade.style.transform = `rotate(${-10 + Math.random() * 20}deg)`;
+                blade.style.transformOrigin = 'bottom';
+                blade.style.animation = `sway ${3 + Math.random() * 2}s ease-in-out infinite`;
+                blade.style.animationDelay = `${-Math.random() * 2}s`;
+
+                grassContainer.appendChild(blade);
+            }
+
+            document.body.appendChild(grassContainer);
+        }
+
+        createGrassBlades();
+
+        // Add grass sway animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sway {
+                0%, 100% { transform: rotate(var(--rotate-start)); }
+                50% { transform: rotate(var(--rotate-end)); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Randomly set sway animation for each blade
+        document.querySelectorAll('div[style*="sway"]').forEach(blade => {
+            const rotateStart = -10 + Math.random() * 20;
+            const rotateEnd = rotateStart + (-5 + Math.random() * 10);
+            blade.style.setProperty('--rotate-start', `${rotateStart}deg`);
+            blade.style.setProperty('--rotate-end', `${rotateEnd}deg`);
+        });
+    </script>
+</body>
+</html>

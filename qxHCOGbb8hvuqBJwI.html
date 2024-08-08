@@ -1,0 +1,374 @@
+<html><head><base href="https://lawncare.co/styling-guide#old%20telegram%20message%20themed">
+    <title>LawnCare Co. - Old Telegram Message Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap');
+
+        :root {
+            --telegram-paper: #F2E8C9;
+            --ink-black: #1A1A1A;
+            --faded-ink: #6B6B6B;
+            --telegram-blue: #3E6B89;
+            --telegram-red: #B33A3A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier Prime', monospace;
+            background-color: var(--telegram-paper);
+            color: var(--ink-black);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--telegram-paper);
+            padding: 2rem;
+            border: 2px solid var(--telegram-blue);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Special Elite', cursive;
+            margin-bottom: 1rem;
+            color: var(--telegram-blue);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--telegram-blue);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 1px solid var(--telegram-blue);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink-black);
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid var(--telegram-blue);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--telegram-paper);
+            border: 1px solid var(--telegram-blue);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--telegram-paper);
+            background-color: var(--telegram-blue);
+            border: 1px solid var(--ink-black);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Special Elite', cursive;
+        }
+
+        .button:hover {
+            background-color: var(--telegram-red);
+        }
+
+        #telegram-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: rgba(62, 107, 137, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px dashed var(--telegram-blue);
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--telegram-blue);
+            font-weight: bold;
+        }
+
+        #telegram-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .telegram-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--telegram-paper);
+            border: 1px solid var(--telegram-blue);
+            transition: all 0.3s ease;
+        }
+
+        .telegram-element:hover {
+            background-color: rgba(62, 107, 137, 0.1);
+        }
+
+        .telegram-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--telegram-blue);
+        }
+
+        #sample-telegram {
+            font-family: 'Special Elite', cursive;
+            background-color: var(--telegram-paper);
+            border: 2px solid var(--telegram-blue);
+            padding: 2rem;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #sample-telegram::before {
+            content: 'TELEGRAM';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 0.8rem;
+            color: var(--telegram-blue);
+            border: 1px solid var(--telegram-blue);
+            padding: 2px 5px;
+        }
+
+        #sample-telegram h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--telegram-red);
+        }
+
+        .telegram-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .telegram-body {
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--telegram-blue);
+        }
+
+        .telegram-footer {
+            text-align: right;
+            margin-top: 2rem;
+            font-style: italic;
+            color: var(--faded-ink);
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Old Telegram Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--telegram-paper);">Telegram Paper</div>
+            <div class="color-swatch" style="background-color: var(--ink-black); color: var(--telegram-paper);">Ink Black</div>
+            <div class="color-swatch" style="background-color: var(--faded-ink); color: var(--telegram-paper);">Faded Ink</div>
+            <div class="color-swatch" style="background-color: var(--telegram-blue); color: var(--telegram-paper);">Telegram Blue</div>
+            <div class="color-swatch" style="background-color: var(--telegram-red); color: var(--telegram-paper);">Telegram Red</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Special Elite (Headings and Body)</h3>
+                <p style="font-family: 'Special Elite', cursive; font-size: 18px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Courier Prime (Alternative Body Text)</h3>
+                <p style="font-family: 'Courier Prime', monospace; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Courier Prime', monospace; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Send Telegram</button>
+
+        <h2>Logo</h2>
+        <svg id="telegram-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="100" fill="var(--telegram-paper)" />
+            <text x="150" y="40" font-family="Special Elite, cursive" font-size="36" fill="var(--telegram-blue)" text-anchor="middle">LawnCare Co.</text>
+            <text x="150" y="70" font-family="Special Elite, cursive" font-size="18" fill="var(--telegram-red)" text-anchor="middle">Telegram Service</text>
+            <line x1="10" y1="80" x2="290" y2="80" stroke="var(--telegram-blue)" stroke-width="2" stroke-dasharray="5,5" />
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use typewriter-style fonts to mimic old telegram typography</li>
+                <li>Incorporate telegram-specific elements like stamps, borders, and header text</li>
+                <li>Utilize a limited color palette reminiscent of vintage paper and ink</li>
+                <li>Implement a structured layout with clear hierarchy</li>
+                <li>Use subtle textures or patterns to emulate aged paper</li>
+                <li>Include telegram-specific elements like date stamps, addresses, and word counts</li>
+                <li>Consider using all caps for headers and important information</li>
+            </ul>
+        </div>
+
+        <h2>Telegram Elements</h2>
+        <div id="telegram-elements">
+            <div class="telegram-element">
+                <div class="telegram-icon">📅</div>
+                <p>Date Stamp</p>
+            </div>
+            <div class="telegram-element">
+                <div class="telegram-icon">📍</div>
+                <p>Address Fields</p>
+            </div>
+            <div class="telegram-element">
+                <div class="telegram-icon">🔢</div>
+                <p>Word Count</p>
+            </div>
+            <div class="telegram-element">
+                <div class="telegram-icon">💼</div>
+                <p>Sender Information</p>
+            </div>
+        </div>
+
+        <h2>Sample Telegram</h2>
+        <div id="sample-telegram">
+            <h3>LAWNCARE CO. URGENT COMMUNICATION</h3>
+            <div class="telegram-line">
+                <span>DATE: MAY 15, 1923</span>
+                <span>TIME: 14:30</span>
+            </div>
+            <div class="telegram-line">
+                <span>TO: MR. JOHN SMITH</span>
+            </div>
+            <div class="telegram-line">
+                <span>123 GREEN STREET, GARDENVILLE</span>
+            </div>
+            <div class="telegram-body">
+                <p>LAWN EMERGENCY STOP CRABGRASS INVASION DETECTED STOP IMMEDIATE ACTION REQUIRED STOP LAWNCARE CO TEAM EN ROUTE STOP EXPECT ARRIVAL WITHIN HOUR STOP</p>
+            </div>
+            <div class="telegram-footer">
+                <p>WORDS: 20</p>
+                <p>SENDER: LAWNCARE CO. HEADQUARTERS</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                alert(`${colorName} color (${colorValue}) copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to telegram elements
+        document.querySelectorAll('.telegram-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simulate sending telegram
+        document.querySelector('.button').addEventListener('click', function() {
+            alert('TELEGRAM SENT STOP');
+        });
+
+        // Add subtle animation to the telegram logo
+        const logo = document.getElementById('telegram-logo');
+        logo.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Add a "worn" effect to the sample telegram on hover
+        const sampleTelegram = document.getElementById('sample-telegram');
+        sampleTelegram.addEventListener('mouseenter', function() {
+            this.style.transform = 'rotate(-1deg) scale(1.02)';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            this.style.transition = 'all 0.3s ease';
+        });
+        sampleTelegram.addEventListener('mouseleave', function() {
+            this.style.transform = 'rotate(0) scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    </script>
+</body>
+</html>

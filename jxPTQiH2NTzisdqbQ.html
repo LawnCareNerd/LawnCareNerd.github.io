@@ -1,0 +1,217 @@
+<html><head><base href="https://lawncare.co/styling-guide#minimalist%20theme">
+    <title>LawnCare Co. Minimalist Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #4A4A4A;
+            --secondary-color: #9BCC50;
+            --background-color: #FFFFFF;
+            --text-color: #333333;
+            --accent-color: #E0E0E0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            background-color: var(--accent-color);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--background-color);
+            background-color: var(--primary-color);
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .design-principles {
+            background-color: var(--accent-color);
+            padding: 1rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 0.5rem;
+        }
+
+        #minimalist-logo {
+            max-width: 200px;
+            margin: 2rem auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Minimalist Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#4A4A4A</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">#9BCC50</div>
+            <div class="color-swatch" style="background-color: var(--text-color);">#333333</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">#E0E0E0</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color); border: 1px solid var(--accent-color);">#FFFFFF</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Roboto Light (300)</h3>
+                <p style="font-weight: 300;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 300;">1234567890!@#$%^&*()</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto Regular (400)</h3>
+                <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p>1234567890!@#$%^&*()</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto Bold (700)</h3>
+                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">1234567890!@#$%^&*()</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <a href="#" class="button">Click Me</a>
+
+        <h2>Logo</h2>
+        <svg id="minimalist-logo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="200" height="100" fill="var(--background-color)"/>
+            <text x="10" y="50" font-family="Roboto, sans-serif" font-size="24" font-weight="300" fill="var(--primary-color)">LawnCare</text>
+            <text x="10" y="80" font-family="Roboto, sans-serif" font-size="24" font-weight="300" fill="var(--secondary-color)">Co.</text>
+            <line x1="10" y1="90" x2="190" y2="90" stroke="var(--accent-color)" stroke-width="1"/>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use a limited color palette with plenty of white space</li>
+                <li>Employ clean, sans-serif typography with varying weights</li>
+                <li>Utilize subtle, thin lines for separators and accents</li>
+                <li>Keep layouts simple and uncluttered</li>
+                <li>Use negative space effectively to create balance</li>
+                <li>Implement subtle hover effects for interactive elements</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effect to color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            swatch.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add click-to-copy functionality for color codes
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.innerHTML;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard!`);
+            });
+        });
+
+        // Add subtle animation to the logo
+        const logo = document.getElementById('minimalist-logo');
+        logo.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.3s ease';
+            this.style.transform = 'scale(1.05)';
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Add interactive effect to the button
+        const button = document.querySelector('.button');
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+
+        // Add subtle parallax effect to headings
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            document.querySelectorAll('h2').forEach((heading, index) => {
+                heading.style.transform = `translateY(${scrollPosition * 0.1 * (index + 1)}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

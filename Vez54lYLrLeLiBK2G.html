@@ -1,0 +1,419 @@
+<html><head><base href="https://lawncare.co/styling-guide#heavy%20industrial/construction%20themed">
+    <title>LawnCare Co. - Heavy Industrial/Construction Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Teko:wght@500;700&display=swap');
+
+        :root {
+            --primary-color: #FFC300;
+            --secondary-color: #DAA520;
+            --accent-color: #FF5733;
+            --background-color: #2C3E50;
+            --text-color: #ECF0F1;
+            --border-color: #7F8C8D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(44, 62, 80, 0.8);
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--primary-color);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Teko', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 2rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+            color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--border-color);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--background-color);
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #construction-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "🚧";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        #construction-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .construction-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .construction-element:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .construction-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        #crane-animation {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .crane {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 250px;
+        }
+
+        .crane-base {
+            width: 100px;
+            height: 20px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .crane-arm {
+            width: 10px;
+            height: 200px;
+            background-color: var(--primary-color);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .crane-hook {
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            position: absolute;
+            bottom: 220px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: hook-move 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes hook-move {
+            0% { transform: translateX(-50%) translateY(0); }
+            100% { transform: translateX(-50%) translateY(100px); }
+        }
+
+        #progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        #progress {
+            width: 0;
+            height: 100%;
+            background-color: var(--accent-color);
+            transition: width 0.5s ease;
+        }
+
+        .hazard-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                var(--primary-color),
+                var(--primary-color) 10px,
+                var(--secondary-color) 10px,
+                var(--secondary-color) 20px
+            );
+            height: 30px;
+            margin: 2rem 0;
+            animation: move-stripes 30s linear infinite;
+        }
+
+        @keyframes move-stripes {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Heavy Industrial/Construction Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#FFC300</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">#DAA520</div>
+            <div class="color-swatch" style="background-color: var(--accent-color);">#FF5733</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#2C3E50</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">#ECF0F1</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Teko (Headings)</h3>
+                <p style="font-family: 'Teko', sans-serif; font-weight: 500; font-size: 24px;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Teko', sans-serif; font-weight: 700; font-size: 24px;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto Condensed (Body Text)</h3>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Heavy Duty Mowing</button>
+
+        <h2>Logo</h2>
+        <svg id="construction-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="100" fill="#2C3E50" />
+            <polygon points="20,80 50,20 80,80" fill="#FFC300" />
+            <text x="90" y="70" font-family="Teko, sans-serif" font-size="48" font-weight="700" fill="#ECF0F1">LAWN</text>
+            <text x="200" y="70" font-family="Teko, sans-serif" font-size="48" font-weight="700" fill="#FF5733">FORCE</text>
+            <line x1="20" y1="85" x2="280" y2="85" stroke="#DAA520" stroke-width="4" stroke-linecap="round" />
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use bold, high-contrast colors reminiscent of safety equipment and heavy machinery</li>
+                <li>Incorporate industrial textures like metal, concrete, and caution stripes</li>
+                <li>Utilize strong, robust typography that conveys strength and durability</li>
+                <li>Include iconography related to construction and heavy equipment</li>
+                <li>Implement grid-based layouts to reflect precision and organization</li>
+                <li>Add subtle animations to simulate machinery or construction processes</li>
+                <li>Use angular shapes and bold lines to create a sense of power and stability</li>
+            </ul>
+        </div>
+
+        <h2>Construction Elements</h2>
+        <div id="construction-elements">
+            <div class="construction-element">
+                <div class="construction-icon">🚜</div>
+                <p>Heavy Machinery</p>
+            </div>
+            <div class="construction-element">
+                <div class="construction-icon">🏗️</div>
+                <p>Construction Site</p>
+            </div>
+            <div class="construction-element">
+                <div class="construction-icon">⚠️</div>
+                <p>Safety First</p>
+            </div>
+            <div class="construction-element">
+                <div class="construction-icon">🔨</div>
+                <p>Tools</p>
+            </div>
+        </div>
+
+        <h2>Crane Animation</h2>
+        <div id="crane-animation">
+            <div class="crane">
+                <div class="crane-base"></div>
+                <div class="crane-arm"></div>
+                <div class="crane-hook"></div>
+            </div>
+        </div>
+
+        <h2>Progress Bar</h2>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+        <h2>Hazard Stripes</h2>
+        <div class="hazard-stripes"></div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.textContent;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to construction elements
+        document.querySelectorAll('.construction-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Progress bar animation
+        const progressBar = document.getElementById('progress');
+        let progress = 0;
+        const intervalId = setInterval(() => {
+            progress += 1;
+            progressBar.style.width = `${progress}%`;
+            if (progress >= 100) {
+                clearInterval(intervalId);
+                setTimeout(() => {
+                    progress = 0;
+                    progressBar.style.width = '0%';
+                    setTimeout(() => {
+                        const intervalId = setInterval(() => {
+                            progress += 1;
+                            progressBar.style.width = `${progress}%`;
+                            if (progress >= 100) {
+                                clearInterval(intervalId);
+                            }
+                        }, 50);
+                    }, 500);
+                }, 1000);
+            }
+        }, 50);
+    </script>
+</body>
+</html>

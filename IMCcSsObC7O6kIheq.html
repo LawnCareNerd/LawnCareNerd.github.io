@@ -1,0 +1,143 @@
+<html><head><base href="https://lawncare.co/styling-guide#make%20it%20look%20hand%20drawn">
+    <title>LawnCare Co. Hand-Drawn Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+        body {
+            font-family: 'Indie Flower', cursive;
+            line-height: 1.6;
+            color: #3a3a3a;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f7e8;
+            background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pattern' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 38 L40 38' stroke='%23e0dcc5' stroke-width='1' fill='none' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pattern)'/%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3 {
+            color: #4a7c59;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: #9cc5a1;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .color-swatch {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+        }
+
+        .color-swatch:hover {
+            transform: rotate(2deg) scale(1.05);
+        }
+
+        .font-example {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px dashed #9cc5a1;
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4a7c59;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            transform: rotate(-1deg);
+        }
+
+        .button:hover {
+            background-color: #9cc5a1;
+            transform: rotate(1deg) scale(1.05);
+        }
+
+        #hand-drawn-logo {
+            max-width: 300px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>LawnCare Co. Hand-Drawn Styling Guide</h1>
+    
+    <h2>Color Palette</h2>
+    <div class="color-palette">
+        <div class="color-swatch" style="background-color: #4a7c59;">#4a7c59</div>
+        <div class="color-swatch" style="background-color: #9cc5a1;">#9cc5a1</div>
+        <div class="color-swatch" style="background-color: #d3e8d4; color: #3a3a3a;">#d3e8d4</div>
+        <div class="color-swatch" style="background-color: #f9f7e8; color: #3a3a3a;">#f9f7e8</div>
+        <div class="color-swatch" style="background-color: #3a3a3a;">#3a3a3a</div>
+    </div>
+
+    <h2>Typography</h2>
+    <div class="font-example">
+        <h3>Headings & Body Text: 'Indie Flower', cursive</h3>
+        <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+        <p>1234567890!@#$%^&*()</p>
+    </div>
+
+    <h2>Buttons</h2>
+    <a href="#" class="button">Click Me!</a>
+
+    <h2>Logo</h2>
+    <svg id="hand-drawn-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20,75 Q150,25 280,75" stroke="#4a7c59" stroke-width="5" fill="none" />
+        <path d="M40,95 Q150,45 260,95" stroke="#9cc5a1" stroke-width="5" fill="none" />
+        <text x="50" y="120" font-family="Indie Flower, cursive" font-size="36" fill="#4a7c59">LawnCare Co.</text>
+    </svg>
+
+    <h2>Design Principles</h2>
+    <ul>
+        <li>Use a hand-drawn, organic aesthetic to convey a natural and friendly feel</li>
+        <li>Incorporate doodle-like elements and imperfect lines to add character</li>
+        <li>Use earthy, muted colors to maintain a connection with nature</li>
+        <li>Embrace asymmetry and slight rotations to enhance the hand-drawn look</li>
+    </ul>
+
+    <script>
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                navigator.clipboard.writeText(this.textContent);
+                alert('Color code copied to clipboard!');
+            });
+        });
+
+        // Add some hand-drawn-like animations
+        function addWobble(element) {
+            element.style.animation = `wobble ${2 + Math.random() * 2}s ease-in-out infinite`;
+        }
+
+        document.querySelectorAll('h1, h2, .button').forEach(addWobble);
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes wobble {
+                0%, 100% { transform: rotate(-2deg); }
+                50% { transform: rotate(2deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<html><head><base href="https://lawncare.co/styling-guide#titanic%20themed">
+    <title>LawnCare Co. - Titanic Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #14213D;
+            --secondary-color: #FCA311;
+            --accent-color: #E5E5E5;
+            --background-color: #FFFFFF;
+            --text-color: #000000;
+            --border-color: #4A4E69;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--background-color);
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--border-color);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 2rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--background-color);
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        #titanic-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: var(--accent-color);
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "⚓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        #titanic-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .titanic-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .titanic-element:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .titanic-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        #ship-animation {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+            background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+            border-radius: 5px;
+        }
+
+        .ship {
+            position: absolute;
+            bottom: 50px;
+            left: -150px;
+            width: 150px;
+            height: 100px;
+            background-color: var(--primary-color);
+            clip-path: polygon(0% 100%, 5% 95%, 95% 95%, 100% 100%);
+            animation: sail 15s linear infinite;
+        }
+
+        .smokestack {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            width: 20px;
+            height: 40px;
+            background-color: var(--secondary-color);
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 350 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 Q50 0 100 50 Q150 100 200 50 Q250 0 300 50 Q350 100 400 50 L400 100 L0 100" fill="%231E90FF"/></svg>');
+            background-repeat: repeat-x;
+            animation: wave 10s linear infinite;
+        }
+
+        @keyframes sail {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(100% + 150px)); }
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        #life-preserver {
+            width: 100px;
+            height: 100px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            position: relative;
+            margin: 2rem auto;
+        }
+
+        #life-preserver::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: var(--background-color);
+            border-radius: 50%;
+        }
+
+        #life-preserver::after {
+            content: 'RMS TITANIC';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Titanic Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#14213D</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">#FCA311</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: #000000;">#E5E5E5</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: #000000;">#FFFFFF</div>
+            <div class="color-swatch" style="background-color: var(--text-color);">#000000</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Playfair Display (Headings)</h3>
+                <p style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 24px;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Lora (Body Text)</h3>
+                <p style="font-family: 'Lora', serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Lora', serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">First Class Lawn Care</button>
+
+        <h2>Logo</h2>
+        <svg id="titanic-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="100" fill="#14213D" />
+            <path d="M20,80 Q75,20 150,80 T280,80" fill="none" stroke="#FCA311" stroke-width="3" />
+            <text x="50%" y="55%" font-family="Playfair Display, serif" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="middle">TITANIC</text>
+            <text x="50%" y="80%" font-family="Lora, serif" font-size="18" font-weight="400" fill="#E5E5E5" text-anchor="middle">LawnCare Co.</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use deep blues and rich golds to evoke the luxury of the Titanic</li>
+                <li>Incorporate nautical elements and Art Deco inspired designs</li>
+                <li>Utilize elegant typography reminiscent of the early 20th century</li>
+                <li>Include iconography related to ships, ocean, and the Titanic era</li>
+                <li>Implement layouts that suggest grandeur and sophistication</li>
+                <li>Add subtle animations to simulate ocean movement or ship mechanics</li>
+                <li>Use curved lines and ornate details to reflect the Titanic's opulence</li>
+            </ul>
+        </div>
+
+        <h2>Titanic Elements</h2>
+        <div id="titanic-elements">
+            <div class="titanic-element">
+                <div class="titanic-icon">🚢</div>
+                <p>Grand Ship</p>
+            </div>
+            <div class="titanic-element">
+                <div class="titanic-icon">🌊</div>
+                <p>Ocean Waves</p>
+            </div>
+            <div class="titanic-element">
+                <div class="titanic-icon">💎</div>
+                <p>Luxury</p>
+            </div>
+            <div class="titanic-element">
+                <div class="titanic-icon">🕰️</div>
+                <p>Edwardian Era</p>
+            </div>
+        </div>
+
+        <h2>Ship Animation</h2>
+        <div id="ship-animation">
+            <div class="ship">
+                <div class="smokestack"></div>
+            </div>
+            <div class="wave"></div>
+        </div>
+
+        <h2>Life Preserver</h2>
+        <div id="life-preserver"></div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.textContent;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to Titanic elements
+        document.querySelectorAll('.titanic-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotate(5deg)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px) rotate(0deg)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Add floating animation to life preserver
+        const lifePreserver = document.getElementById('life-preserver');
+        let floatUp = true;
+
+        function floatAnimation() {
+            if (floatUp) {
+                lifePreserver.style.transform = 'translateY(-10px)';
+                floatUp = false;
+            } else {
+                lifePreserver.style.transform = 'translateY(0)';
+                floatUp = true;
+            }
+            setTimeout(floatAnimation, 1500);
+        }
+
+        floatAnimation();
+    </script>
+</body>
+</html>

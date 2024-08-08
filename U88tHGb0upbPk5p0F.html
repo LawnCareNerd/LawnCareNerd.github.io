@@ -1,0 +1,180 @@
+<html><head><base href="https://lawncare.co/styling-guide#typewriter%20theme">
+    <title>LawnCare Co. Typewriter Theme Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+        body {
+            font-family: 'Courier Prime', monospace;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f1e8;
+            background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='graph' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 0 L40 0 M0 40 L40 40 M0 0 L0 40 M40 0 L40 40' stroke='%23e0dcc5' stroke-width='1' fill='none' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23graph)'/%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .color-swatch {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .color-swatch:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+        }
+
+        .font-example {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #2c3e50;
+            background-color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: #f4f1e8;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            border: none;
+            font-family: 'Courier Prime', monospace;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #34495e;
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+        }
+
+        #typewriter-logo {
+            max-width: 300px;
+            margin: 20px 0;
+        }
+
+        .typewriter-effect {
+            overflow: hidden;
+            border-right: .15em solid #2c3e50;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #2c3e50; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="typewriter-effect">LawnCare Co. Typewriter Theme</h1>
+    
+    <h2>Color Palette</h2>
+    <div class="color-palette">
+        <div class="color-swatch" style="background-color: #2c3e50;">#2c3e50</div>
+        <div class="color-swatch" style="background-color: #34495e;">#34495e</div>
+        <div class="color-swatch" style="background-color: #95a5a6;">#95a5a6</div>
+        <div class="color-swatch" style="background-color: #f4f1e8; color: #333;">#f4f1e8</div>
+        <div class="color-swatch" style="background-color: #333;">#333333</div>
+    </div>
+
+    <h2>Typography</h2>
+    <div class="font-example">
+        <h3>Headings & Body Text: 'Courier Prime', monospace</h3>
+        <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+        <p>1234567890!@#$%^&*()</p>
+    </div>
+
+    <h2>Buttons</h2>
+    <button class="button">Click Me!</button>
+
+    <h2>Logo</h2>
+    <svg id="typewriter-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="280" height="130" fill="#f4f1e8" stroke="#2c3e50" stroke-width="5"/>
+        <text x="30" y="60" font-family="Courier Prime, monospace" font-size="36" fill="#2c3e50">LawnCare</text>
+        <text x="90" y="100" font-family="Courier Prime, monospace" font-size="36" fill="#2c3e50">Co.</text>
+        <line x1="20" y1="120" x2="280" y2="120" stroke="#2c3e50" stroke-width="3"/>
+        <circle cx="40" cy="130" r="8" fill="#2c3e50"/>
+        <circle cx="260" cy="130" r="8" fill="#2c3e50"/>
+    </svg>
+
+    <h2>Design Principles</h2>
+    <ul>
+        <li>Use monospaced fonts to mimic typewriter text</li>
+        <li>Incorporate paper-like textures and colors</li>
+        <li>Add typewriter-inspired animations for text</li>
+        <li>Use sharp, clean lines and geometric shapes</li>
+        <li>Include subtle "ink bleed" effects for emphasis</li>
+    </ul>
+
+    <script>
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                navigator.clipboard.writeText(this.textContent);
+                alert('Color code copied to clipboard!');
+            });
+        });
+
+        // Typewriter effect for paragraphs
+        document.querySelectorAll('p').forEach(p => {
+            p.classList.add('typewriter-effect');
+            p.style.width = '0';
+            p.style.animation = 'none';
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        p.style.animation = '';
+                        observer.unobserve(p);
+                    }
+                });
+            });
+            
+            observer.observe(p);
+        });
+
+        // Simulated key press sound
+        function playKeyPress() {
+            const audio = new Audio('data:audio/wav;base64,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');
+            audio.play();
+        }
+
+        document.querySelector('.button').addEventListener('click', playKeyPress);
+        document.addEventListener('keydown', playKeyPress);
+    </script>
+</body>
+</html>

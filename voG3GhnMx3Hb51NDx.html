@@ -1,0 +1,314 @@
+<html><head><base href="https://lawncare.co/styling-guide#ingredient%20list%20themed">
+    <title>LawnCare Co. - Ingredient List Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+        :root {
+            --background-color: #FFFDF7;
+            --text-color: #333333;
+            --accent-color: #4CAF50;
+            --border-color: #E0E0E0;
+            --highlight-color: #FFF9C4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .ingredient-list {
+            list-style-type: none;
+            padding: 1rem;
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .ingredient-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .ingredient-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .nutrition-facts {
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .nutrition-facts h3 {
+            border-bottom: 8px solid var(--text-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .nutrition-facts dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem;
+        }
+
+        .nutrition-facts dt {
+            font-weight: bold;
+        }
+
+        .nutrition-facts dd {
+            text-align: right;
+        }
+
+        .design-principles {
+            background-color: var(--highlight-color);
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 0.5rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        #ingredient-icon {
+            max-width: 100px;
+            margin: 2rem auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Ingredient List Theme</h1>
+        
+        <svg id="ingredient-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" fill="var(--background-color)" />
+            <path d="M20 20 H80 V80 H20 Z" fill="none" stroke="var(--accent-color)" stroke-width="4" />
+            <line x1="30" y1="40" x2="70" y2="40" stroke="var(--text-color)" stroke-width="2" />
+            <line x1="30" y1="50" x2="70" y2="50" stroke="var(--text-color)" stroke-width="2" />
+            <line x1="30" y1="60" x2="70" y2="60" stroke="var(--text-color)" stroke-width="2" />
+            <circle cx="25" cy="40" r="2" fill="var(--accent-color)" />
+            <circle cx="25" cy="50" r="2" fill="var(--accent-color)" />
+            <circle cx="25" cy="60" r="2" fill="var(--accent-color)" />
+        </svg>
+
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--background-color);">Background</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: #FFFFFF;">Text</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: #FFFFFF;">Accent</div>
+            <div class="color-swatch" style="background-color: var(--border-color);">Border</div>
+            <div class="color-swatch" style="background-color: var(--highlight-color);">Highlight</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Merriweather (Headings)</h3>
+                <p style="font-family: 'Merriweather', serif; font-size: 18px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto Mono (Body Text)</h3>
+                <p style="font-family: 'Roboto Mono', monospace; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Mono', monospace; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">View Full Ingredients</button>
+
+        <h2>Ingredient List Example</h2>
+        <ul class="ingredient-list">
+            <li>Organic Lawn Grass Seeds</li>
+            <li>Slow-Release Nitrogen Fertilizer</li>
+            <li>Beneficial Soil Microbes</li>
+            <li>Organic Matter (Compost)</li>
+            <li>Trace Minerals</li>
+        </ul>
+
+        <h2>Nutrition Facts-style Information</h2>
+        <div class="nutrition-facts">
+            <h3>Lawn Care Facts</h3>
+            <dl>
+                <dt>Coverage Area</dt>
+                <dd>1000 sq ft</dd>
+                <dt>Nitrogen (N)</dt>
+                <dd>5%</dd>
+                <dt>Phosphorus (P)</dt>
+                <dd>3%</dd>
+                <dt>Potassium (K)</dt>
+                <dd>1%</dd>
+                <dt>Organic Matter</dt>
+                <dd>15%</dd>
+            </dl>
+        </div>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use clean, legible typography for easy reading</li>
+                <li>Implement a clear hierarchy with distinct sections</li>
+                <li>Use bullet points or numbered lists for ingredient items</li>
+                <li>Include visual elements like icons or simple illustrations</li>
+                <li>Utilize white space effectively for improved readability</li>
+                <li>Incorporate a nutrition facts-style layout for key information</li>
+                <li>Use subtle background colors and borders to define sections</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy functionality for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                alert(`${colorName} color (${colorValue}) copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to ingredient list items
+        document.querySelectorAll('.ingredient-list li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'var(--highlight-color)';
+                this.style.transition = 'background-color 0.3s ease';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Add animation to the ingredient icon
+        const icon = document.getElementById('ingredient-icon');
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'rotate(5deg) scale(1.1)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'rotate(0) scale(1)';
+        });
+
+        // Simulate opening a modal with full ingredients list
+        document.querySelector('.button').addEventListener('click', function() {
+            alert('This would open a modal or new page with a full list of ingredients and detailed information.');
+        });
+    </script>
+</body>
+</html>

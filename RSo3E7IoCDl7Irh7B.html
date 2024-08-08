@@ -1,0 +1,480 @@
+<html><head><base href="https://lawncare.co/styling-guide#vinyl%20record%20themed">
+    <title>LawnCare Co. - Vinyl Record Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #1A1A1A;
+            --secondary-color: #E6E6E6;
+            --accent-color: #FF4081;
+            --text-color: #FFFFFF;
+            --background-color: #121212;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Permanent Marker', cursive;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-size: 1rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Permanent Marker', cursive;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        #vinyl-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "🎵";
+            position: absolute;
+            left: 0;
+        }
+
+        #vinyl-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .vinyl-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .vinyl-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        #playlist-container {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        #playlist-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        #playlist-tracks {
+            font-size: 1rem;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #playlist-tracks li {
+            margin-bottom: 0.5rem;
+        }
+
+        .texture-example {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .vinyl-texture {
+            background-image: radial-gradient(circle, #333 0%, #000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vinyl-texture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-radial-gradient(
+                circle at center,
+                #000,
+                #000 2px,
+                #333 2px,
+                #333 4px
+            );
+            opacity: 0.3;
+        }
+
+        .grooved-texture {
+            background-image: repeating-linear-gradient(
+                45deg,
+                #1A1A1A,
+                #1A1A1A 2px,
+                #333 2px,
+                #333 4px
+            );
+        }
+
+        .album-cover-texture {
+            background-image: linear-gradient(45deg, #FF4081, #3F51B5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .album-cover-texture::after {
+            content: '🎵';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #vinyl-animation {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        #vinyl-animation::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-radial-gradient(
+                circle at center,
+                #000,
+                #000 2px,
+                #333 2px,
+                #333 4px
+            );
+            opacity: 0.3;
+        }
+
+        #vinyl-animation::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .spinning {
+            animation: spin 5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Vinyl Record Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#1A1A1A</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color); color: var(--primary-color);">#E6E6E6</div>
+            <div class="color-swatch" style="background-color: var(--accent-color);">#FF4081</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: var(--primary-color);">#FFFFFF</div>
+            <div class="color-swatch" style="background-color: var(--background-color);">#121212</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Permanent Marker (Headings)</h3>
+                <p style="font-family: 'Permanent Marker', cursive;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto (Body Text)</h3>
+                <p style="font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Spin the Vinyl</button>
+
+        <h2>Logo</h2>
+        <svg id="vinyl-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="#000000" stroke="#FF4081" stroke-width="2"/>
+            <circle cx="50" cy="50" r="20" fill="#FF4081"/>
+            <circle cx="50" cy="50" r="5" fill="#000000"/>
+            <text x="110" y="40" font-family="Permanent Marker, cursive" font-size="36" fill="#FFFFFF">LawnCare</text>
+            <text x="110" y="80" font-family="Roboto, sans-serif" font-size="24" fill="#FF4081">Vinyl Vibes</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use circular shapes to mimic vinyl records</li>
+                <li>Incorporate music-related iconography</li>
+                <li>Create a retro, nostalgic atmosphere</li>
+                <li>Use bold, eye-catching typography</li>
+                <li>Implement high contrast color schemes</li>
+                <li>Add subtle textures to evoke vinyl grooves</li>
+                <li>Include playful, interactive elements</li>
+            </ul>
+        </div>
+
+        <h2>Vinyl Elements</h2>
+        <div id="vinyl-elements">
+            <div class="vinyl-element">
+                <div class="vinyl-icon">💿</div>
+                <p>Vinyl Records</p>
+            </div>
+            <div class="vinyl-element">
+                <div class="vinyl-icon">🎧</div>
+                <p>Headphones</p>
+            </div>
+            <div class="vinyl-element">
+                <div class="vinyl-icon">🎵</div>
+                <p>Musical Notes</p>
+            </div>
+            <div class="vinyl-element">
+                <div class="vinyl-icon">🎚️</div>
+                <p>Equalizer</p>
+            </div>
+        </div>
+
+        <h2>Textures</h2>
+        <div class="texture-example vinyl-texture"></div>
+        <div class="texture-example grooved-texture"></div>
+        <div class="texture-example album-cover-texture"></div>
+
+        <h2>Vinyl Animation</h2>
+        <div id="vinyl-animation"></div>
+
+        <div id="playlist-container">
+            <h3 id="playlist-title">LawnCare Vinyl Mix</h3>
+            <ul id="playlist-tracks">
+                <li>1. Grass Roots Revival</li>
+                <li>2. Mower's Groove</li>
+                <li>3. Retro Garden Party</li>
+                <li>4. Vinyl Verdant</li>
+                <li>5. Trimmed to Perfection</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effect and click-to-copy to color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(15deg)';
+            });
+            swatch.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+            swatch.addEventListener('click', function() {
+                const colorCode = this.innerHTML;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard.`);
+            });
+        });
+
+        // Add hover effect to vinyl elements
+        document.querySelectorAll('.vinyl-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) rotate(5deg)';
+                this.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.15)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) rotate(0deg)';
+                this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Vinyl animation
+        const vinylAnimation = document.getElementById('vinyl-animation');
+        vinylAnimation.addEventListener('click', function() {
+            this.classList.toggle('spinning');
+        });
+
+        // Dynamic playlist
+        const playlist = [
+            "Grass Roots Revival",
+            "Mower's Groove",
+            "Retro Garden Party",
+            "Vinyl Verdant",
+            "Trimmed to Perfection",
+            "Lawn and Order",
+            "Green Day",
+            "Sod's Law",
+            "Turf's Up",
+            "The Grass is Always Greener"
+        ];
+
+        function updatePlaylist() {
+            const playlistTracks = document.getElementById('playlist-tracks');
+            playlistTracks.innerHTML = '';
+            const shuffledPlaylist = playlist.sort(() => 0.5 - Math.random()).slice(0, 5);
+            shuffledPlaylist.forEach((track, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${index + 1}. ${track}`;
+                playlistTracks.appendChild(li);
+            });
+        }
+
+        // Update playlist every 10 seconds
+        setInterval(updatePlaylist, 10000);
+
+        // Initial playlist update
+        updatePlaylist();
+
+        // Add a subtle animation to the logo
+        const logo = document.getElementById('vinyl-logo');
+        logo.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) rotate(5deg)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+
+        // Add hover effect to texture examples
+        document.querySelectorAll('.texture-example').forEach(texture => {
+            texture.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.15)';
+            });
+            texture.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'inset 0 2px 4px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>

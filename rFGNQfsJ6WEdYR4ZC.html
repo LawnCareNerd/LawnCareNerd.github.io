@@ -1,0 +1,436 @@
+<html><head><base href="https://lawncare.co/styling-guide#winter%20%20themed">
+    <title>LawnCare Co. - Winter Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+        :root {
+            --snow-white: #FFFFFF;
+            --ice-blue: #A5F2F3;
+            --winter-sky: #77B5FE;
+            --evergreen: #228B22;
+            --slate-gray: #708090;
+            --midnight-blue: #191970;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--ice-blue);
+            color: var(--midnight-blue);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(119, 181, 254, 0.3);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--midnight-blue);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px var(--ice-blue);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid var(--winter-sky);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--midnight-blue);
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--snow-white);
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--snow-white);
+            background-color: var(--winter-sky);
+            border: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: var(--midnight-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #winter-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: var(--snow-white);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "❄️";
+            position: absolute;
+            left: 0;
+        }
+
+        #winter-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .winter-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--snow-white);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .winter-element:hover {
+            transform: translateY(-5px) rotate(3deg);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .winter-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #snowfall {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, var(--winter-sky), var(--ice-blue));
+        }
+
+        .snowflake {
+            position: absolute;
+            background-color: var(--snow-white);
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% { transform: translateY(-10px) rotate(0deg); }
+            100% { transform: translateY(310px) rotate(360deg); }
+        }
+
+        #winter-scene {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+            border-radius: 15px;
+            background-color: var(--ice-blue);
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid var(--evergreen);
+        }
+
+        .tree::after {
+            content: '';
+            position: absolute;
+            left: -50px;
+            bottom: -10px;
+            width: 100px;
+            height: 10px;
+            background-color: var(--snow-white);
+            border-radius: 50%;
+        }
+
+        .snowman {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 100px;
+        }
+
+        .snowman-body {
+            position: absolute;
+            background-color: var(--snow-white);
+            border-radius: 50%;
+        }
+
+        .snowman-bottom {
+            width: 60px;
+            height: 60px;
+            bottom: 0;
+        }
+
+        .snowman-middle {
+            width: 40px;
+            height: 40px;
+            bottom: 50px;
+            left: 10px;
+        }
+
+        .snowman-head {
+            width: 30px;
+            height: 30px;
+            bottom: 85px;
+            left: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Winter Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--snow-white);">Snow White</div>
+            <div class="color-swatch" style="background-color: var(--ice-blue);">Ice Blue</div>
+            <div class="color-swatch" style="background-color: var(--winter-sky);">Winter Sky</div>
+            <div class="color-swatch" style="background-color: var(--evergreen);">Evergreen</div>
+            <div class="color-swatch" style="background-color: var(--slate-gray);">Slate Gray</div>
+            <div class="color-swatch" style="background-color: var(--midnight-blue);">Midnight Blue</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Playfair Display (Headings)</h3>
+                <p style="font-family: 'Playfair Display', serif; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Montserrat (Body Text)</h3>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 300;">Light: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Winter Lawn Care</button>
+
+        <h2>Logo</h2>
+        <svg id="winter-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="150" fill="#A5F2F3" />
+            <circle cx="250" cy="50" r="30" fill="#FFFFFF" />
+            <path d="M0,150 Q150,120 300,150" fill="#77B5FE" />
+            <text x="50%" y="50%" font-family="Playfair Display, serif" font-size="36" fill="#191970" text-anchor="middle" dominant-baseline="middle">LawnCare Co.</text>
+            <text x="50%" y="75%" font-family="Montserrat, sans-serif" font-size="18" fill="#708090" text-anchor="middle" dominant-baseline="middle">Winter Wonder</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use cool, crisp colors that evoke the feeling of a winter landscape</li>
+                <li>Incorporate elegant, serif typography for headings to suggest tradition and warmth</li>
+                <li>Utilize winter-related iconography such as snowflakes, evergreen trees, and icicles</li>
+                <li>Implement gentle animations to simulate falling snow or twinkling lights</li>
+                <li>Create layouts that suggest coziness and protection from the cold</li>
+                <li>Use gradients and textures to mimic the look of ice and frost</li>
+                <li>Integrate nature-inspired patterns like knit textures or snowflake designs</li>
+            </ul>
+        </div>
+
+        <h2>Winter Elements</h2>
+        <div id="winter-elements">
+            <div class="winter-element">
+                <div class="winter-icon">❄️</div>
+                <p>Snowflake</p>
+            </div>
+            <div class="winter-element">
+                <div class="winter-icon">🎄</div>
+                <p>Evergreen Tree</p>
+            </div>
+            <div class="winter-element">
+                <div class="winter-icon">⛄</div>
+                <p>Snowman</p>
+            </div>
+            <div class="winter-element">
+                <div class="winter-icon">🧤</div>
+                <p>Mittens</p>
+            </div>
+        </div>
+
+        <h2>Snowfall Animation</h2>
+        <div id="snowfall"></div>
+
+        <h2>Winter Scene</h2>
+        <div id="winter-scene">
+            <div class="tree" style="left: 10%;"></div>
+            <div class="tree" style="left: 30%; transform: scale(1.2);"></div>
+            <div class="tree" style="left: 50%; transform: scale(0.8);"></div>
+            <div class="tree" style="left: 70%; transform: scale(1.1);"></div>
+            <div class="tree" style="left: 90%; transform: scale(0.9);"></div>
+            <div class="snowman">
+                <div class="snowman-body snowman-bottom"></div>
+                <div class="snowman-body snowman-middle"></div>
+                <div class="snowman-body snowman-head"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                alert(`${colorName} color (${colorValue}) copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to winter elements
+        document.querySelectorAll('.winter-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotate(5deg)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px) rotate(3deg)';
+            });
+        });
+
+        // Create snowfall
+        const snowfall = document.getElementById('snowfall');
+        for (let i = 0; i < 50; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = `${Math.random() * 100}%`;
+            snowflake.style.opacity = Math.random();
+            snowflake.style.width = `${Math.random() * 5 + 2}px`;
+            snowflake.style.height = snowflake.style.width;
+            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            snowflake.style.animationDelay = `${Math.random() * 2}s`;
+            snowfall.appendChild(snowflake);
+        }
+
+        // Add subtle movement to trees
+        const trees = document.querySelectorAll('.tree');
+        trees.forEach((tree, index) => {
+            tree.style.animation = `treeSway 3s ease-in-out ${index * 0.5}s infinite alternate`;
+        });
+
+        // Add tree sway animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes treeSway {
+                0% { transform: rotate(-1deg); }
+                100% { transform: rotate(1deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add blinking effect to snowman's eyes
+        const snowmanHead = document.querySelector('.snowman-head');
+        const leftEye = document.createElement('div');
+        const rightEye = document.createElement('div');
+        [leftEye, rightEye].forEach(eye => {
+            eye.style.position = 'absolute';
+            eye.style.width = '5px';
+            eye.style.height = '5px';
+            eye.style.backgroundColor = 'black';
+            eye.style.borderRadius = '50%';
+            eye.style.top = '10px';
+            snowmanHead.appendChild(eye);
+        });
+        leftEye.style.left = '7px';
+        rightEye.style.right = '7px';
+
+        setInterval(() => {
+            [leftEye, rightEye].forEach(eye => {
+                eye.style.height = eye.style.height === '5px' ? '1px' : '5px';
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

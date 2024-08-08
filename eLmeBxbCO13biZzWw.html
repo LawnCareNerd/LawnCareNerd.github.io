@@ -1,0 +1,255 @@
+<html><head><base href="https://lawncare.co/styling-guide#retro%20theme">
+    <title>LawnCare Co. Retro Theme Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=VT323&display=swap');
+
+        body {
+            font-family: 'Roboto Slab', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5e6d3;
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e0c9a6' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3 {
+            font-family: 'VT323', monospace;
+            color: #d35400;
+            text-shadow: 2px 2px 0px #f39c12;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .color-swatch {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            border: 4px solid #333;
+            box-shadow: 4px 4px 0px #333;
+            transition: all 0.3s;
+        }
+
+        .color-swatch:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #333;
+        }
+
+        .font-example {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 4px solid #333;
+            background-color: #fff;
+            box-shadow: 4px 4px 0px #333;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+            border: 4px solid #333;
+            box-shadow: 4px 4px 0px #333;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #333;
+        }
+
+        #retro-logo {
+            max-width: 300px;
+            margin: 20px 0;
+        }
+
+        .retro-animation {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        .crt-effect {
+            animation: textShadow 1.6s infinite;
+        }
+
+        @keyframes textShadow {
+            0% {
+                text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            5% {
+                text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            10% {
+                text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            15% {
+                text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            20% {
+                text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            25% {
+                text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            30% {
+                text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            35% {
+                text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            40% {
+                text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            45% {
+                text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            50% {
+                text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            55% {
+                text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            60% {
+                text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            65% {
+                text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            70% {
+                text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            75% {
+                text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            80% {
+                text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            85% {
+                text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            90% {
+                text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            95% {
+                text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+            100% {
+                text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="crt-effect">LawnCare Co. Retro Theme</h1>
+    
+    <h2>Color Palette</h2>
+    <div class="color-palette">
+        <div class="color-swatch" style="background-color: #e74c3c;">#e74c3c</div>
+        <div class="color-swatch" style="background-color: #f39c12;">#f39c12</div>
+        <div class="color-swatch" style="background-color: #27ae60;">#27ae60</div>
+        <div class="color-swatch" style="background-color: #2980b9;">#2980b9</div>
+        <div class="color-swatch" style="background-color: #8e44ad;">#8e44ad</div>
+    </div>
+
+    <h2>Typography</h2>
+    <div class="font-example">
+        <h3>Headings: 'VT323', monospace</h3>
+        <p style="font-family: 'VT323', monospace;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+        <p style="font-family: 'VT323', monospace;">1234567890!@#$%^&*()</p>
+        
+        <h3>Body: 'Roboto Slab', serif</h3>
+        <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+        <p>1234567890!@#$%^&*()</p>
+    </div>
+
+    <h2>Buttons</h2>
+    <button class="button">Click Me!</button>
+
+    <h2>Logo</h2>
+    <svg id="retro-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="280" height="130" fill="#f5e6d3" stroke="#333" stroke-width="5"/>
+        <text x="30" y="60" font-family="VT323, monospace" font-size="36" fill="#e74c3c">LawnCare</text>
+        <text x="90" y="100" font-family="VT323, monospace" font-size="36" fill="#e74c3c">Co.</text>
+        <path d="M20 120 Q150 80 280 120" stroke="#27ae60" stroke-width="5" fill="none"/>
+        <circle cx="40" cy="130" r="8" fill="#f39c12"/>
+        <circle cx="260" cy="130" r="8" fill="#f39c12"/>
+    </svg>
+
+    <h2>Design Principles</h2>
+    <ul class="crt-effect">
+        <li>Use bold, vibrant colors reminiscent of early computer graphics</li>
+        <li>Incorporate pixel-style fonts for headings and accents</li>
+        <li>Add retro-inspired animations and effects (e.g., blinking, CRT effects)</li>
+        <li>Use thick borders and drop shadows to create a "chunky" look</li>
+        <li>Include patterns and textures that evoke nostalgia</li>
+    </ul>
+
+    <script>
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                navigator.clipboard.writeText(this.textContent);
+                alert('Color code copied to clipboard!');
+            });
+        });
+
+        // Retro cursor effect
+        const cursor = document.createElement('div');
+        cursor.style.position = 'fixed';
+        cursor.style.width = '10px';
+        cursor.style.height = '10px';
+        cursor.style.backgroundColor = '#e74c3c';
+        cursor.style.pointerEvents = 'none';
+        cursor.style.zIndex = '9999';
+        document.body.appendChild(cursor);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = Math.floor(e.clientX / 10) * 10 + 'px';
+            cursor.style.top = Math.floor(e.clientY / 10) * 10 + 'px';
+        });
+
+        // Retro hover effect for buttons
+        document.querySelector('.button').addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#f39c12';
+        });
+        document.querySelector('.button').addEventListener('mouseout', function() {
+            this.style.backgroundColor = '#e74c3c';
+        });
+
+        // Add blinking effect to some elements
+        const blinkingElements = document.querySelectorAll('h1, h2');
+        blinkingElements.forEach(el => {
+            el.classList.add('retro-animation');
+        });
+
+        // Retro click sound
+        function playRetroClick() {
+            const audio = new Audio('data:audio/wav;base64,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');
+            audio.play();
+        }
+
+        document.querySelector('.button').addEventListener('click', playRetroClick);
+        document.addEventListener('click', playRetroClick);
+    </script>
+</body>
+</html>

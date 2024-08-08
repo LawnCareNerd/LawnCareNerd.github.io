@@ -1,0 +1,331 @@
+<html><head><base href="https://lawncare.co/styling-guide#ascii%20theme">
+    <title>LawnCare Co. - ASCII Theme Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #33ff33;
+            --accent-color: #00cc00;
+            --secondary-color: #008000;
+            --highlight-color: #66ff66;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--text-color);
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-color);
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid var(--text-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(51, 255, 51, 0.5);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: rgba(51, 255, 51, 0.1);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--bg-color);
+            background-color: var(--text-color);
+            border: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .button:hover {
+            background-color: var(--highlight-color);
+        }
+
+        #ascii-art {
+            font-size: 10px;
+            line-height: 1.2;
+            white-space: pre;
+            font-family: monospace;
+            text-align: center;
+            color: var(--accent-color);
+            margin: 2rem 0;
+        }
+
+        .design-principles {
+            background-color: rgba(51, 255, 51, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px dashed var(--secondary-color);
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        #ascii-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ascii-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(51, 255, 51, 0.1);
+            border: 1px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ascii-element:hover {
+            background-color: rgba(51, 255, 51, 0.2);
+        }
+
+        .ascii-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 12px;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. ASCII Theme</h1>
+        
+        <div id="ascii-art">
+ _                     ____                  ____      
+| |    __ ___      __ / ___|__ _ _ __ ___   / ___|___  
+| |   / _` \ \ /\ / // |   / _` | '__/ _ \ | |   / _ \ 
+| |__| (_| |\ V  V / | |__| (_| | | |  __/ | |__| (_) |
+|_____\__,_| \_/\_/   \____\__,_|_|  \___|  \____\___/ 
+        </div>
+
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--bg-color); color: var(--text-color);">Background</div>
+            <div class="color-swatch" style="background-color: var(--text-color);">Text Color</div>
+            <div class="color-swatch" style="background-color: var(--accent-color);">Accent Color</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">Secondary</div>
+            <div class="color-swatch" style="background-color: var(--highlight-color);">Highlight</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>IBM Plex Mono</h3>
+                <p style="font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Click Me</button>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use monospaced fonts to maintain consistent character width</li>
+                <li>Stick to a limited color palette inspired by classic terminal colors</li>
+                <li>Incorporate ASCII art for logos and decorative elements</li>
+                <li>Use simple geometric shapes and patterns for UI elements</li>
+                <li>Embrace a minimalist approach to layout and design</li>
+                <li>Utilize text-based icons and symbols when possible</li>
+                <li>Implement a grid-based layout to maintain alignment</li>
+            </ul>
+        </div>
+
+        <h2>ASCII Elements</h2>
+        <div id="ascii-elements">
+            <div class="ascii-element">
+                <div class="ascii-icon">[ ]</div>
+                <p>Checkbox</p>
+            </div>
+            <div class="ascii-element">
+                <div class="ascii-icon">|&gt;</div>
+                <p>Play Button</p>
+            </div>
+            <div class="ascii-element">
+                <div class="ascii-icon">&lt;/&gt;</div>
+                <p>Code Block</p>
+            </div>
+            <div class="ascii-element">
+                <div class="ascii-icon">...</div>
+                <p>Loading</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                this.textContent = 'Copied!';
+                setTimeout(() => {
+                    this.textContent = colorName;
+                }, 1000);
+            });
+        });
+
+        // Add hover effect to ASCII elements
+        document.querySelectorAll('.ascii-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simulate terminal typing effect for the ASCII art
+        const asciiArt = document.getElementById('ascii-art');
+        const originalText = asciiArt.textContent;
+        asciiArt.textContent = '';
+        let index = 0;
+
+        function typeEffect() {
+            if (index < originalText.length) {
+                asciiArt.textContent += originalText.charAt(index);
+                index++;
+                setTimeout(typeEffect, 20);
+            }
+        }
+
+        typeEffect();
+
+        // Add a "glitch" effect to the button on hover
+        const button = document.querySelector('.button');
+        button.addEventListener('mouseenter', function() {
+            this.style.animation = 'glitch 0.3s infinite';
+        });
+        button.addEventListener('mouseleave', function() {
+            this.style.animation = 'none';
+        });
+    </script>
+
+    <style>
+        @keyframes glitch {
+            0% {
+                transform: translate(2px, 2px);
+            }
+            25% {
+                transform: translate(-2px, -2px);
+            }
+            50% {
+                transform: translate(-2px, 2px);
+            }
+            75% {
+                transform: translate(2px, -2px);
+            }
+            100% {
+                transform: translate(2px, 2px);
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<html><head><base href="https://lawncare.co/styling-guide#beach%20themed">
+    <title>LawnCare Co. - Beach Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap');
+
+        :root {
+            --sand: #f4e1d2;
+            --ocean: #4ab3e6;
+            --coral: #ff6b6b;
+            --seashell: #fff5ee;
+            --driftwood: #8b7355;
+            --palm: #2ecc71;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--seashell);
+            color: var(--driftwood);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Pacifico', cursive;
+            color: var(--ocean);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px var(--coral);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid var(--coral);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--sand);
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--ocean);
+            border: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: var(--coral);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #beach-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: var(--sand);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "🌴";
+            position: absolute;
+            left: 0;
+        }
+
+        #beach-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .beach-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--seashell);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .beach-element:hover {
+            transform: translateY(-5px) rotate(3deg);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .beach-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #ocean-animation {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+            border-radius: 15px;
+        }
+
+        .wave {
+            position: absolute;
+            width: 200%;
+            height: 200px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%234ab3e6'/%3E%3C/svg%3E");
+            background-position: 0 bottom;
+            background-repeat: repeat-x;
+            animation: wave 10s linear infinite;
+        }
+
+        .wave:nth-of-type(2) {
+            bottom: 0;
+            animation: wave 7s linear reverse infinite;
+            opacity: 0.7;
+        }
+
+        .wave:nth-of-type(3) {
+            bottom: 0;
+            animation: wave 5s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        #sandcastle {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .castle-base {
+            width: 180px;
+            height: 120px;
+            background-color: var(--sand);
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+
+        .castle-tower {
+            width: 60px;
+            height: 140px;
+            background-color: var(--sand);
+            border-radius: 30px 30px 0 0;
+            position: absolute;
+            bottom: 120px;
+            left: 70px;
+        }
+
+        .castle-window {
+            width: 20px;
+            height: 30px;
+            background-color: var(--ocean);
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+        }
+
+        .castle-flag {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 30px solid var(--coral);
+            position: absolute;
+            top: -25px;
+            left: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Beach Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--sand); color: #000;">Sand</div>
+            <div class="color-swatch" style="background-color: var(--ocean);">Ocean</div>
+            <div class="color-swatch" style="background-color: var(--coral);">Coral</div>
+            <div class="color-swatch" style="background-color: var(--seashell); color: #000;">Seashell</div>
+            <div class="color-swatch" style="background-color: var(--driftwood);">Driftwood</div>
+            <div class="color-swatch" style="background-color: var(--palm);">Palm</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Pacifico (Headings)</h3>
+                <p style="font-family: 'Pacifico', cursive; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Montserrat (Body Text)</h3>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Beach Perfect Lawn</button>
+
+        <h2>Logo</h2>
+        <svg id="beach-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sand-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#f4e1d2;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#d2b48c;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <rect width="300" height="150" fill="url(#sand-gradient)" />
+            <path d="M0,100 Q75,70 150,100 T300,100 L300,150 L0,150 Z" fill="#4ab3e6" />
+            <circle cx="250" cy="50" r="30" fill="#ff6b6b" />
+            <path d="M50,100 Q60,60 70,100 M60,100 Q70,40 80,100 M70,100 Q80,50 90,100" stroke="#2ecc71" stroke-width="4" fill="none" />
+            <text x="50%" y="40%" font-family="Pacifico, cursive" font-size="36" fill="#4ab3e6" text-anchor="middle">LawnCare Co.</text>
+            <text x="50%" y="60%" font-family="Montserrat, sans-serif" font-size="18" fill="#8b7355" text-anchor="middle">Beach Perfect</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use a color palette inspired by beach elements: sand, ocean, coral, and seashells</li>
+                <li>Incorporate organic shapes and curved lines to mimic waves and natural beach forms</li>
+                <li>Utilize beach-related iconography such as palm trees, seashells, and waves</li>
+                <li>Implement a relaxed and casual typography with a mix of playful and clean fonts</li>
+                <li>Add subtle animations to simulate ocean waves or swaying palm trees</li>
+                <li>Use textures that evoke the feeling of sand, water, and beach materials</li>
+                <li>Create layouts that suggest openness and the expanse of the beach horizon</li>
+            </ul>
+        </div>
+
+        <h2>Beach Elements</h2>
+        <div id="beach-elements">
+            <div class="beach-element">
+                <div class="beach-icon">🌊</div>
+                <p>Ocean Waves</p>
+            </div>
+            <div class="beach-element">
+                <div class="beach-icon">🌴</div>
+                <p>Palm Trees</p>
+            </div>
+            <div class="beach-element">
+                <div class="beach-icon">🐚</div>
+                <p>Seashells</p>
+            </div>
+            <div class="beach-element">
+                <div class="beach-icon">🌞</div>
+                <p>Sunshine</p>
+            </div>
+        </div>
+
+        <h2>Ocean Animation</h2>
+        <div id="ocean-animation">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+        <h2>Sandcastle</h2>
+        <div id="sandcastle">
+            <div class="castle-base"></div>
+            <div class="castle-tower">
+                <div class="castle-window"></div>
+                <div class="castle-flag"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                alert(`${colorName} color (${colorValue}) copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to beach elements
+        document.querySelectorAll('.beach-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotate(5deg)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px) rotate(3deg)';
+            });
+        });
+
+        // Add sandcastle building animation
+        const sandcastle = document.getElementById('sandcastle');
+        let isBuilding = true;
+
+        function buildSandcastle() {
+            if (isBuilding) {
+                sandcastle.style.transform = 'scale(1.1)';
+                isBuilding = false;
+            } else {
+                sandcastle.style.transform = 'scale(1)';
+                isBuilding = true;
+            }
+            setTimeout(buildSandcastle, 1500);
+        }
+
+        buildSandcastle();
+    </script>
+</body>
+</html>

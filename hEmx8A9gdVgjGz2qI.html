@@ -1,0 +1,370 @@
+<html><head><base href="https://lawncare.co/styling-guide#industrial%20themed">
+    <title>LawnCare Co. - Industrial Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto+Mono&display=swap');
+
+        :root {
+            --primary-color: #2C3E50;
+            --secondary-color: #E74C3C;
+            --accent-color: #F39C12;
+            --background-color: #ECF0F1;
+            --text-color: #34495E;
+            --border-color: #BDC3C7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #industrial-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "⚙️";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        #industrial-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .industrial-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .industrial-element:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .industrial-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        #gears-animation {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .gear {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        #progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        #progress {
+            width: 0;
+            height: 100%;
+            background-color: var(--secondary-color);
+            transition: width 0.5s ease;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Industrial Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#2C3E50</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">#E74C3C</div>
+            <div class="color-swatch" style="background-color: var(--accent-color);">#F39C12</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#ECF0F1</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">#34495E</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Roboto Condensed (Headings & Body)</h3>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Roboto Condensed', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto Mono (Code & Technical Text)</h3>
+                <p style="font-family: 'Roboto Mono', monospace;">Monospace: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Industrial Mowing</button>
+
+        <h2>Logo</h2>
+        <svg id="industrial-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="100" fill="#ECF0F1" />
+            <text x="10" y="60" font-family="Roboto Condensed, sans-serif" font-size="48" font-weight="700" fill="#2C3E50">LAWN</text>
+            <text x="140" y="60" font-family="Roboto Condensed, sans-serif" font-size="48" font-weight="700" fill="#E74C3C">TECH</text>
+            <path d="M10 70 Q 150 90, 290 70" stroke="#F39C12" stroke-width="4" fill="none" />
+            <text x="70" y="90" font-family="Roboto Mono, monospace" font-size="14" fill="#34495E">Precision. Efficiency. Growth.</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use bold, strong colors reminiscent of industrial machinery and warning signs</li>
+                <li>Incorporate geometric shapes and patterns inspired by industrial design</li>
+                <li>Utilize san-serif fonts for clear readability and a modern look</li>
+                <li>Include technical elements like blueprints, schematics, or CAD-style graphics</li>
+                <li>Add subtle textures to mimic metal, concrete, or other industrial materials</li>
+                <li>Use animations to simulate machinery or industrial processes</li>
+                <li>Implement a grid-based layout for organized and structured content presentation</li>
+            </ul>
+        </div>
+
+        <h2>Industrial Elements</h2>
+        <div id="industrial-elements">
+            <div class="industrial-element">
+                <div class="industrial-icon">⚙️</div>
+                <p>Gears</p>
+            </div>
+            <div class="industrial-element">
+                <div class="industrial-icon">🏭</div>
+                <p>Factory</p>
+            </div>
+            <div class="industrial-element">
+                <div class="industrial-icon">🔧</div>
+                <p>Tools</p>
+            </div>
+            <div class="industrial-element">
+                <div class="industrial-icon">📐</div>
+                <p>Blueprint</p>
+            </div>
+        </div>
+
+        <h2>Gears Animation</h2>
+        <div id="gears-animation">
+            <div class="gear" style="top: 50px; left: 50px;">LAWN</div>
+            <div class="gear" style="top: 50px; right: 50px;">TECH</div>
+        </div>
+
+        <h2>Progress Bar</h2>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.textContent;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to industrial elements
+        document.querySelectorAll('.industrial-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Gears animation
+        const gears = document.querySelectorAll('.gear');
+        gears[0].style.animation = 'rotate 10s linear infinite';
+        gears[1].style.animation = 'rotate-reverse 10s linear infinite';
+
+        // Progress bar animation
+        const progressBar = document.getElementById('progress');
+        let progress = 0;
+        const intervalId = setInterval(() => {
+            progress += 1;
+            progressBar.style.width = `${progress}%`;
+            if (progress >= 100) {
+                clearInterval(intervalId);
+                setTimeout(() => {
+                    progress = 0;
+                    progressBar.style.width = '0%';
+                    setTimeout(() => {
+                        const intervalId = setInterval(() => {
+                            progress += 1;
+                            progressBar.style.width = `${progress}%`;
+                            if (progress >= 100) {
+                                clearInterval(intervalId);
+                            }
+                        }, 50);
+                    }, 500);
+                }, 1000);
+            }
+        }, 50);
+    </script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<html><head><base href="https://lawncare.co/styling-guide#classic%20and%20timeless">
+    <title>LawnCare Co. - Classic and Timeless Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #2C5234;
+            --secondary-color: #7B9E87;
+            --accent-color: #E6C87F;
+            --text-color: #333333;
+            --background-color: #F9F7F4;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            background-color: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+            background-color: var(--primary-color);
+            border: none;
+            transition: all 0.3s ease;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        #classic-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: white;
+            padding: 2rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        #timeless-elements {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .timeless-element {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .timeless-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+        }
+
+        #quote-container {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        #quote-text {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        #quote-author {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Classic and Timeless Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#2C5234</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">#7B9E87</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">#E6C87F</div>
+            <div class="color-swatch" style="background-color: var(--text-color);">#333333</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#F9F7F4</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Playfair Display (Headings)</h3>
+                <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">1234567890!@#$%^&*()</p>
+            </div>
+            <div class="font-example">
+                <h3>Lato (Body Text)</h3>
+                <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p>1234567890!@#$%^&*()</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <a href="#" class="button">Learn More</a>
+
+        <h2>Logo</h2>
+        <svg id="classic-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)"/>
+            <text x="20" y="60" font-family="Playfair Display, serif" font-size="48" font-weight="700" fill="var(--primary-color)">LawnCare</text>
+            <text x="20" y="85" font-family="Lato, sans-serif" font-size="24" font-weight="300" fill="var(--secondary-color)">Est. 1985</text>
+            <path d="M250,20 Q270,50 290,20 M260,25 Q270,40 280,25" stroke="var(--accent-color)" stroke-width="3" fill="none"/>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use a refined and elegant color palette</li>
+                <li>Implement clean, uncluttered layouts</li>
+                <li>Utilize classic typography pairings</li>
+                <li>Incorporate subtle, tasteful decorative elements</li>
+                <li>Ensure consistency across all brand touchpoints</li>
+                <li>Focus on high-quality, timeless imagery</li>
+                <li>Embrace white space for a sophisticated look</li>
+            </ul>
+        </div>
+
+        <h2>Timeless Elements</h2>
+        <div id="timeless-elements">
+            <div class="timeless-element">
+                <div class="timeless-icon">🏛️</div>
+                <p>Classic Architecture</p>
+            </div>
+            <div class="timeless-element">
+                <div class="timeless-icon">🌳</div>
+                <p>Mature Trees</p>
+            </div>
+            <div class="timeless-element">
+                <div class="timeless-icon">⛲</div>
+                <p>Elegant Fountains</p>
+            </div>
+            <div class="timeless-element">
+                <div class="timeless-icon">🪑</div>
+                <p>Traditional Furniture</p>
+            </div>
+        </div>
+
+        <div id="quote-container">
+            <p id="quote-text">"The best time to plant a tree was 20 years ago. The second best time is now."</p>
+            <p id="quote-author">- Chinese Proverb</p>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effect to color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            swatch.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add click-to-copy functionality for color codes
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.innerHTML;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard.`);
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic quote change
+        const quotes = [
+            {
+                text: "The best time to plant a tree was 20 years ago. The second best time is now.",
+                author: "Chinese Proverb"
+            },
+            {
+                text: "To plant a garden is to believe in tomorrow.",
+                author: "Audrey Hepburn"
+            },
+            {
+                text: "The glory of gardening: hands in the dirt, head in the sun, heart with nature.",
+                author: "Alfred Austin"
+            },
+            {
+                text: "A lawn is nature under totalitarian rule.",
+                author: "Michael Pollan"
+            },
+            {
+                text: "Gardens are not made by singing 'Oh, how beautiful,' and sitting in the shade.",
+                author: "Rudyard Kipling"
+            }
+        ];
+
+        function changeQuote() {
+            const quoteText = document.getElementById('quote-text');
+            const quoteAuthor = document.getElementById('quote-author');
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            
+            quoteText.textContent = `"${randomQuote.text}"`;
+            quoteAuthor.textContent = `- ${randomQuote.author}`;
+        }
+
+        // Change quote every 10 seconds
+        setInterval(changeQuote, 10000);
+
+        // Initial quote change
+        changeQuote();
+
+        // Add a subtle animation to the logo
+        const logo = document.getElementById('classic-logo');
+        logo.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Add a classy hover effect to the timeless elements
+        document.querySelectorAll('.timeless-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

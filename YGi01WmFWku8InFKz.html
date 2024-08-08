@@ -1,0 +1,410 @@
+<html><head><base href="https://lawncare.co/styling-guide#receipt%20themed">
+    <title>LawnCare Co. - Receipt Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:wght@400;700&display=swap');
+
+        :root {
+            --paper-white: #F5F5F5;
+            --ink-black: #1A1A1A;
+            --faded-ink: #6B6B6B;
+            --highlight-yellow: #FFFF99;
+            --receipt-edge: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier Prime', monospace;
+            background-color: var(--paper-white);
+            color: var(--ink-black);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--paper-white);
+            padding: 2rem;
+            border: 1px solid var(--receipt-edge);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .container::before, .container::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 5px,
+                var(--receipt-edge) 5px,
+                var(--receipt-edge) 10px
+            );
+        }
+
+        .container::before {
+            top: 0;
+        }
+
+        .container::after {
+            bottom: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'VT323', monospace;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px dashed var(--faded-ink);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 1px solid var(--faded-ink);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink-black);
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px dashed var(--faded-ink);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--paper-white);
+            border: 1px solid var(--faded-ink);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--ink-black);
+            background-color: var(--paper-white);
+            border: 1px solid var(--ink-black);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .button:hover {
+            background-color: var(--highlight-yellow);
+        }
+
+        #receipt-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: var(--highlight-yellow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        #receipt-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .receipt-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--paper-white);
+            border: 1px dashed var(--faded-ink);
+            transition: all 0.3s ease;
+        }
+
+        .receipt-element:hover {
+            background-color: var(--highlight-yellow);
+        }
+
+        .receipt-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #sample-receipt {
+            font-family: 'Courier Prime', monospace;
+            background-color: var(--paper-white);
+            border: 1px solid var(--faded-ink);
+            padding: 2rem;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #sample-receipt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 5px,
+                var(--receipt-edge) 5px,
+                var(--receipt-edge) 10px
+            );
+        }
+
+        #sample-receipt h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .receipt-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .receipt-total {
+            border-top: 1px dashed var(--faded-ink);
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            font-weight: bold;
+        }
+
+        .receipt-footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Receipt Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--paper-white);">Paper White</div>
+            <div class="color-swatch" style="background-color: var(--ink-black); color: var(--paper-white);">Ink Black</div>
+            <div class="color-swatch" style="background-color: var(--faded-ink); color: var(--paper-white);">Faded Ink</div>
+            <div class="color-swatch" style="background-color: var(--highlight-yellow);">Highlight Yellow</div>
+            <div class="color-swatch" style="background-color: var(--receipt-edge);">Receipt Edge</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>VT323 (Headings)</h3>
+                <p style="font-family: 'VT323', monospace; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Courier Prime (Body Text)</h3>
+                <p style="font-family: 'Courier Prime', monospace; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Courier Prime', monospace; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Print Receipt</button>
+
+        <h2>Logo</h2>
+        <svg id="receipt-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="100" fill="var(--paper-white)" />
+            <text x="150" y="40" font-family="VT323, monospace" font-size="36" fill="var(--ink-black)" text-anchor="middle">LawnCare Co.</text>
+            <text x="150" y="70" font-family="Courier Prime, monospace" font-size="18" fill="var(--faded-ink)" text-anchor="middle">Receipt of Excellence</text>
+            <line x1="10" y1="80" x2="290" y2="80" stroke="var(--ink-black)" stroke-width="2" stroke-dasharray="5,5" />
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use monospaced fonts to mimic typewriter or dot-matrix printer output</li>
+                <li>Incorporate dashed or perforated lines to simulate tear-off sections</li>
+                <li>Utilize a limited color palette reminiscent of thermal paper and ink</li>
+                <li>Implement a clean, structured layout with clear hierarchy</li>
+                <li>Use subtle textures or patterns to emulate paper grain</li>
+                <li>Include receipt-specific elements like item lists, totals, and transaction numbers</li>
+                <li>Consider print-friendly designs for actual receipt functionality</li>
+            </ul>
+        </div>
+
+        <h2>Receipt Elements</h2>
+        <div id="receipt-elements">
+            <div class="receipt-element">
+                <div class="receipt-icon">📅</div>
+                <p>Date & Time</p>
+            </div>
+            <div class="receipt-element">
+                <div class="receipt-icon">🔢</div>
+                <p>Transaction Number</p>
+            </div>
+            <div class="receipt-element">
+                <div class="receipt-icon">📋</div>
+                <p>Item List</p>
+            </div>
+            <div class="receipt-element">
+                <div class="receipt-icon">💰</div>
+                <p>Total Amount</p>
+            </div>
+        </div>
+
+        <h2>Sample Receipt</h2>
+        <div id="sample-receipt">
+            <h3>LawnCare Co.</h3>
+            <p style="text-align: center;">123 Green Street, Gardenville</p>
+            <p style="text-align: center;">Tel: (555) 123-4567</p>
+            <div class="receipt-line">
+                <span>Date: 05/15/2023</span>
+                <span>Time: 14:30</span>
+            </div>
+            <div class="receipt-line">
+                <span>Transaction #: LC20230515143001</span>
+            </div>
+            <hr style="border-top: 1px dashed var(--faded-ink); margin: 1rem 0;">
+            <div class="receipt-line">
+                <span>Lawn Mowing Service</span>
+                <span>$50.00</span>
+            </div>
+            <div class="receipt-line">
+                <span>Hedge Trimming</span>
+                <span>$35.00</span>
+            </div>
+            <div class="receipt-line">
+                <span>Fertilizer Application</span>
+                <span>$25.00</span>
+            </div>
+            <div class="receipt-total">
+                <span>Total</span>
+                <span>$110.00</span>
+            </div>
+            <div class="receipt-footer">
+                <p>Thank you for choosing LawnCare Co.!</p>
+                <p>We appreciate your business.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                alert(`${colorName} color (${colorValue}) copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to receipt elements
+        document.querySelectorAll('.receipt-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simluate printing receipt
+        document.querySelector('.button').addEventListener('click', function() {
+            window.print();
+        });
+
+        // Add subtle animation to the receipt logo
+        const logo = document.getElementById('receipt-logo');
+        logo.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Add a "crumple" effect to the sample receipt on hover
+        const sampleReceipt = document.getElementById('sample-receipt');
+        sampleReceipt.addEventListener('mouseenter', function() {
+            this.style.transform = 'rotate(1deg) scale(1.02)';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            this.style.transition = 'all 0.3s ease';
+        });
+        sampleReceipt.addEventListener('mouseleave', function() {
+            this.style.transform = 'rotate(0) scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    </script>
+</body>
+</html>

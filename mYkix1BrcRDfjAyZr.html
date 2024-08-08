@@ -1,0 +1,414 @@
+<html><head><base href="https://lawncare.co/styling-guide#jazz%20themed">
+    <title>LawnCare Co. - Jazz Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #1E2761;
+            --secondary-color: #7A2048;
+            --accent-color: #D9A566;
+            --background-color: #F2E8C9;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+        }
+
+        #jazz-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "♪";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        #jazz-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .jazz-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .jazz-element:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .jazz-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        #piano-keys {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .key {
+            width: 40px;
+            height: 150px;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            margin: 0 2px;
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+
+        .key.black {
+            background-color: #000000;
+            height: 100px;
+            width: 30px;
+            margin-left: -15px;
+            margin-right: -15px;
+            z-index: 2;
+        }
+
+        .key:active, .key.active {
+            background-color: var(--accent-color);
+        }
+
+        @keyframes note-float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-50px); opacity: 0; }
+        }
+
+        .floating-note {
+            position: absolute;
+            font-size: 24px;
+            color: var(--accent-color);
+            pointer-events: none;
+            animation: note-float 2s ease-out;
+        }
+
+        #vinyl-record {
+            width: 300px;
+            height: 300px;
+            background-color: #333;
+            border-radius: 50%;
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            animation: spin 5s linear infinite;
+            cursor: pointer;
+        }
+
+        #vinyl-label {
+            width: 100px;
+            height: 100px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Jazz Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#1E2761</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">#7A2048</div>
+            <div class="color-swatch" style="background-color: var(--accent-color);">#D9A566</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#F2E8C9</div>
+            <div class="color-swatch" style="background-color: var(--text-color); color: var(--background-color);">#333333</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Playfair Display (Headings)</h3>
+                <p style="font-family: 'Playfair Display', serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Playfair Display', serif; font-style: italic;">Italic: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Raleway (Body Text)</h3>
+                <p style="font-family: 'Raleway', sans-serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Raleway', sans-serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Smooth Jazz Mowing</button>
+
+        <h2>Logo</h2>
+        <svg id="jazz-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="100" fill="#F2E8C9" />
+            <text x="10" y="60" font-family="Playfair Display, serif" font-size="48" fill="#1E2761">Lawn</text>
+            <text x="130" y="60" font-family="Playfair Display, serif" font-style="italic" font-size="48" fill="#7A2048">Jazz</text>
+            <path d="M10 70 Q 150 120, 290 70" stroke="#D9A566" stroke-width="4" fill="none" />
+            <text x="90" y="90" font-family="Raleway, sans-serif" font-size="14" fill="#333333">Smooth Cuts, Cool Grass</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use rich, warm colors inspired by jazz clubs and instruments</li>
+                <li>Incorporate musical elements and iconography</li>
+                <li>Create a sense of rhythm and movement in layouts</li>
+                <li>Use elegant typography with a mix of serif and sans-serif fonts</li>
+                <li>Add subtle animations to mimic the fluidity of jazz music</li>
+                <li>Include interactive elements that respond like musical instruments</li>
+                <li>Use curved lines and organic shapes to reflect the improvisational nature of jazz</li>
+            </ul>
+        </div>
+
+        <h2>Jazz Elements</h2>
+        <div id="jazz-elements">
+            <div class="jazz-element">
+                <div class="jazz-icon">🎷</div>
+                <p>Saxophone</p>
+            </div>
+            <div class="jazz-element">
+                <div class="jazz-icon">🎺</div>
+                <p>Trumpet</p>
+            </div>
+            <div class="jazz-element">
+                <div class="jazz-icon">🎹</div>
+                <p>Piano</p>
+            </div>
+            <div class="jazz-element">
+                <div class="jazz-icon">🥁</div>
+                <p>Drums</p>
+            </div>
+        </div>
+
+        <h2>Interactive Piano</h2>
+        <div id="piano-keys"></div>
+
+        <h2>Vinyl Record</h2>
+        <div id="vinyl-record">
+            <div id="vinyl-label">LawnJazz Greatest Hits</div>
+        </div>
+    </div>
+
+    <script>
+        // Piano functionality
+        const pianoKeys = document.getElementById('piano-keys');
+        const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+        notes.forEach((note, index) => {
+            const key = document.createElement('div');
+            key.className = `key ${note.includes('#') ? 'black' : 'white'}`;
+            key.dataset.note = note;
+            key.dataset.octave = 4;
+            pianoKeys.appendChild(key);
+
+            key.addEventListener('mousedown', () => playNote(note, 4));
+            key.addEventListener('mouseup', () => stopNote(note, 4));
+            key.addEventListener('mouseleave', () => stopNote(note, 4));
+        });
+
+        function playNote(note, octave) {
+            const frequency = 440 * Math.pow(2, (notes.indexOf(note) - 9) / 12) * Math.pow(2, octave - 4);
+            const oscillator = audioContext.createOscillator();
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+            oscillator.connect(audioContext.destination);
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.5);
+
+            const key = document.querySelector(`.key[data-note="${note}"][data-octave="${octave}"]`);
+            key.classList.add('active');
+
+            createFloatingNote(key);
+        }
+
+        function stopNote(note, octave) {
+            const key = document.querySelector(`.key[data-note="${note}"][data-octave="${octave}"]`);
+            key.classList.remove('active');
+        }
+
+        function createFloatingNote(key) {
+            const note = document.createElement('div');
+            note.textContent = '♪';
+            note.className = 'floating-note';
+            note.style.left = `${key.offsetLeft + key.offsetWidth / 2}px`;
+            note.style.top = `${key.offsetTop}px`;
+            document.body.appendChild(note);
+
+            setTimeout(() => {
+                document.body.removeChild(note);
+            }, 2000);
+        }
+
+        // Vinyl record functionality
+        const vinylRecord = document.getElementById('vinyl-record');
+        let isPlaying = false;
+
+        vinylRecord.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            vinylRecord.style.animationPlayState = isPlaying ? 'running' : 'paused';
+        });
+
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.textContent;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to jazz elements
+        document.querySelectorAll('.jazz-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>

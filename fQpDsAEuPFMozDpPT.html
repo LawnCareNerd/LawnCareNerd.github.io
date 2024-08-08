@@ -1,0 +1,275 @@
+<html><head><base href="https://lawncare.co/styling-guide#seinfeld%20thmed">
+    <title>LawnCare Co. - Seinfeld Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #FF0000;
+            --secondary-color: #4A90E2;
+            --background-color: #F0F0F0;
+            --text-color: #333333;
+            --accent-color: #FFD700;
+        }
+
+        body {
+            font-family: 'Syne', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            background-color: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        #seinfeld-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 0.5rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "✦";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        #puffy-shirt {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        #puffy-shirt:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Seinfeld Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color);">#FF0000</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color);">#4A90E2</div>
+            <div class="color-swatch" style="background-color: var(--background-color); color: var(--text-color);">#F0F0F0</div>
+            <div class="color-swatch" style="background-color: var(--text-color);">#333333</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--text-color);">#FFD700</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Syne Regular (400)</h3>
+                <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p>1234567890!@#$%^&*()</p>
+            </div>
+            <div class="font-example">
+                <h3>Syne Bold (700)</h3>
+                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">1234567890!@#$%^&*()</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <a href="#" class="button">Serenity Now!</a>
+
+        <h2>Logo</h2>
+        <svg id="seinfeld-logo" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="300" height="100" fill="var(--background-color)"/>
+            <text x="10" y="60" font-family="Syne, sans-serif" font-size="48" font-weight="700" fill="var(--primary-color)">LawnCare</text>
+            <text x="10" y="90" font-family="Syne, sans-serif" font-size="24" font-weight="400" fill="var(--secondary-color)">Co.</text>
+            <path d="M270,20 Q285,50 300,80" stroke="var(--accent-color)" stroke-width="4" fill="none"/>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use bold, primary colors reminiscent of the Seinfeld logo</li>
+                <li>Incorporate quirky, memorable elements (like the puffy shirt)</li>
+                <li>Keep layouts clean and simple, focusing on content</li>
+                <li>Use Syne font for a 90s-inspired, yet modern look</li>
+                <li>Add subtle animations to enhance user interaction</li>
+                <li>Include Seinfeld-inspired quotes or references in microcopy</li>
+                <li>Maintain a balance between professionalism and humor</li>
+            </ul>
+        </div>
+    </div>
+
+    <svg id="puffy-shirt" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20,80 Q50,60 80,80 L90,100 H10 L20,80" fill="white" stroke="var(--text-color)" stroke-width="2"/>
+        <path d="M30,80 Q50,70 70,80" fill="none" stroke="var(--text-color)" stroke-width="2"/>
+        <circle cx="50" cy="30" r="20" fill="white" stroke="var(--text-color)" stroke-width="2"/>
+        <path d="M40,25 Q50,35 60,25" fill="none" stroke="var(--text-color)" stroke-width="2"/>
+    </svg>
+
+    <script>
+        // Add hover effect to color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            swatch.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Add click-to-copy functionality for color codes
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.innerHTML;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard! Not that there's anything wrong with that.`);
+            });
+        });
+
+        // Add Seinfeld quotes to button clicks
+        const button = document.querySelector('.button');
+        const quotes = [
+            "No soup for you!",
+            "These pretzels are making me thirsty!",
+            "Yada, yada, yada...",
+            "I'm out there, Jerry, and I'm lovin' every minute of it!",
+            "It's not a lie if you believe it.",
+            "Hello, Newman."
+        ];
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert(quotes[Math.floor(Math.random() * quotes.length)]);
+        });
+
+        // Add puffy shirt easter egg
+        const puffyShirt = document.getElementById('puffy-shirt');
+        puffyShirt.addEventListener('click', function() {
+            alert("But I don't wanna be a pirate!");
+        });
+
+        // Add subtle animation to the logo
+        const logo = document.getElementById('seinfeld-logo');
+        logo.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.3s ease';
+            this.style.transform = 'scale(1.05)';
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Add "bass slap" sound effect on page load
+        window.addEventListener('load', function() {
+            const bassSlap = new Audio('https://example.com/bass-slap.mp3');
+            bassSlap.play();
+        });
+
+        // Change cursor to a soup ladle on hover over design principles
+        const designPrinciples = document.querySelector('.design-principles');
+        designPrinciples.addEventListener('mouseenter', function() {
+            document.body.style.cursor = 'url(https://example.com/soup-ladle-cursor.png), auto';
+        });
+        designPrinciples.addEventListener('mouseleave', function() {
+            document.body.style.cursor = 'default';
+        });
+    </script>
+</body>
+</html>

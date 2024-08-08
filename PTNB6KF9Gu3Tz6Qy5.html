@@ -1,0 +1,386 @@
+<html><head><base href="https://lawncare.co/styling-guide#forest%20themed">
+    <title>LawnCare Co. - Forest Themed Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
+
+        :root {
+            --deep-forest: #1a3c1a;
+            --pine-green: #2d5a2d;
+            --sunlit-leaf: #90ee90;
+            --bark-brown: #8b4513;
+            --forest-floor: #d2b48c;
+            --misty-gray: #c0c0c0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif', serif;
+            background-color: var(--forest-floor);
+            color: var(--deep-forest);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cabin', sans-serif;
+            color: var(--pine-green);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px var(--misty-gray);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid var(--bark-brown);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--misty-gray);
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--pine-green);
+            border: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Cabin', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: var(--deep-forest);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #forest-logo {
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .design-principles {
+            background-color: var(--sunlit-leaf);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 1rem;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .design-principles li::before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+        }
+
+        #forest-elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .forest-element {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--misty-gray);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .forest-element:hover {
+            transform: translateY(-5px) rotate(3deg);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .forest-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #forest-animation {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+            border-radius: 15px;
+            background-color: var(--deep-forest);
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 150px solid var(--pine-green);
+            animation: grow 3s ease-out forwards;
+        }
+
+        @keyframes grow {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        #woodland-creatures {
+            width: 300px;
+            height: 200px;
+            margin: 2rem auto;
+            position: relative;
+            background-color: var(--forest-floor);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .creature {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        #deer {
+            width: 80px;
+            height: 100px;
+            background-color: var(--bark-brown);
+            bottom: 20px;
+            left: 20px;
+            clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+        }
+
+        #owl {
+            width: 60px;
+            height: 60px;
+            background-color: var(--misty-gray);
+            top: 30px;
+            right: 40px;
+            border-radius: 50%;
+        }
+
+        #fox {
+            width: 70px;
+            height: 40px;
+            background-color: #ff6347;
+            bottom: 10px;
+            right: 30px;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. Forest Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--deep-forest);">Deep Forest</div>
+            <div class="color-swatch" style="background-color: var(--pine-green);">Pine Green</div>
+            <div class="color-swatch" style="background-color: var(--sunlit-leaf); color: #000;">Sunlit Leaf</div>
+            <div class="color-swatch" style="background-color: var(--bark-brown);">Bark Brown</div>
+            <div class="color-swatch" style="background-color: var(--forest-floor); color: #000;">Forest Floor</div>
+            <div class="color-swatch" style="background-color: var(--misty-gray); color: #000;">Misty Gray</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Cabin (Headings)</h3>
+                <p style="font-family: 'Cabin', sans-serif; font-size: 24px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+            <div class="font-example">
+                <h3>Noto Serif (Body Text)</h3>
+                <p style="font-family: 'Noto Serif', serif; font-weight: 400;">Regular: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-family: 'Noto Serif', serif; font-weight: 700;">Bold: Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <button class="button">Forest Fresh Lawn</button>
+
+        <h2>Logo</h2>
+        <svg id="forest-logo" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="150" fill="#d2b48c" />
+            <path d="M50,150 L100,50 L150,150 Z" fill="#2d5a2d" />
+            <path d="M125,150 L175,25 L225,150 Z" fill="#1a3c1a" />
+            <path d="M200,150 L250,75 L300,150 Z" fill="#2d5a2d" />
+            <rect x="25" y="125" width="250" height="25" fill="#8b4513" />
+            <text x="50%" y="50%" font-family="Cabin, sans-serif" font-size="36" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">LawnCare Co.</text>
+            <text x="50%" y="75%" font-family="Noto Serif, serif" font-size="18" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">Forest Fresh</text>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use a color palette inspired by forest elements: deep greens, earthy browns, and misty grays</li>
+                <li>Incorporate organic shapes and textures to mimic tree bark, leaves, and forest undergrowth</li>
+                <li>Utilize forest-related iconography such as trees, woodland creatures, and leaves</li>
+                <li>Implement a mix of sturdy and elegant typography to reflect the strength and beauty of forests</li>
+                <li>Add subtle animations to simulate rustling leaves or gentle forest movements</li>
+                <li>Use textures that evoke the feeling of tree bark, moss, and forest floor materials</li>
+                <li>Create layouts that suggest the layered, vertical nature of forest environments</li>
+            </ul>
+        </div>
+
+        <h2>Forest Elements</h2>
+        <div id="forest-elements">
+            <div class="forest-element">
+                <div class="forest-icon">🌳</div>
+                <p>Tall Trees</p>
+            </div>
+            <div class="forest-element">
+                <div class="forest-icon">🍄</div>
+                <p>Mushrooms</p>
+            </div>
+            <div class="forest-element">
+                <div class="forest-icon">🦌</div>
+                <p>Wildlife</p>
+            </div>
+            <div class="forest-element">
+                <div class="forest-icon">🍃</div>
+                <p>Leaves</p>
+            </div>
+        </div>
+
+        <h2>Forest Growth Animation</h2>
+        <div id="forest-animation"></div>
+
+        <h2>Woodland Creatures</h2>
+        <div id="woodland-creatures">
+            <div id="deer" class="creature"></div>
+            <div id="owl" class="creature"></div>
+            <div id="fox" class="creature"></div>
+        </div>
+    </div>
+
+    <script>
+        // Add click-to-copy for color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorName = this.textContent;
+                const colorValue = getComputedStyle(this).backgroundColor;
+                navigator.clipboard.writeText(colorValue);
+                alert(`${colorName} color (${colorValue}) copied to clipboard!`);
+            });
+        });
+
+        // Add hover effect to forest elements
+        document.querySelectorAll('.forest-element').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotate(5deg)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px) rotate(3deg)';
+            });
+        });
+
+        // Forest growth animation
+        const forestAnimation = document.getElementById('forest-animation');
+        
+        function createTree() {
+            const tree = document.createElement('div');
+            tree.classList.add('tree');
+            tree.style.left = `${Math.random() * 100}%`;
+            forestAnimation.appendChild(tree);
+
+            setTimeout(() => {
+                tree.remove();
+            }, 3000);
+        }
+
+        setInterval(createTree, 500);
+
+        // Woodland creatures animation
+        const creatures = document.querySelectorAll('.creature');
+
+        function animateCreatures() {
+            creatures.forEach(creature => {
+                const randomX = Math.random() * 20 - 10;
+                const randomY = Math.random() * 20 - 10;
+                creature.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            });
+        }
+
+        setInterval(animateCreatures, 2000);
+    </script>
+</body>
+</html>

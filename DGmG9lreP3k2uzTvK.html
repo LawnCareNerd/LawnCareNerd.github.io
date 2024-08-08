@@ -1,0 +1,231 @@
+<html><head><base href="https://lawncare.co/styling-guide#high%20contrast">
+    <title>LawnCare Co. High Contrast Styling Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #FFFFFF;
+            --accent-color: #FFD700;
+            --text-color: #FFFFFF;
+            --background-color: #000000;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-top: 3rem;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--background-color);
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .typography {
+            margin-bottom: 2rem;
+        }
+
+        .font-example {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            background-color: var(--accent-color);
+            border: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .design-principles {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        .design-principles ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .design-principles li {
+            margin-bottom: 0.5rem;
+        }
+
+        #high-contrast-logo {
+            max-width: 200px;
+            margin: 2rem auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LawnCare Co. High Contrast Theme</h1>
+        
+        <h2>Color Palette</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: var(--primary-color); color: var(--secondary-color);">#000000</div>
+            <div class="color-swatch" style="background-color: var(--secondary-color); color: var(--primary-color);">#FFFFFF</div>
+            <div class="color-swatch" style="background-color: var(--accent-color); color: var(--primary-color);">#FFD700</div>
+        </div>
+
+        <h2>Typography</h2>
+        <div class="typography">
+            <div class="font-example">
+                <h3>Roboto Regular (400)</h3>
+                <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p>1234567890!@#$%^&*()</p>
+            </div>
+            <div class="font-example">
+                <h3>Roboto Bold (700)</h3>
+                <p style="font-weight: 700;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                <p style="font-weight: 700;">1234567890!@#$%^&*()</p>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <a href="#" class="button">Click Me</a>
+
+        <h2>Logo</h2>
+        <svg id="high-contrast-logo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="200" height="100" fill="var(--primary-color)"/>
+            <text x="10" y="50" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="var(--accent-color)">LawnCare</text>
+            <text x="10" y="80" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="var(--secondary-color)">Co.</text>
+            <line x1="10" y1="90" x2="190" y2="90" stroke="var(--accent-color)" stroke-width="2"/>
+        </svg>
+
+        <h2>Design Principles</h2>
+        <div class="design-principles">
+            <ul>
+                <li>Use a stark black and white color scheme for maximum contrast</li>
+                <li>Incorporate a bright accent color for emphasis and calls-to-action</li>
+                <li>Employ bold, easy-to-read typography</li>
+                <li>Ensure text has high contrast against its background</li>
+                <li>Use thick lines and borders for visual separation</li>
+                <li>Implement clear hover states for interactive elements</li>
+                <li>Maintain simplicity in layouts to enhance readability</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effect to color swatches
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.boxShadow = '0 0 10px var(--accent-color)';
+            });
+            swatch.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Add click-to-copy functionality for color codes
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('click', function() {
+                const colorCode = this.innerHTML;
+                navigator.clipboard.writeText(colorCode);
+                alert(`Color code ${colorCode} copied to clipboard!`);
+            });
+        });
+
+        // Add subtle animation to the logo
+        const logo = document.getElementById('high-contrast-logo');
+        logo.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.3s ease';
+            this.style.transform = 'scale(1.05)';
+        });
+        logo.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Add interactive effect to the button
+        const button = document.querySelector('.button');
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 2px 5px rgba(255, 255, 255, 0.2)';
+        });
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+
+        // Add focus outline for accessibility
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.style.outline = '2px solid var(--accent-color)';
+                this.style.outlineOffset = '2px';
+            });
+            element.addEventListener('blur', function() {
+                this.style.outline = 'none';
+            });
+        });
+
+        // Add subtle parallax effect to headings
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            document.querySelectorAll('h2').forEach((heading, index) => {
+                heading.style.transform = `translateX(${scrollPosition * 0.1 * (index % 2 === 0 ? 1 : -1)}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
