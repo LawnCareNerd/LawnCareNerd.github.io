@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawn Care Co. Style Guide Demo</title>
+    <style>
+        body {
+    font-family: 'Courier Prime', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-family: 'VT323', monospace;
+    font-size: 36px;
+    color: #4CAF50;
+}
+
+.typography h1, .typography h2, .typography h3 {
+    font-family: 'VT323', monospace;
+}
+
+.typography h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.typography h2 {
+    font-size: 28px;
+    color: #388E3C;
+}
+
+.typography h3 {
+    font-size: 22px;
+    color: #4CAF50;
+}
+
+.typography p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #757575;
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 45%;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    font-family: 'VT323', monospace;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+button {
+    font-family: 'Courier Prime', monospace;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.primary-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.secondary-button {
+    background-color: #388E3C;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Style Guide Demo: Lawn Care Co.</h1>
+            <p>Overview of basic brand styles including fonts, colors, and buttons.</p>
+        </header>
+
+        <section class="typography">
+            <h2>Typography</h2>
+            <h1>Heading 1 - VT323, 36px</h1>
+            <h2>Heading 2 - VT323, 28px</h2>
+            <h3>Heading 3 - VT323, 22px</h3>
+            <p>Body text - Courier Prime, 16px. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+
+        <section class="colors">
+            <h2>Color Palette</h2>
+            <div class="color-box" style="background-color: #4CAF50;">Primary Green - #4CAF50</div>
+            <div class="color-box" style="background-color: #388E3C;">Dark Green - #388E3C</div>
+            <div class="color-box" style="background-color: #81C784;">Secondary Blue - #81C784</div>
+            <div class="color-box" style="background-color: #795548;">Earth Brown - #795548</div>
+            <div class="color-box" style="background-color: #FFFFFF; color: #000;">Neutral White - #FFFFFF</div>
+            <div class="color-box" style="background-color: #757575;">Neutral Gray - #757575</div>
+        </section>
+
+        <section class="buttons">
+            <h2>Buttons</h2>
+            <button class="primary-button">Primary Button</button>
+            <button class="secondary-button">Secondary Button</button>
+        </section>
+    </div>
+</body>
+</html>
